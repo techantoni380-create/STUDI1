@@ -1,0 +1,40 @@
+<main id="contenido" class="enrollment-page">
+<section class="wrap enrollment-layout">
+  <div class="enrollment-story">
+    <img src="assets/img/fuerza.webp" alt="Sala de entrenamiento conceptual" class="enrollment-photo" width="1000" height="1200">
+    <div class="enrollment-story-copy"><p class="eyebrow white">GIMNASIO EN REUS <span class="lime-line"></span></p><h1>TU RITMO.<br><span>TU FUERZA.</span></h1><p>En solitario, en pareja o en familia.<br>Encuentra tu forma de entrenar.</p></div>
+    <div class="enrollment-perks"><span><i data-icon="dumbbell"></i> Tu gimnasio</span><span><i data-icon="users"></i> A tu manera</span><span><i data-icon="lock"></i> Pago puntual</span></div>
+  </div>
+  <div class="enrollment-form-wrap">
+    <p class="eyebrow">INSCRIPCIÓN ONLINE</p><h2>APÚNTATE A <span>STUDI-1</span></h2><p>Elige tu cuota individual, de pareja o familiar. Sin crear una cuenta.</p>
+    <ol class="steps"><li class="active"><span>1</span> Modalidad y datos</li><li><span>2</span> Revisar y pagar</li></ol>
+    <form id="enrollment-form" data-mode="demo">
+      {{include:enrollment-fields}}
+      <h3 class="enrollment-contact-title">Datos de la persona titular</h3>
+      <div class="form-pair"><label for="first-name">Nombre *<input id="first-name" name="firstName" autocomplete="given-name" required maxlength="70" placeholder="Tu nombre"></label><label for="last-name">Apellidos *<input id="last-name" name="lastName" autocomplete="family-name" required maxlength="100" placeholder="Tus apellidos"></label></div>
+      <label for="email">Correo electrónico *<input id="email" type="email" name="email" autocomplete="email" required maxlength="150" placeholder="tu@correo.com"></label>
+      <label for="phone">Teléfono *<input id="phone" type="tel" name="phone" autocomplete="tel" required minlength="7" maxlength="25" placeholder="Tu teléfono"></label>
+      <label class="checkbox"><input type="checkbox" name="terms" required><span>Acepto las <a href="legal.html#condiciones">condiciones de inscripción</a> y he leído la <a href="legal.html#privacidad">política de privacidad</a>. *</span></label>
+      <button class="button lime full large" id="enrollment-submit" type="submit" disabled>Continuar <i data-icon="arrow"></i></button>
+      <noscript><p>Activa JavaScript para elegir tu inscripción o llama al 675 72 83 43.</p></noscript>
+      <p class="privacy-caption"><i data-icon="lock"></i> Demostración: tus datos no se envían ni se guardan.</p>
+    </form>
+    <section id="enrollment-review" hidden aria-label="Revisión de la inscripción">
+      <div class="review-top"><button type="button" class="text-link" id="enrollment-back"><i data-icon="back"></i> Editar inscripción</button><span>RESUMEN</span></div>
+      <div class="review-data" id="review-data"></div>
+      <div class="checkout-total"><span>Total de muestra</span><strong id="review-total">39,00 €</strong></div>
+      {{include:payment-card}}
+      <div class="payment-demo-fields">
+        <label for="card-holder">Nombre en la tarjeta<input id="card-holder" type="text" maxlength="80" autocomplete="off" placeholder="Tu nombre y apellidos" aria-describedby="card-holder-help"></label>
+        <small id="card-holder-help">Escribe o edita el nombre y lo verás en la tarjeta.</small>
+        <label for="card-design">Diseño de muestra<select id="card-design"><option value="visa">Visa</option><option value="mastercard">Mastercard</option></select></label>
+        <div class="sample-card-details"><span>Número de ejemplo<strong data-sample-number>•••• •••• •••• 4242</strong></span><span>Caducidad<strong>MM/AA</strong></span><span>CVC<strong>•••</strong></span></div>
+        <p class="payment-compatibility">Visa · Mastercard · Tarjetas de bancos españoles e internacionales, como Revolut. Disponibilidad según la tarjeta y la pasarela que se configure.</p>
+      </div>
+      <p class="editorial-note">Demostración sin cobros. Solo puedes editar el nombre; no introduzcas datos bancarios reales.</p>
+      <button type="button" id="enrollment-confirm" class="button lime full large">Simular pago de <span id="payment-demo-total">39,00 €</span> <i data-icon="lock"></i></button>
+    </section>
+  </div>
+</section>
+{{include:rates}}
+</main>

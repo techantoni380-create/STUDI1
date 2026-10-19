@@ -1,0 +1,12 @@
+<div class="enrollment-picker">
+  <label for="enrollment-plan">Elige tu inscripción
+    <select id="enrollment-plan" name="studi1_plan" required>{{include:enrollment-options}}</select>
+  </label>
+  <label id="family-people-wrap" for="family-people" hidden>Personas incluidas en esta inscripción
+    <input id="family-people" name="studi1_people" type="number" min="1" max="12" step="1" value="3" disabled>
+    <small>Hasta 12 personas por formulario. Las condiciones de la tarifa familiar las confirma el gimnasio.</small>
+  </label>
+  <div class="membership-choice" aria-live="polite" aria-atomic="true"><span><b id="plan-name">Cuota individual</b><small id="plan-calculation">39 € · 1 persona</small></span><strong id="plan-total">39,00 €</strong></div>
+  <p class="plan-note" id="plan-note">Consulta el período de la cuota y las condiciones de alta.</p>
+  <fieldset id="extra-participants" hidden><legend>Las personas que te acompañan</legend><p>La primera plaza corresponde a la persona titular de la inscripción.</p><div id="participant-inputs"></div></fieldset>
+</div>

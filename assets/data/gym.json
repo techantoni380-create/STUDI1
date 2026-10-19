@@ -1,0 +1,410 @@
+{
+  "name": "STUDI-1 Gimnàs",
+  "sourceDate": "2026-10-16",
+  "address": "Carrer de Sant Pau i Sant Blai, 1, 43202 Reus, Tarragona",
+  "phone": "+34675728343",
+  "phoneDisplay": "675 72 83 43",
+  "whatsapp": "",
+  "email": "",
+  "hours": "Lunes a viernes: 06:00–22:00\nSábado: 09:00–13:00\nDomingo: 10:00–14:00",
+  "openingHours": [
+    {
+      "days": "Lunes a viernes",
+      "from": "06:00",
+      "to": "22:00"
+    },
+    {
+      "days": "Sábado",
+      "from": "09:00",
+      "to": "13:00"
+    },
+    {
+      "days": "Domingo",
+      "from": "10:00",
+      "to": "14:00"
+    }
+  ],
+  "fees": [
+    {
+      "name": "Individual",
+      "price": 39,
+      "unit": "Cuota individual"
+    },
+    {
+      "name": "Pareja",
+      "price": 37,
+      "unit": "Por persona"
+    },
+    {
+      "name": "Familiar",
+      "price": 35,
+      "unit": "Por persona"
+    }
+  ],
+  "feesPeriod": null,
+  "feesSummary": "Cuota individual: 39 €. Pareja: 37 € por persona. Familiar: 35 € por persona. El período de estas cuotas y las condiciones de alta deben confirmarse con el gimnasio.",
+  "personalTraining": [
+    {
+      "name": "Individual",
+      "members": 15,
+      "nonMembers": 18,
+      "people": 1
+    },
+    {
+      "name": "Pareja",
+      "members": 20,
+      "nonMembers": 25,
+      "people": 2
+    },
+    {
+      "name": "Grupo de 4",
+      "members": 28,
+      "nonMembers": 35,
+      "people": 4
+    }
+  ],
+  "days": [
+    {
+      "id": "lunes",
+      "name": "Lunes",
+      "sessions": [
+        {
+          "time": "07:45",
+          "name": "Ciclo Indoor",
+          "detail": "30 min",
+          "uncertain": false
+        },
+        {
+          "time": "08:30",
+          "name": "Tono Suau",
+          "detail": "Tonificación suave",
+          "uncertain": false
+        },
+        {
+          "time": "09:30",
+          "name": "Tonificació",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "10:20",
+          "name": "Movilitat i estiraments",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "15:15",
+          "name": "Body Tono",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "18:00",
+          "name": "Ciclo Indoor",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "18:45",
+          "name": "Core",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "19:15",
+          "name": "Pilates",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "20:00",
+          "name": "Tai Chi",
+          "detail": "",
+          "uncertain": false
+        }
+      ],
+      "unreadable": []
+    },
+    {
+      "id": "martes",
+      "name": "Martes",
+      "sessions": [
+        {
+          "time": "07:10",
+          "name": "Yoga",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "08:30",
+          "name": "Body Tono",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "09:30",
+          "name": "Body Tono",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "10:20",
+          "name": "Zumba",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "14:30",
+          "name": "Body Tono",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "15:15",
+          "name": "Movilitat i estiraments",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "18:00",
+          "name": "Fit Box Saco",
+          "detail": "30 min",
+          "uncertain": false
+        },
+        {
+          "time": "18:30",
+          "name": "Pilates TRX",
+          "detail": "Hora por confirmar: el cartel indica 18:30 dentro de la fila de 18:45.",
+          "uncertain": true
+        },
+        {
+          "time": "19:15",
+          "name": "Body Tono",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "20:00",
+          "name": "Pilates",
+          "detail": "",
+          "uncertain": false
+        }
+      ],
+      "unreadable": []
+    },
+    {
+      "id": "miercoles",
+      "name": "Miércoles",
+      "sessions": [
+        {
+          "time": "07:45",
+          "name": "Ciclo Indoor",
+          "detail": "30 min",
+          "uncertain": false
+        },
+        {
+          "time": "08:30",
+          "name": "Tono Suau",
+          "detail": "Tonificación suave",
+          "uncertain": false
+        },
+        {
+          "time": "09:30",
+          "name": "Ciclo Indoor",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "10:20",
+          "name": "Pilates",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "15:15",
+          "name": "Pilates",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "16:00",
+          "name": "Tono Suau",
+          "detail": "Tonificación suave",
+          "uncertain": false
+        },
+        {
+          "time": "18:00",
+          "name": "Body Tono",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "18:45",
+          "name": "Ciclo Indoor",
+          "detail": "30 min",
+          "uncertain": false
+        },
+        {
+          "time": "19:15",
+          "name": "Zumba",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "20:00",
+          "name": "Pilates",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "21:00",
+          "name": "Tai Chi",
+          "detail": "",
+          "uncertain": false
+        }
+      ],
+      "unreadable": []
+    },
+    {
+      "id": "jueves",
+      "name": "Jueves",
+      "sessions": [
+        {
+          "time": "08:10",
+          "name": "Yoga",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "09:30",
+          "name": "Pilates",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "10:20",
+          "name": "Movilitat i estiraments",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "14:30",
+          "name": "Ciclo Indoor",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "15:15",
+          "name": "Body Tono",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "18:00",
+          "name": "GAP",
+          "detail": "Glúteos, abdominales y piernas",
+          "uncertain": false
+        },
+        {
+          "time": "18:45",
+          "name": "Ciclo Indoor",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "19:15",
+          "name": "Pilates",
+          "detail": "",
+          "uncertain": false
+        }
+      ],
+      "unreadable": [
+        "20:00",
+        "21:00"
+      ]
+    },
+    {
+      "id": "viernes",
+      "name": "Viernes",
+      "sessions": [
+        {
+          "time": "09:30",
+          "name": "GAP",
+          "detail": "Glúteos, abdominales y piernas",
+          "uncertain": false
+        },
+        {
+          "time": "10:20",
+          "name": "Zumba",
+          "detail": "",
+          "uncertain": false
+        },
+        {
+          "time": "15:15",
+          "name": "GAP",
+          "detail": "Glúteos, abdominales y piernas",
+          "uncertain": false
+        },
+        {
+          "time": "16:00",
+          "name": "Tono Suau",
+          "detail": "Tonificación suave",
+          "uncertain": false
+        }
+      ],
+      "unreadable": [
+        "18:45",
+        "19:15",
+        "20:00",
+        "21:00"
+      ]
+    }
+  ],
+  "sources": {
+    "contact": "image(20261016-210356).png",
+    "fees": "image(20261016-212847).png",
+    "classes": "20261016_103621.jpg"
+  },
+  "notes": [
+    "El período de las cuotas no aparece en el cartel.",
+    "Pilates TRX del martes: la celda dice 18:30, pero está en la fila de 18:45.",
+    "Los reflejos impiden confirmar algunas celdas del jueves y viernes al final de la tarde.",
+    "No se ha confirmado WhatsApp, correo electrónico ni horario en festivos."
+  ],
+  "enrollmentMaxPeople": 12,
+  "enrollmentPlans": [
+    {
+      "id": "membership-individual",
+      "name": "Cuota individual",
+      "group": "Cuotas del gimnasio",
+      "price": 39,
+      "basis": "person",
+      "people": 1,
+      "defaultPeople": 1,
+      "audience": "all",
+      "kind": "membership"
+    },
+    {
+      "id": "membership-couple",
+      "name": "Cuota pareja",
+      "group": "Cuotas del gimnasio",
+      "price": 37,
+      "basis": "person",
+      "people": 2,
+      "defaultPeople": 2,
+      "audience": "all",
+      "kind": "membership"
+    },
+    {
+      "id": "membership-family",
+      "name": "Cuota familiar",
+      "group": "Cuotas del gimnasio",
+      "price": 35,
+      "basis": "person",
+      "people": 0,
+      "defaultPeople": 3,
+      "audience": "all",
+      "kind": "membership"
+    }
+  ]
+}

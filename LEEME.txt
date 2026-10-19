@@ -1,0 +1,136 @@
+STUDI-1 · WEB ESENCIAL · VERSIÓN 2
+
+1. Extrae este ZIP entero en una carpeta.
+2. Abre index.html con Chrome, Edge o Firefox.
+3. Navega por Inicio, Gimnasio, Actividades, Tienda e Inscripción.
+
+No abras index.html directamente dentro del ZIP: primero extrae todos los archivos.
+La demo funciona sin instalar nada y sin conexión. No cobra ni envía formularios.
+
+QUÉ INCLUYE
+- Cinco páginas principales, contacto dentro de Inicio, checkout y borrador legal.
+- Dirección y teléfono en Reus, horario de apertura, horario de 42 clases legibles, cuotas y tarifas de entrenamiento personal del material recibido el 16/10/2026.
+- Horario semanal en ordenador y horarios plegables por día en móvil.
+- Logo PNG transparente mejorado a partir del JPEG recibido: «STUDI / RAÚL BEAS / 1», con los textos inferiores originales.
+- Transformación del logo durante 5 segundos en la primera entrada o al recargar.
+- Destello metálico al acabar la entrada y cada 8 segundos, sin repetir el giro.
+- Diseño oscuro, azul #2448D8, acento azul eléctrico, lima #C8EF35 y hielo #F4F7FB.
+- Cuatro fotografías conceptuales optimizadas y vídeo de fondo de 5 segundos.
+- Header, footer y head con fuentes únicas en src/partials.
+- CSS y JavaScript separados, fuentes locales y diseño adaptable.
+- Galería, vídeo con control, búsqueda local, pestañas de actividades.
+- Tienda: filtros, detalle de producto, carrito persistente, cantidades, recogida/envío.
+- Inscripción demo en 2 pasos; no almacena ni envía datos personales.
+- Asistente guiado con 10 respuestas, sin IA ni datos de socios.
+- Tema WordPress original preparado para WooCommerce y un alta como producto virtual.
+
+EDITAR
+src/partials/header.html    Cabecera y menú compartidos.
+src/partials/footer.html    Pie, asistente y ventanas compartidas.
+src/partials/head.html      Metadatos y enlaces CSS/JS.
+src/pages/                 Contenido independiente de cada página.
+assets/css/styles.css      Diseño de toda la web.
+assets/css/logo-animation.css   Duración y colocación de la animación.
+assets/js/logo-animation.js     Primera entrada, recargas y accesibilidad.
+assets/js/logo-morph.js         Giro y apertura continua del logo.
+assets/js/logo-morph-data.js    Máscaras geométricas del PNG oficial.
+assets/js/logo-shine.js         Reflejo de luz cada 8 segundos.
+assets/js/enrollment-model.js   Cálculo de personas e importes de presentación.
+assets/js/enrollment.js         Selector, acompañantes y resumen.
+assets/css/enrollment.css       Estilos del formulario compartido.
+src/data/gym.json          Datos oficiales de contacto, apertura, clases y tarifas.
+assets/js/config.js        Productos y envío de la demo.
+assets/css/gym-info.css    Diseño de horarios, contacto y tarifas.
+tools/gym_content.py       Genera los componentes compartidos desde gym.json.
+assets/js/app.js           Interacciones.
+assets/img/                Logo y fotografías reemplazables.
+assets/video/              Vídeo de 5 segundos.
+
+Después de editar src/partials o src/pages ejecuta:
+  python tools/build.py
+
+Para actualizar también el tema de WordPress y su ZIP:
+  python tools/package.py
+
+Los HTML de la raíz están ya generados. Puedes editarlos directamente, pero al
+reconstruir se sustituyen por src/pages + src/partials. No necesitas servidor
+para abrir los HTML: los componentes se incluyen al construir.
+
+WORDPRESS / HOSTINGER
+El ZIP instalable es wordpress/studi1-esencial.zip.
+Lee docs/INSTALACION-WOOCOMMERCE.md para completar el montaje real.
+No subas la carpeta HTML encima de una instalación WordPress existente.
+El tema es propio; no es el tema comercial Astra.
+
+ANIMACIÓN DEL LOGO
+Movimiento inspirado en la referencia de Mercedes, adaptado a STUDI-1:
+1. La S y el 1 del propio PNG forman un monograma compacto.
+2. Gira 4 vueltas en 1,45 segundos, acelera y frena con suavidad.
+3. Tras una pausa breve, el monograma se abre hacia el nombre completo.
+4. Aparecen los descriptores y permanece el PNG original, sin efectos.
+Las transiciones usan máscaras complementarias y el acabado original.
+No hay partículas, círculos auxiliares ni copias fantasma superpuestas.
+Dura 5 segundos. Se reproduce en la primera entrada de la sesión de pestaña
+y cada vez que se recarga. No se repite al navegar entre páginas del sitio,
+ni al volver con Atrás/Adelante, ni al pasar el ratón por encima.
+Prueba: abre index.html; visita Gimnasio (logo fijo); pulsa Ctrl+R (animación).
+El logo conserva su espacio y sigue siendo un enlace durante la secuencia.
+Respeta «reducir movimiento»: en ese caso muestra el PNG directamente.
+Al cambiar de pestaña se finaliza el efecto para dejar el logo visible.
+El destello recorre solo la superficie visible del PNG, dura 1,15 s y sus
+inicios están separados por 8 s. Se pausa en segundo plano y con movimiento
+reducido. No altera el giro ni se repite la introducción al navegar.
+Usa sessionStorage solo para un indicador de reproducción, sin datos personales.
+Si el navegador bloquea ese almacenamiento, evita repetir mediante la referencia
+de navegación cuando está disponible. El bloqueo puede limitar este control.
+
+Las máscaras se incluyen en un JS local y no requieren peticiones de red.
+El PNG original no se modifica. Las máscaras son específicas de este logo:
+si se cambia, hay que adaptar tools/build-logo-morph.py antes de regenerarlas
+(requiere Pillow) y empaquetar de nuevo. No basta con cambiar sus dimensiones.
+Un logo personalizado de WordPress se muestra estático para evitar animar una
+marca que no corresponde. La duración se ajusta en --logo-intro-duration.
+
+ESTADO REAL
+HTML demo y código de integración preparados. No existe conexión a un hosting,
+pasarela, pedidos, correo o base de datos en esta entrega. El tema requiere
+WordPress + WooCommerce instalados, configuración y prueba en un entorno real.
+Las imágenes de instalaciones y los productos/precios de la tienda son de muestra.
+Las cuotas y tarifas de entrenamiento personal se han transcrito del cartel.
+El texto legal no es final.
+
+PENDIENTE DEL GIMNASIO
+Email, confirmación de WhatsApp, período de las cuotas y condiciones de alta,
+duración de entrenamientos personales, horario de festivos, celdas poco legibles
+y hora de Pilates TRX del martes; catálogo, stock, datos fiscales, fotos reales
+y condiciones legales. Ver docs/DATOS-OFICIALES.md.
+
+VERIFICACIÓN
+Consulta docs/VERIFICACION.md. El acabado visual necesita revisión en navegador,
+y el tema debe probarse dentro de WordPress antes de activar ventas.
+
+MODALIDADES ONLINE
+Solo inscripciones: individual, pareja y familiar (3 opciones).
+Individual: 39 €. Pareja: 37 €/persona, total 74 €.
+Familiar: 35 € × personas seleccionadas; 1–12 personas por formulario como
+límite técnico, no condición comercial. El gimnasio confirma la elegibilidad.
+Los entrenamientos mantienen las tarifas informativas y la consulta de horario
+por teléfono. No se pueden seleccionar ni pagar online. No hay agenda automática.
+Los precios reales proceden de tres productos WooCommerce. Si ya creaste los
+antiguos productos de entrenamiento, pásalos a borrador y revisa pedidos pendientes.
+Consulta docs/INSTALACION-WOOCOMMERCE.md.
+
+TARJETA VISUAL
+En el segundo paso de la demo aparece una única tarjeta verde con el logo oficial.
+El nombre se refleja al escribir y puede editarse. Visa/Mastercard son diseños
+de muestra; los números son fijos y enmascarados. No se piden datos bancarios.
+La simulación no cobra ni guarda datos. En WooCommerce la tarjeta refleja el
+nombre de facturación; el pago real se realiza con los campos de la pasarela.
+CSS: assets/css/payment-card.css. JavaScript: assets/js/payment-card.js.
+Componente compartido: src/partials/payment-card.html.
+
+ACTUALIZACIÓN RESPONSIVE — 19/10/2026
+Sustituye la carpeta anterior por esta versión completa. Abre index.html
+y recarga sin caché (Ctrl+F5) si habías abierto la versión anterior.
+Para GitHub Pages, sube el contenido de STUDI1-web con index.html en
+la raíz del repositorio. Se muestra una demostración, sin cobros reales.
