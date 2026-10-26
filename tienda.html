@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="assets/css/logo-animation.css">
 <link rel="stylesheet" href="assets/css/enrollment.css">
 <link rel="stylesheet" href="assets/css/payment-card.css">
+<link rel="stylesheet" href="assets/css/real-media.css">
+<link rel="stylesheet" href="assets/css/dossier.css">
+<script src="assets/js/real-media.js" defer></script>
 <script src="assets/js/gym-data.js" defer></script>
 <script src="assets/js/config.js" defer></script>
 <script src="assets/js/app.js" defer></script>
@@ -25,26 +28,25 @@
 </head>
 <body data-page="tienda">
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
-<div class="preview-bar" data-demo-notice>PROPUESTA <span>· Tienda e imágenes de muestra · Sin cobros</span></div>
+<div class="preview-bar" data-demo-notice>PROPUESTA <span>· Tienda de muestra · Sin cobros</span></div>
 <header class="site-header">
   <div class="header-inner wrap">
     <a class="logo" href="index.html" aria-label="STUDI-1 · Ir al inicio"><img src="assets/img/logo-oficial.png" alt="STUDI 1 · Raúl Beas" width="2143" height="734"></a>
     <nav class="nav-desktop" aria-label="Navegación principal">
-      <a data-page="inicio" href="index.html">Inicio</a><a data-page="gimnasio" href="gimnasio.html">Gimnasio</a><a data-page="actividades" href="actividades.html">Actividades</a><a data-page="tienda" href="tienda.html">Tienda</a><a href="index.html#contacto">Contacto</a>
+      <a data-page="inicio" href="index.html">Inicio</a><a data-page="gimnasio" href="gimnasio.html">Gimnasio</a><a data-page="servicios" href="servicios.html">Servicios</a><a data-page="actividades" href="actividades.html">Clases</a><a data-page="tienda" href="tienda.html">Tienda</a><a href="index.html#contacto">Contacto</a>
     </nav>
     <div class="nav-actions"><button class="icon-button" data-open-search aria-label="Buscar en la web"><i data-icon="search"></i></button><button class="icon-button cart-trigger" data-open-cart aria-label="Abrir carrito"><i data-icon="bag"></i><span data-cart-count>0</span></button><a class="button lime header-join" href="inscripcion.html">Inscríbete <i data-icon="arrow"></i></a><button class="icon-button menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú"><i data-icon="menu"></i></button></div>
   </div>
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" hidden><a href="index.html">Inicio</a><a href="gimnasio.html">Gimnasio</a><a href="actividades.html">Actividades</a><a href="tienda.html">Tienda</a><a href="index.html#contacto">Contacto</a><a class="button lime" href="inscripcion.html">Inscríbete online <i data-icon="arrow"></i></a></nav>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" hidden><a href="index.html">Inicio</a><a href="gimnasio.html">Gimnasio</a><a href="servicios.html">Servicios</a><a href="actividades.html">Clases</a><a href="tienda.html">Tienda</a><a href="index.html#contacto">Contacto</a><a class="button lime" href="inscripcion.html">Inscríbete online <i data-icon="arrow"></i></a></nav>
 </header>
 
 <main id="contenido"><section class="hero shop-hero"><div class="hero-media"><img src="assets/img/tienda.webp" alt="Proteína, accesorios y ropa de entrenamiento ilustrativos" width="1672" height="941" fetchpriority="high"></div><div class="wrap hero-copy"><p class="eyebrow white">TIENDA STUDI-1 <span class="lime-line"></span></p><h1>TODO PARA<br><span>ENTRENAR.</span></h1><p class="hero-description">Una selección pequeña.<br>Una compra sencilla.</p></div></section><section class="section wrap"><div class="shop-toolbar"><div class="filter-group" aria-label="Filtrar catálogo"><button data-filter="all" aria-pressed="true">Todo</button><button data-filter="nutricion" aria-pressed="false">Nutrición</button><button data-filter="accesorios" aria-pressed="false">Accesorios</button></div><p><span id="product-count">3</span> productos de muestra</p></div><div class="product-grid" id="products"></div><noscript>Activa JavaScript para probar el catálogo y el carrito.</noscript><div class="shop-benefits"><span><i data-icon="bag"></i> Recogida en el gimnasio</span><span><i data-icon="truck"></i> Envío con coste visible</span><span><i data-icon="lock"></i> Pago puntual</span></div><p class="demo-caption">Catálogo ilustrativo: marcas, precios, existencias y especificaciones por confirmar.</p></section></main>
 
 <footer class="site-footer"><div class="wrap footer-grid">
 <div class="footer-brand"><a class="logo" href="index.html"><img src="assets/img/logo-oficial.png" alt="STUDI 1 · Raúl Beas" width="2143" height="734" loading="lazy"></a><p>Tu ritmo. Tu fuerza.<br>Tu gimnasio en Reus.</p></div>
-<div><h3>Explora</h3><a href="gimnasio.html">El gimnasio</a><a href="gimnasio.html#raul-beas">Raúl Beas · Su trayectoria</a><a href="actividades.html#horarios">Clases y horarios</a><a href="inscripcion.html#tarifas">Cuotas y entrenamiento personal</a><a href="tienda.html">Tienda</a><a href="inscripcion.html">Inscripción online</a></div>
+<div><h3>Explora</h3><a href="gimnasio.html">El gimnasio</a><a href="gimnasio.html#equipo">Nuestro equipo</a><a href="servicios.html">Servicios</a><a href="actividades.html#horarios">Clases y horarios</a><a href="inscripcion.html#tarifas">Tarifas y bonos</a><a href="tienda.html">Tienda</a><a href="inscripcion.html">Inscripción online</a></div>
 <div class="footer-contact"><h3>Estamos cerca</h3><address data-location>Carrer de Sant Pau i Sant Blai, 1, 43202 Reus, Tarragona</address><a data-call href="tel:+34675728343"><i data-icon="phone"></i> <span data-phone>675 72 83 43</span></a><a data-map href="https://www.google.com/maps/search/?api=1&amp;query=Carrer%20de%20Sant%20Pau%20i%20Sant%20Blai%2C%201%2C%2043202%20Reus%2C%20Tarragona" target="_blank" rel="noopener noreferrer">Cómo llegar <i data-icon="arrow"></i></a></div>
-<div class="footer-hours"><h3>Horario de apertura</h3><div class="hours-block" data-opening-hours><dl class="opening-hours"><div><dt>Lunes a viernes</dt><dd><time>06:00</time>–<time>22:00</time></dd></div><div><dt>Sábado</dt><dd><time>09:00</time>–<time>13:00</time></dd></div><div><dt>Domingo</dt><dd><time>10:00</time>–<time>14:00</time></dd></div></dl></div>
-<small>Festivos: consultar.</small><a href="actividades.html#horarios">Ver clases dirigidas <i data-icon="arrow"></i></a></div>
+<div class="footer-hours"><h3>Tu día en STUDI-1</h3><a href="index.html#contacto">Horario de apertura</a><a href="actividades.html#horarios">Horario de clases</a><a href="index.html#contacto">Redes sociales y contacto</a></div>
 </div><div class="wrap footer-bottom"><span>© <span data-year>2026</span> STUDI-1 Gimnàs</span><div><a href="legal.html#privacidad">Privacidad</a><a href="legal.html#condiciones">Condiciones</a><a href="legal.html#aviso">Aviso legal</a></div><span>Diseño y desarrollo · <a class="developer-credit" href="https://antonitech.es/" target="_blank" rel="noopener noreferrer">Antoni Tech</a></span></div></footer>
 <div class="toast" role="status" aria-live="polite" hidden></div>
 <button class="assistant-launch" aria-label="Abrir asistente STUDI-1" aria-controls="assistant" aria-expanded="false"><span class="robot-face"><b>⌣</b></span><span>¿Te ayudamos?</span><i data-icon="chat"></i></button>
@@ -53,6 +55,8 @@
 <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="panel-head"><h2 id="search-title">¿Qué buscas?</h2><button class="icon-button" data-close-dialog aria-label="Cerrar búsqueda"><i data-icon="close"></i></button></div><label class="sr-only" for="site-search">Buscar páginas y productos</label><input id="site-search" type="search" placeholder="Gimnasio, actividades, proteínas…" autocomplete="off"><div id="search-results"></div></dialog>
 <dialog class="product-dialog" id="product-dialog" aria-labelledby="product-title"><button class="icon-button dialog-x" data-close-dialog aria-label="Cerrar ficha"><i data-icon="close"></i></button><div id="product-detail"></div></dialog>
 <dialog class="result-dialog" id="result-dialog" aria-labelledby="result-title"><span class="success-icon"><i data-icon="check"></i></span><h2 id="result-title">Recorrido completado</h2><p>Has probado la demostración. No se ha realizado ningún cobro, creado un pedido ni enviado tus datos.</p><a href="index.html" class="button lime">Volver al inicio <i data-icon="arrow"></i></a><button class="link-button" data-close-dialog>Cerrar</button></dialog>
+
+<dialog id="photo-dialog" class="photo-dialog" aria-labelledby="photo-dialog-caption"><button type="button" class="photo-close" data-close-dialog aria-label="Cerrar fotografía">×</button><img id="photo-dialog-image" alt=""><p id="photo-dialog-caption"></p></dialog>
 
 </body>
 </html>

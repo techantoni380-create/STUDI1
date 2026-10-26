@@ -24,13 +24,13 @@ def generate():
     for group in dict.fromkeys(p['group'] for p in plans):
         options += '<optgroup label="'+escape(group)+'">'
         for plan in [p for p in plans if p['group']==group]:
-            suffix = ' / persona' if plan['basis']=='person' else ' total'
+            suffix = ' / persona / mes' if plan['basis']=='person' else ' total'
             options += '<option value="'+plan['id']+'">'+escape(plan['name'])+' · '+euro(plan['price'])+suffix+'</option>'
         options += '</optgroup>'
     (partials/'enrollment-options.html').write_text(options+'\n')
     (ROOT/'assets/data').mkdir(exist_ok=True)
     (ROOT/'assets/data/gym.json').write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n')
-    (ROOT/'assets/js/gym-data.js').write_text('/* Datos del gimnasio aportados el 16/10/2026. Generado desde src/data/gym.json. */\nwindow.STUDI_GYM='+json.dumps(data, ensure_ascii=False, separators=(',',':'))+';\n')
+    (ROOT/'assets/js/gym-data.js').write_text('/* Datos del gimnasio actualizados el 26/10/2026. Generado desde src/data/gym.json. */\nwindow.STUDI_GYM='+json.dumps(data, ensure_ascii=False, separators=(',',':'))+';\n')
     maps = 'https://www.google.com/maps/search/?api=1&query='+quote(data['address'])
     opening = '<div class="hours-block" data-opening-hours><dl class="opening-hours">'
     for item in data['openingHours']:
@@ -39,25 +39,15 @@ def generate():
     (partials/'opening-hours.html').write_text(opening+'\n')
     contact = f'''<div class="contact-details">
 <div><i data-icon="pin"></i><div><h3>Dirección en Reus</h3><address data-location>{escape(data['address'])}</address><a class="text-link" data-map href="{escape(maps)}" target="_blank" rel="noopener noreferrer">Cómo llegar <i data-icon="arrow"></i></a></div></div>
-<div><i data-icon="clock"></i><div><h3>Horario de apertura</h3>{{{{include:opening-hours}}}}<small>Festivos: consulta con el gimnasio.</small></div></div>
+<div><i data-icon="clock"></i><div><h3>Horario de apertura</h3>{{{{include:opening-hours}}}}<small>{escape(data['holidayNotice'])}</small></div></div>
 <div><i data-icon="phone"></i><div><h3>Teléfono</h3><a class="contact-phone" data-call href="tel:{data['phone']}"><span data-phone>{data['phoneDisplay']}</span></a><p>Consulta horarios, cuotas y entrenamiento personal.</p></div></div>
+<div><i data-icon="instagram"></i><div><h3>Síguenos</h3>{''.join('<a class="contact-social" href="'+escape(s['url'])+'" target="_blank" rel="noopener noreferrer">'+escape(s['handle'])+'</a>' for s in data['socials'])}</div></div>
 </div>'''
     (partials/'visit-details.html').write_text(contact+'\n')
-    rates = '<section class="section wrap rates-section" id="tarifas"><div class="section-heading"><div><p class="eyebrow">ENTRENA A TU MANERA</p><h2 class="section-title">TUS CUOTAS.<br><span>TU SIGUIENTE PASO.</span></h2></div><p>Cuotas y entrenamiento personal anunciados por STUDI-1.</p></div><div class="membership-rates">'
-    for fee in data['fees']:
-        rates += f'<article class="rate-card"><h3>{escape(fee["name"])}</h3><p class="rate-price">{euro(fee["price"])}</p><p>{escape(fee["unit"])}</p></article>'
-    rates += '<p class="rates-note">Las cuotas de pareja y familiar son <strong>por persona</strong>. Consulta el período de la cuota y las condiciones de alta con el gimnasio.</p></div>'
-    rates += '<div class="training-rates"><div><p class="eyebrow">ACOMPAÑAMIENTO PERSONAL</p><h3>Entrenamientos personales</h3><p>Elige entrenar de forma individual, en pareja o en un grupo de cuatro.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Tarifas de entrenamiento personal"><table class="price-table"><caption>Importes anunciados para socios y no socios</caption><thead><tr><th scope="col">Modalidad</th><th scope="col">Socios</th><th scope="col">No socios</th></tr></thead><tbody>'
-    for rate in data['personalTraining']:
-        rates += f'<tr><th scope="row">{escape(rate["name"])}</th>'
-        for kind in ['members','nonMembers']:
-            per = f'<small>{euro(rate[kind]/rate["people"])} por persona</small>' if rate['people'] > 1 else '<small>Individual</small>'
-            rates += f'<td><strong>{euro(rate[kind])}</strong>{per}</td>'
-        rates += '</tr>'
-    rates += '</tbody></table></div></div><div class="rates-bottom"><p>Entrenamientos sin pago online. Acuerda el horario, la duración y la disponibilidad directamente con el gimnasio. En pareja y grupo se indica el total y el precio por persona.</p><a class="button outline-blue" data-call href="tel:'+data['phone']+'">Consultar entrenamiento <i data-icon="phone"></i></a></div></section>'
-    (partials/'rates.html').write_text(rates+'\n')
+    from dossier_content import generate_dossier
+    generate_dossier(data)
     rows = sorted({s['time'] for day in data['days'] for s in day['sessions']} | {t for day in data['days'] for t in day['unreadable']})
-    schedule = '<section class="section wrap schedule-section" id="horarios"><div class="section-heading"><div><p class="eyebrow">CLASES DIRIGIDAS · 2026</p><h2 class="section-title">CADA DÍA,<br><span>UNA FORMA DE MOVERTE.</span></h2></div><p>Yoga, ciclo indoor, tonificación, Pilates, Zumba, Core y Tai Chi. Encuentra tu clase en el horario del gimnasio.</p></div><div class="schedule-legend"><span><b class="lime-text">●</b> Horario de clases</span><a href="index.html#contacto">Ver horario de apertura <i data-icon="arrow"></i></a></div>'
+    schedule = '<section class="section wrap schedule-section" id="horarios"><div class="section-heading"><div><p class="eyebrow">CLASES DIRIGIDAS · 2026</p><h2 class="section-title">CADA DÍA,<br><span>UNA FORMA DE MOVERTE.</span></h2></div><p>Consulta los días y las horas de las sesiones. Las franjas pendientes de confirmar se indican en el horario.</p></div><div class="schedule-legend"><span><b class="lime-text">●</b> Horario de clases</span><a href="index.html#contacto">Ver horario de apertura <i data-icon="arrow"></i></a></div>'
     schedule += '<div class="schedule-desktop table-scroll" tabindex="0" role="region" aria-label="Horario semanal de clases"><table class="schedule-table"><caption>Horario de lunes a viernes. Confirma las franjas marcadas «Consultar».</caption><thead><tr><th scope="col">Hora</th>'
     schedule += ''.join(f'<th scope="col">{day["name"]}</th>' for day in data['days'])+'</tr></thead><tbody>'
     for time in rows:
@@ -82,7 +72,7 @@ def generate():
         if day['unreadable']:
             schedule += '<p class="schedule-day-note">Consultar las franjas de '+', '.join(day['unreadable'])+'.</p>'
         schedule += '</details>'
-    schedule += '</div><div class="schedule-notes"><p><strong>* Pilates TRX del martes:</strong> hora pendiente de confirmar entre las 18:30 y las 18:45. Llámanos antes de asistir.</p><p>Para las franjas marcadas «Consultar» del jueves y viernes, confirma la programación con el gimnasio.</p><a class="text-link" data-call href="tel:'+data['phone']+'">Llamar al <span data-phone>'+data['phoneDisplay']+'</span> <i data-icon="phone"></i></a></div></section>'
+    schedule += '</div><div class="schedule-notes"><p>Yoga y Taichí tienen suplemento. <a href="inscripcion.html#otros-servicios">Ver condiciones en Tarifas</a>.</p><p>La actividad del martes a las 18:00 está pendiente de confirmación en recepción.</p><p><strong>* Pilates TRX del martes:</strong> hora pendiente de confirmar entre las 18:30 y las 18:45. Llámanos antes de asistir.</p><p>Para las franjas marcadas «Consultar» del jueves y viernes, confirma la programación con el gimnasio.</p><a class="text-link" data-call href="tel:'+data['phone']+'">Llamar al <span data-phone>'+data['phoneDisplay']+'</span> <i data-icon="phone"></i></a></div></section>'
     (partials/'class-schedule.html').write_text(schedule+'\n')
 
 if __name__ == '__main__':

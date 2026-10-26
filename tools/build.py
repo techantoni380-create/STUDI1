@@ -6,6 +6,7 @@ from gym_content import generate
 ROOT = Path(__file__).resolve().parents[1]
 PAGES = {
  'index':('inicio','Inicio','STUDI-1 Gimnàs en Reus. Tu ritmo, tu fuerza. Descubre el gimnasio, actividades e inscripción online.'),
+ 'servicios':('servicios','Servicios','Sala fitness, entrenamiento personal, clases dirigidas, orientación alimentaria y sauna en STUDI-1 Reus.'),
  'gimnasio':('gimnasio','El gimnasio','Conoce STUDI-1 Gimnàs, sus espacios y cómo dar el primer paso.'),
  'actividades':('actividades','Actividades','Fuerza, cardio y movilidad. Encuentra tu forma de entrenar en STUDI-1.'),
  'tienda':('tienda','Tienda','Proteínas y accesorios. Tienda STUDI-1 con recogida o envío.'),
@@ -18,6 +19,30 @@ def render(text, depth=0):
  return re.sub(r'\{\{include:([a-z-]+)\}\}', lambda m: render((ROOT/'src/partials'/f'{m[1]}.html').read_text(), depth+1), text)
 
 def build():
+ # Evita entregar recursos vacíos o WebP incompletos aunque su ruta exista.
+ for directory in ('assets/img', 'assets/video'):
+  for media in (ROOT/directory).rglob('*'):
+   if not media.is_file(): continue
+   size = media.stat().st_size
+   if size == 0: raise ValueError(f'Recurso vacío: {media.relative_to(ROOT)}')
+   if media.suffix.lower() == '.webp':
+    with media.open('rb') as stream: header = stream.read(12)
+    if header[:4] != b'RIFF' or header[8:12] != b'WEBP' or int.from_bytes(header[4:8], 'little') + 8 != size:
+     raise ValueError(f'WebP incompleto: {media.relative_to(ROOT)}')
+   if media.suffix.lower() == '.mp4':
+    boxes = set()
+    with media.open('rb') as stream:
+     while stream.tell() < size:
+      start = stream.tell(); header = stream.read(8)
+      if len(header) != 8: raise ValueError(f'MP4 incompleto: {media.relative_to(ROOT)}')
+      length = int.from_bytes(header[:4], 'big'); kind = header[4:8]; minimum = 8
+      if length == 1:
+       length = int.from_bytes(stream.read(8), 'big'); minimum = 16
+      elif length == 0: length = size - start
+      if length < minimum or start + length > size: raise ValueError(f'MP4 incompleto: {media.relative_to(ROOT)}')
+      boxes.add(kind); stream.seek(start + length)
+    if not {b'ftyp', b'moov', b'mdat'} <= boxes:
+     raise ValueError(f'MP4 sin estructura de reproducción: {media.relative_to(ROOT)}')
  generate()
  partials={name:render((ROOT/'src/partials'/f'{name}.html').read_text()) for name in ['head','header','footer']}
  for name,(page,title,description) in PAGES.items():

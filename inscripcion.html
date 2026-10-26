@@ -12,6 +12,9 @@
 <link rel="stylesheet" href="assets/css/logo-animation.css">
 <link rel="stylesheet" href="assets/css/enrollment.css">
 <link rel="stylesheet" href="assets/css/payment-card.css">
+<link rel="stylesheet" href="assets/css/real-media.css">
+<link rel="stylesheet" href="assets/css/dossier.css">
+<script src="assets/js/real-media.js" defer></script>
 <script src="assets/js/gym-data.js" defer></script>
 <script src="assets/js/config.js" defer></script>
 <script src="assets/js/app.js" defer></script>
@@ -25,40 +28,40 @@
 </head>
 <body data-page="inscripcion">
 <a class="skip-link" href="#contenido">Saltar al contenido</a>
-<div class="preview-bar" data-demo-notice>PROPUESTA <span>· Tienda e imágenes de muestra · Sin cobros</span></div>
+<div class="preview-bar" data-demo-notice>PROPUESTA <span>· Tienda de muestra · Sin cobros</span></div>
 <header class="site-header">
   <div class="header-inner wrap">
     <a class="logo" href="index.html" aria-label="STUDI-1 · Ir al inicio"><img src="assets/img/logo-oficial.png" alt="STUDI 1 · Raúl Beas" width="2143" height="734"></a>
     <nav class="nav-desktop" aria-label="Navegación principal">
-      <a data-page="inicio" href="index.html">Inicio</a><a data-page="gimnasio" href="gimnasio.html">Gimnasio</a><a data-page="actividades" href="actividades.html">Actividades</a><a data-page="tienda" href="tienda.html">Tienda</a><a href="index.html#contacto">Contacto</a>
+      <a data-page="inicio" href="index.html">Inicio</a><a data-page="gimnasio" href="gimnasio.html">Gimnasio</a><a data-page="servicios" href="servicios.html">Servicios</a><a data-page="actividades" href="actividades.html">Clases</a><a data-page="tienda" href="tienda.html">Tienda</a><a href="index.html#contacto">Contacto</a>
     </nav>
     <div class="nav-actions"><button class="icon-button" data-open-search aria-label="Buscar en la web"><i data-icon="search"></i></button><button class="icon-button cart-trigger" data-open-cart aria-label="Abrir carrito"><i data-icon="bag"></i><span data-cart-count>0</span></button><a class="button lime header-join" href="inscripcion.html">Inscríbete <i data-icon="arrow"></i></a><button class="icon-button menu-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Abrir menú"><i data-icon="menu"></i></button></div>
   </div>
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" hidden><a href="index.html">Inicio</a><a href="gimnasio.html">Gimnasio</a><a href="actividades.html">Actividades</a><a href="tienda.html">Tienda</a><a href="index.html#contacto">Contacto</a><a class="button lime" href="inscripcion.html">Inscríbete online <i data-icon="arrow"></i></a></nav>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Navegación móvil" hidden><a href="index.html">Inicio</a><a href="gimnasio.html">Gimnasio</a><a href="servicios.html">Servicios</a><a href="actividades.html">Clases</a><a href="tienda.html">Tienda</a><a href="index.html#contacto">Contacto</a><a class="button lime" href="inscripcion.html">Inscríbete online <i data-icon="arrow"></i></a></nav>
 </header>
 
 <main id="contenido" class="enrollment-page">
 <section class="wrap enrollment-layout">
   <div class="enrollment-story">
-    <img src="assets/img/fuerza.webp" alt="Sala de entrenamiento conceptual" class="enrollment-photo" width="1000" height="1200">
+    <img src="assets/img/real/inscripcion-sala-921.webp" srcset="assets/img/real/inscripcion-sala-640.webp 640w, assets/img/real/inscripcion-sala-921.webp 921w" sizes="(max-width: 700px) 100vw, 50vw" alt="Sala de entrenamiento de STUDI-1" width="921" height="2048" class="enrollment-photo" fetchpriority="high" loading="eager" decoding="async">
     <div class="enrollment-story-copy"><p class="eyebrow white">GIMNASIO EN REUS <span class="lime-line"></span></p><h1>TU RITMO.<br><span>TU FUERZA.</span></h1><p>En solitario, en pareja o en familia.<br>Encuentra tu forma de entrenar.</p></div>
     <div class="enrollment-perks"><span><i data-icon="dumbbell"></i> Tu gimnasio</span><span><i data-icon="users"></i> A tu manera</span><span><i data-icon="lock"></i> Pago puntual</span></div>
   </div>
   <div class="enrollment-form-wrap">
-    <p class="eyebrow">INSCRIPCIÓN ONLINE</p><h2>APÚNTATE A <span>STUDI-1</span></h2><p>Elige tu cuota individual, de pareja o familiar. Sin crear una cuenta.</p>
+    <p class="eyebrow">INSCRIPCIÓN ONLINE</p><h2>APÚNTATE A <span>STUDI-1</span></h2><p>Elige tu cuota mensual individual, de pareja o familiar. Sin crear una cuenta. <a class="inline-tariffs" href="#tarifas">Ver tarifas y bonos</a></p>
     <ol class="steps"><li class="active"><span>1</span> Modalidad y datos</li><li><span>2</span> Revisar y pagar</li></ol>
     <form id="enrollment-form" data-mode="demo">
       <div class="enrollment-picker">
   <label for="enrollment-plan">Elige tu inscripción
-    <select id="enrollment-plan" name="studi1_plan" required><optgroup label="Cuotas del gimnasio"><option value="membership-individual">Cuota individual · 39 € / persona</option><option value="membership-couple">Cuota pareja · 37 € / persona</option><option value="membership-family">Cuota familiar · 35 € / persona</option></optgroup>
+    <select id="enrollment-plan" name="studi1_plan" required><optgroup label="Cuotas del gimnasio"><option value="membership-individual">Cuota individual · 39 € / persona / mes</option><option value="membership-couple">Cuota pareja · 37 € / persona / mes</option><option value="membership-family">Cuota familiar · 35 € / persona / mes</option></optgroup>
 </select>
   </label>
   <label id="family-people-wrap" for="family-people" hidden>Personas incluidas en esta inscripción
     <input id="family-people" name="studi1_people" type="number" min="1" max="12" step="1" value="3" disabled>
     <small>Hasta 12 personas por formulario. Las condiciones de la tarifa familiar las confirma el gimnasio.</small>
   </label>
-  <div class="membership-choice" aria-live="polite" aria-atomic="true"><span><b id="plan-name">Cuota individual</b><small id="plan-calculation">39 € · 1 persona</small></span><strong id="plan-total">39,00 €</strong></div>
-  <p class="plan-note" id="plan-note">Consulta el período de la cuota y las condiciones de alta.</p>
+  <div class="membership-choice" aria-live="polite" aria-atomic="true"><span><b id="plan-name">Cuota individual</b><small id="plan-calculation">39 € / mes · 1 persona</small></span><strong id="plan-total">39,00 €</strong></div>
+  <p class="plan-note" id="plan-note">Cuota mensual. Seguro anual: 15 € aparte. Consulta en recepción si corresponde abonarlo al realizar tu alta. El importe mostrado corresponde solo a la cuota seleccionada.</p>
   <fieldset id="extra-participants" hidden><legend>Las personas que te acompañan</legend><p>La primera plaza corresponde a la persona titular de la inscripción.</p><div id="participant-inputs"></div></fieldset>
 </div>
 
@@ -74,7 +77,7 @@
     <section id="enrollment-review" hidden aria-label="Revisión de la inscripción">
       <div class="review-top"><button type="button" class="text-link" id="enrollment-back"><i data-icon="back"></i> Editar inscripción</button><span>RESUMEN</span></div>
       <div class="review-data" id="review-data"></div>
-      <div class="checkout-total"><span>Total de muestra</span><strong id="review-total">39,00 €</strong></div>
+      <div class="checkout-total"><span>Cuota seleccionada · muestra</span><strong id="review-total">39,00 €</strong></div>
       <figure class="payment-card-widget" data-card-widget aria-label="Vista previa ilustrativa de la tarjeta">
   <div class="payment-card" aria-hidden="true">
     <div class="payment-card-top"><span class="payment-card-logo"><img src="assets/img/logo-oficial.png" alt="" width="2143" height="734"></span><span class="payment-card-label">INSCRIPCIÓN</span></div>
@@ -97,16 +100,15 @@
     </section>
   </div>
 </section>
-<section class="section wrap rates-section" id="tarifas"><div class="section-heading"><div><p class="eyebrow">ENTRENA A TU MANERA</p><h2 class="section-title">TUS CUOTAS.<br><span>TU SIGUIENTE PASO.</span></h2></div><p>Cuotas y entrenamiento personal anunciados por STUDI-1.</p></div><div class="membership-rates"><article class="rate-card"><h3>Individual</h3><p class="rate-price">39 €</p><p>Cuota individual</p></article><article class="rate-card"><h3>Pareja</h3><p class="rate-price">37 €</p><p>Por persona</p></article><article class="rate-card"><h3>Familiar</h3><p class="rate-price">35 €</p><p>Por persona</p></article><p class="rates-note">Las cuotas de pareja y familiar son <strong>por persona</strong>. Consulta el período de la cuota y las condiciones de alta con el gimnasio.</p></div><div class="training-rates"><div><p class="eyebrow">ACOMPAÑAMIENTO PERSONAL</p><h3>Entrenamientos personales</h3><p>Elige entrenar de forma individual, en pareja o en un grupo de cuatro.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Tarifas de entrenamiento personal"><table class="price-table"><caption>Importes anunciados para socios y no socios</caption><thead><tr><th scope="col">Modalidad</th><th scope="col">Socios</th><th scope="col">No socios</th></tr></thead><tbody><tr><th scope="row">Individual</th><td><strong>15 €</strong><small>Individual</small></td><td><strong>18 €</strong><small>Individual</small></td></tr><tr><th scope="row">Pareja</th><td><strong>20 €</strong><small>10 € por persona</small></td><td><strong>25 €</strong><small>12,50 € por persona</small></td></tr><tr><th scope="row">Grupo de 4</th><td><strong>28 €</strong><small>7 € por persona</small></td><td><strong>35 €</strong><small>8,75 € por persona</small></td></tr></tbody></table></div></div><div class="rates-bottom"><p>Entrenamientos sin pago online. Acuerda el horario, la duración y la disponibilidad directamente con el gimnasio. En pareja y grupo se indica el total y el precio por persona.</p><a class="button outline-blue" data-call href="tel:+34675728343">Consultar entrenamiento <i data-icon="phone"></i></a></div></section>
+<section class="section wrap rates-section" id="tarifas"><div class="section-heading"><div><p class="eyebrow">TARIFAS · CUOTAS Y BONOS</p><h2 class="section-title">ELIGE TU RITMO.<br><span>CONOCE TU CUOTA.</span></h2></div><p>Cuotas mensuales, bonos por duración y servicios adicionales. Consulta las condiciones de cada modalidad en recepción.</p></div><nav class="section-jump" aria-label="Apartados de tarifas"><a href="#cuotas">Cuotas</a><a href="#bonos">Bonos</a><a href="#entrenamientos">Entrenamiento personal</a><a href="#otros-servicios">Otros servicios</a></nav><div id="cuotas" class="membership-rates"><article class="rate-card"><h3>Individual</h3><p class="rate-price">39 €<small>/ mes</small></p><p>Cuota individual</p></article><article class="rate-card"><h3>Pareja</h3><p class="rate-price">37 €<small>/ mes</small></p><p>Por persona</p></article><article class="rate-card"><h3>Familiar</h3><p class="rate-price">35 €<small>/ mes</small></p><p>Por persona</p></article></div><div class="insurance-note"><span class="service-icon"><i data-icon="info"></i></span><div><strong>Seguro anual: 15 €</strong><p>Se añade a la cuota. Los totales de los bonos que aparecen a continuación ya incluyen el seguro anual.</p></div></div><section class="dossier-rate-block" id="bonos"><div class="rate-section-intro"><p class="eyebrow">BONOS POR DURACIÓN</p><h3>MÁS CONTINUIDAD.<br>OTRA CUOTA MENSUAL.</h3><p>Los bonos de 3, 6, 9 y 12 meses corresponden a meses consecutivos.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Precios de bonos por duración"><table class="price-table pass-table"><caption>Totales del bono con seguro anual incluido</caption><thead><tr><th scope="col">Duración</th><th scope="col">Precio mensual</th><th scope="col">Total con seguro</th></tr></thead><tbody><tr><th scope="row">1 mes</th><td>39 € / mes</td><td><strong>54 €</strong></td></tr><tr><th scope="row">3 meses</th><td>35 € / mes</td><td><strong>120 €</strong></td></tr><tr><th scope="row">6 meses</th><td>32 € / mes</td><td><strong>207 €</strong></td></tr><tr><th scope="row">9 meses</th><td>30 € / mes</td><td><strong>285 €</strong></td></tr><tr><th scope="row">12 meses</th><td>28 € / mes</td><td><strong>351 €</strong></td></tr></tbody></table></div></section><section class="dossier-rate-block" id="entrenamientos"><div class="rate-section-intro"><p class="eyebrow">ENTRENAMIENTOS PERSONALES</p><h3>A TU MEDIDA.<br>A TU NIVEL.</h3><p>Sesiones individuales, en pareja o en un grupo de cuatro. Acuerda el horario, la duración y la disponibilidad con el gimnasio.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Tarifas de entrenamiento personal"><table class="price-table"><caption>Importes para socios y no socios</caption><thead><tr><th scope="col">Modalidad</th><th scope="col">Socios</th><th scope="col">No socios</th></tr></thead><tbody><tr><th scope="row">Individual</th><td><strong>15 €</strong></td><td><strong>18 €</strong></td></tr><tr><th scope="row">Pareja</th><td><strong>20 €</strong><small>10 € / persona</small></td><td><strong>25 €</strong><small>12,50 € / persona</small></td></tr><tr><th scope="row">Grupo de 4</th><td><strong>28 €</strong><small>7 € / persona</small></td><td><strong>35 €</strong><small>8,75 € / persona</small></td></tr></tbody></table></div></section><p class="price-footnote">En pareja y grupo de cuatro se muestra el importe total y su equivalente por persona. Los entrenamientos se acuerdan directamente con el gimnasio.</p><section class="dossier-rate-block other-rate-block" id="otros-servicios"><div class="rate-section-intro"><p class="eyebrow">OTROS SERVICIOS</p><h3>COMPLETA<br>TU EXPERIENCIA.</h3></div><div class="other-service-rates"><article><div><h4>Plan de alimentación</h4><p>Servicio individualizado de orientación alimentaria.</p></div><strong>40 €</strong></article><article><div><h4>Yoga</h4><p>Con suplemento. Consulta tarifa y condiciones en recepción.</p></div><strong>Consultar</strong></article><article><div><h4>Taichí</h4><p>Con suplemento. Consulta tarifa y condiciones en recepción.</p></div><strong>Consultar</strong></article></div></section><div class="rates-bottom"><p>Consulta las condiciones de las cuotas de pareja y familiar, los bonos, el seguro anual y los servicios adicionales en recepción.</p><a class="button outline-blue" data-call href="tel:+34675728343">Consultar tarifas <i data-icon="phone"></i></a></div></section>
 
 </main>
 
 <footer class="site-footer"><div class="wrap footer-grid">
 <div class="footer-brand"><a class="logo" href="index.html"><img src="assets/img/logo-oficial.png" alt="STUDI 1 · Raúl Beas" width="2143" height="734" loading="lazy"></a><p>Tu ritmo. Tu fuerza.<br>Tu gimnasio en Reus.</p></div>
-<div><h3>Explora</h3><a href="gimnasio.html">El gimnasio</a><a href="gimnasio.html#raul-beas">Raúl Beas · Su trayectoria</a><a href="actividades.html#horarios">Clases y horarios</a><a href="inscripcion.html#tarifas">Cuotas y entrenamiento personal</a><a href="tienda.html">Tienda</a><a href="inscripcion.html">Inscripción online</a></div>
+<div><h3>Explora</h3><a href="gimnasio.html">El gimnasio</a><a href="gimnasio.html#equipo">Nuestro equipo</a><a href="servicios.html">Servicios</a><a href="actividades.html#horarios">Clases y horarios</a><a href="inscripcion.html#tarifas">Tarifas y bonos</a><a href="tienda.html">Tienda</a><a href="inscripcion.html">Inscripción online</a></div>
 <div class="footer-contact"><h3>Estamos cerca</h3><address data-location>Carrer de Sant Pau i Sant Blai, 1, 43202 Reus, Tarragona</address><a data-call href="tel:+34675728343"><i data-icon="phone"></i> <span data-phone>675 72 83 43</span></a><a data-map href="https://www.google.com/maps/search/?api=1&amp;query=Carrer%20de%20Sant%20Pau%20i%20Sant%20Blai%2C%201%2C%2043202%20Reus%2C%20Tarragona" target="_blank" rel="noopener noreferrer">Cómo llegar <i data-icon="arrow"></i></a></div>
-<div class="footer-hours"><h3>Horario de apertura</h3><div class="hours-block" data-opening-hours><dl class="opening-hours"><div><dt>Lunes a viernes</dt><dd><time>06:00</time>–<time>22:00</time></dd></div><div><dt>Sábado</dt><dd><time>09:00</time>–<time>13:00</time></dd></div><div><dt>Domingo</dt><dd><time>10:00</time>–<time>14:00</time></dd></div></dl></div>
-<small>Festivos: consultar.</small><a href="actividades.html#horarios">Ver clases dirigidas <i data-icon="arrow"></i></a></div>
+<div class="footer-hours"><h3>Tu día en STUDI-1</h3><a href="index.html#contacto">Horario de apertura</a><a href="actividades.html#horarios">Horario de clases</a><a href="index.html#contacto">Redes sociales y contacto</a></div>
 </div><div class="wrap footer-bottom"><span>© <span data-year>2026</span> STUDI-1 Gimnàs</span><div><a href="legal.html#privacidad">Privacidad</a><a href="legal.html#condiciones">Condiciones</a><a href="legal.html#aviso">Aviso legal</a></div><span>Diseño y desarrollo · <a class="developer-credit" href="https://antonitech.es/" target="_blank" rel="noopener noreferrer">Antoni Tech</a></span></div></footer>
 <div class="toast" role="status" aria-live="polite" hidden></div>
 <button class="assistant-launch" aria-label="Abrir asistente STUDI-1" aria-controls="assistant" aria-expanded="false"><span class="robot-face"><b>⌣</b></span><span>¿Te ayudamos?</span><i data-icon="chat"></i></button>
@@ -115,6 +117,8 @@
 <dialog class="search-dialog" id="search-dialog" aria-labelledby="search-title"><div class="panel-head"><h2 id="search-title">¿Qué buscas?</h2><button class="icon-button" data-close-dialog aria-label="Cerrar búsqueda"><i data-icon="close"></i></button></div><label class="sr-only" for="site-search">Buscar páginas y productos</label><input id="site-search" type="search" placeholder="Gimnasio, actividades, proteínas…" autocomplete="off"><div id="search-results"></div></dialog>
 <dialog class="product-dialog" id="product-dialog" aria-labelledby="product-title"><button class="icon-button dialog-x" data-close-dialog aria-label="Cerrar ficha"><i data-icon="close"></i></button><div id="product-detail"></div></dialog>
 <dialog class="result-dialog" id="result-dialog" aria-labelledby="result-title"><span class="success-icon"><i data-icon="check"></i></span><h2 id="result-title">Recorrido completado</h2><p>Has probado la demostración. No se ha realizado ningún cobro, creado un pedido ni enviado tus datos.</p><a href="index.html" class="button lime">Volver al inicio <i data-icon="arrow"></i></a><button class="link-button" data-close-dialog>Cerrar</button></dialog>
+
+<dialog id="photo-dialog" class="photo-dialog" aria-labelledby="photo-dialog-caption"><button type="button" class="photo-close" data-close-dialog aria-label="Cerrar fotografía">×</button><img id="photo-dialog-image" alt=""><p id="photo-dialog-caption"></p></dialog>
 
 </body>
 </html>

@@ -1,21 +1,29 @@
-STUDI-1 · WEB ESENCIAL · VERSIÓN 2
+STUDI-1 · WEB ESENCIAL · DOSSIER, FOTOS Y VÍDEOS REALES · 26/10/2026
 
-1. Extrae este ZIP entero en una carpeta.
+1. Extrae este ZIP entero en una carpeta NUEVA, sin mezclarlo con versiones anteriores.
 2. Abre index.html con Chrome, Edge o Firefox.
-3. Navega por Inicio, Gimnasio, Actividades, Tienda e Inscripción.
+3. Navega por Inicio, Gimnasio, Servicios, Clases, Tienda e Inscripción.
 
 No abras index.html directamente dentro del ZIP: primero extrae todos los archivos.
 La demo funciona sin instalar nada y sin conexión. No cobra ni envía formularios.
 
 QUÉ INCLUYE
-- Cinco páginas principales, contacto dentro de Inicio, checkout y borrador legal.
-- Dirección y teléfono en Reus, horario de apertura, horario de 42 clases legibles, cuotas y tarifas de entrenamiento personal del material recibido el 16/10/2026.
+- Seis páginas principales, contacto dentro de Inicio, checkout y borrador legal.
+- Dirección y teléfono en Reus, horario de apertura, horario de clases del 16/10/2026 y dossier de servicios, equipo y tarifas recibido el 26/10/2026.
+- Cinco servicios, cinco profesionales y doce clases, con tarifas completas centralizadas en Inscripción.
+- Cuotas mensuales, bonos de 1 a 12 meses, seguro anual y servicios adicionales.
 - Horario semanal en ordenador y horarios plegables por día en móvil.
 - Logo PNG transparente mejorado a partir del JPEG recibido: «STUDI / RAÚL BEAS / 1», con los textos inferiores originales.
 - Transformación del logo durante 5 segundos en la primera entrada o al recargar.
 - Destello metálico al acabar la entrada y cada 8 segundos, sin repetir el giro.
 - Diseño oscuro, azul #2448D8, acento azul eléctrico, lima #C8EF35 y hielo #F4F7FB.
-- Cuatro fotografías conceptuales optimizadas y vídeo de fondo de 5 segundos.
+- 25 fotografías reales y 10 vídeos, distribuidos sin repetir archivos entre secciones.
+- Cabecera de Inicio con 3 panorámicas y cambio cada 8 segundos.
+- Galerías ampliables y fotos de instalaciones con movimiento suave y marco verde.
+- Vídeos automáticos en bucle, silenciosos al inicio, con pausa, sonido y ampliación.
+- Tres vídeos juntos en Inicio, dos en Gimnasio y cinco en Clases.
+- Fotografía de recepción ampliada y números de Servicios en verde.
+- La imagen provisional de tienda queda pendiente de la fase de productos.
 - Header, footer y head con fuentes únicas en src/partials.
 - CSS y JavaScript separados, fuentes locales y diseño adaptable.
 - Galería, vídeo con control, búsqueda local, pestañas de actividades.
@@ -42,9 +50,11 @@ src/data/gym.json          Datos oficiales de contacto, apertura, clases y tarif
 assets/js/config.js        Productos y envío de la demo.
 assets/css/gym-info.css    Diseño de horarios, contacto y tarifas.
 tools/gym_content.py       Genera los componentes compartidos desde gym.json.
+tools/dossier_content.py   Genera servicios, equipo, catálogo de clases y tarifas.
+assets/css/dossier.css     Diseño de las secciones del dossier.
 assets/js/app.js           Interacciones.
-assets/img/                Logo y fotografías reemplazables.
-assets/video/              Vídeo de 5 segundos.
+assets/img/                Logo, retratos y fotos reales en real/.
+assets/video/real/         Los 10 vídeos del gimnasio.
 
 Después de editar src/partials o src/pages ejecuta:
   python tools/build.py
@@ -95,25 +105,29 @@ ESTADO REAL
 HTML demo y código de integración preparados. No existe conexión a un hosting,
 pasarela, pedidos, correo o base de datos en esta entrega. El tema requiere
 WordPress + WooCommerce instalados, configuración y prueba en un entorno real.
-Las imágenes de instalaciones y los productos/precios de la tienda son de muestra.
-Las cuotas y tarifas de entrenamiento personal se han transcrito del cartel.
+Las fotografías y vídeos del gimnasio son reales. Los productos/precios de la
+tienda y su imagen de cabecera siguen siendo de muestra.
+Las cuotas y tarifas se han actualizado con el dossier de Raúl.
 El texto legal no es final.
 
 PENDIENTE DEL GIMNASIO
-Email, confirmación de WhatsApp, período de las cuotas y condiciones de alta,
-duración de entrenamientos personales, horario de festivos, celdas poco legibles
-y hora de Pilates TRX del martes; catálogo, stock, datos fiscales, fotos reales
-y condiciones legales. Ver docs/DATOS-OFICIALES.md.
+Email, confirmación de WhatsApp, condiciones de alta y aplicación del seguro
+al pago; duración de entrenamientos personales, fechas concretas de festivos,
+celdas poco legibles, hora de Pilates TRX y clase del martes a las 18:00;
+catálogo, stock, datos fiscales, retratos identificados del equipo y textos legales. Ver docs/DATOS-OFICIALES.md.
 
 VERIFICACIÓN
-Consulta docs/VERIFICACION.md. El acabado visual necesita revisión en navegador,
-y el tema debe probarse dentro de WordPress antes de activar ventas.
+Consulta docs/VERIFICACION.md. Revisión visual local en escritorio y móvil
+realizada. El tema debe probarse dentro de WordPress antes de activar ventas.
 
 MODALIDADES ONLINE
 Solo inscripciones: individual, pareja y familiar (3 opciones).
-Individual: 39 €. Pareja: 37 €/persona, total 74 €.
-Familiar: 35 € × personas seleccionadas; 1–12 personas por formulario como
+Individual: 39 €/mes. Pareja: 37 €/persona/mes, total 74 €/mes.
+Familiar: 35 €/mes × personas seleccionadas; 1–12 personas por formulario como
 límite técnico, no condición comercial. El gimnasio confirma la elegibilidad.
+Seguro anual: 15 € aparte. La demo solo calcula la cuota; la aplicación del
+seguro al pago y las renovaciones debe concretarse con el gimnasio. Los bonos
+son informativos y no se incorporan como nuevos productos de venta.
 Los entrenamientos mantienen las tarifas informativas y la consulta de horario
 por teléfono. No se pueden seleccionar ni pagar online. No hay agenda automática.
 Los precios reales proceden de tres productos WooCommerce. Si ya creaste los
@@ -134,3 +148,14 @@ Sustituye la carpeta anterior por esta versión completa. Abre index.html
 y recarga sin caché (Ctrl+F5) si habías abierto la versión anterior.
 Para GitHub Pages, sube el contenido de STUDI1-web con index.html en
 la raíz del repositorio. Se muestra una demostración, sin cobros reales.
+
+ACTUALIZACIÓN VISUAL 26/10/2026
+Consulta docs/MEDIA-REALES.md para la asignación exacta de cada foto y vídeo.
+La web sigue preparada para revisión local; no se ha publicado esta actualización.
+
+ACTUALIZACIÓN DE MOVIMIENTO Y RECURSOS — 26/10/2026
+Cinco fotografías y un vídeo incompleto reparados desde los originales.
+Las imágenes y los diez vídeos se han decodificado para comprobar su integridad.
+Los navegadores pueden limitar el autoplay por sus propias preferencias o ahorro
+de energía; si sucede, se puede iniciar cada vídeo desde su control de reproducción.
+La galería de máquinas anima las fotografías disponibles; no son grabaciones nuevas.

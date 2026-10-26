@@ -14,7 +14,7 @@ foreach ($plans as $plan) {
     }
     $choose = !$selected && $plan['available'];
     $selected = $selected || $choose;
-    $suffix = $plan['basis'] === 'person' ? ' / persona' : ' total';
+    $suffix = $plan['basis'] === 'person' ? ' / persona / mes' : ' total';
     $price = $plan['available'] ? wp_strip_all_tags(wc_price($plan['price'])) . $suffix : 'Próximamente';
     $options .= '<option value="' . esc_attr($plan['id']) . '"' . ($choose ? ' selected' : '') . (!$plan['available'] ? ' disabled' : '') . '>' . esc_html($plan['name'] . ' · ' . html_entity_decode($price, ENT_QUOTES, 'UTF-8')) . '</option>';
 }
@@ -24,8 +24,8 @@ $fields = is_readable($fields_path) ? file_get_contents($fields_path) : '';
 $fields = preg_replace_callback('/(<select id="enrollment-plan"[^>]*>).*?(<\/select>)/s', function ($m) use ($options) { return $m[1] . $options . $m[2]; }, $fields);
 ?>
 <main id="contenido" class="enrollment-page"><section class="wrap enrollment-layout">
-<div class="enrollment-story"><img class="enrollment-photo" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/fuerza.webp'); ?>" alt="Imagen conceptual de una sala de entrenamiento"><div class="enrollment-story-copy"><p class="eyebrow white">GIMNASIO EN REUS</p><h1>TU RITMO.<br><span>TU FUERZA.</span></h1><p>En solitario, en pareja o en familia.<br>Encuentra tu forma de entrenar.</p></div></div>
-<div class="enrollment-form-wrap"><p class="eyebrow">INSCRIPCIÓN ONLINE</p><h2>APÚNTATE A <span>STUDI-1</span></h2><p>Cuota individual, de pareja o familiar. Pago puntual, sin renovación automática.</p>
+<div class="enrollment-story"><img class="enrollment-photo" src="<?php echo esc_url(get_template_directory_uri() . '/assets/img/real/inscripcion-sala-921.webp'); ?>" alt="Sala de entrenamiento de STUDI-1"><div class="enrollment-story-copy"><p class="eyebrow white">GIMNASIO EN REUS</p><h1>TU RITMO.<br><span>TU FUERZA.</span></h1><p>En solitario, en pareja o en familia.<br>Encuentra tu forma de entrenar.</p></div></div>
+<div class="enrollment-form-wrap"><p class="eyebrow">INSCRIPCIÓN ONLINE</p><h2>APÚNTATE A <span>STUDI-1</span></h2><p>Cuota mensual individual, de pareja o familiar. Pago puntual, sin renovación automática. <a class="inline-tariffs" href="#tarifas">Ver tarifas y bonos</a></p>
 <ol class="steps"><li class="active"><span>1</span> Elige tu modalidad</li><li><span>2</span> Datos y pago</li></ol>
 <?php if (function_exists('wc_print_notices')) { wc_print_notices(); } ?>
 <form id="enrollment-form" data-mode="woocommerce" method="post" action="<?php echo esc_url(studi1_url('inscripcion.html')); ?>">

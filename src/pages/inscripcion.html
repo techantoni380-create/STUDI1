@@ -1,12 +1,12 @@
 <main id="contenido" class="enrollment-page">
 <section class="wrap enrollment-layout">
   <div class="enrollment-story">
-    <img src="assets/img/fuerza.webp" alt="Sala de entrenamiento conceptual" class="enrollment-photo" width="1000" height="1200">
+    <img src="assets/img/real/inscripcion-sala-921.webp" srcset="assets/img/real/inscripcion-sala-640.webp 640w, assets/img/real/inscripcion-sala-921.webp 921w" sizes="(max-width: 700px) 100vw, 50vw" alt="Sala de entrenamiento de STUDI-1" width="921" height="2048" class="enrollment-photo" fetchpriority="high" loading="eager" decoding="async">
     <div class="enrollment-story-copy"><p class="eyebrow white">GIMNASIO EN REUS <span class="lime-line"></span></p><h1>TU RITMO.<br><span>TU FUERZA.</span></h1><p>En solitario, en pareja o en familia.<br>Encuentra tu forma de entrenar.</p></div>
     <div class="enrollment-perks"><span><i data-icon="dumbbell"></i> Tu gimnasio</span><span><i data-icon="users"></i> A tu manera</span><span><i data-icon="lock"></i> Pago puntual</span></div>
   </div>
   <div class="enrollment-form-wrap">
-    <p class="eyebrow">INSCRIPCIÓN ONLINE</p><h2>APÚNTATE A <span>STUDI-1</span></h2><p>Elige tu cuota individual, de pareja o familiar. Sin crear una cuenta.</p>
+    <p class="eyebrow">INSCRIPCIÓN ONLINE</p><h2>APÚNTATE A <span>STUDI-1</span></h2><p>Elige tu cuota mensual individual, de pareja o familiar. Sin crear una cuenta. <a class="inline-tariffs" href="#tarifas">Ver tarifas y bonos</a></p>
     <ol class="steps"><li class="active"><span>1</span> Modalidad y datos</li><li><span>2</span> Revisar y pagar</li></ol>
     <form id="enrollment-form" data-mode="demo">
       {{include:enrollment-fields}}
@@ -22,7 +22,7 @@
     <section id="enrollment-review" hidden aria-label="Revisión de la inscripción">
       <div class="review-top"><button type="button" class="text-link" id="enrollment-back"><i data-icon="back"></i> Editar inscripción</button><span>RESUMEN</span></div>
       <div class="review-data" id="review-data"></div>
-      <div class="checkout-total"><span>Total de muestra</span><strong id="review-total">39,00 €</strong></div>
+      <div class="checkout-total"><span>Cuota seleccionada · muestra</span><strong id="review-total">39,00 €</strong></div>
       {{include:payment-card}}
       <div class="payment-demo-fields">
         <label for="card-holder">Nombre en la tarjeta<input id="card-holder" type="text" maxlength="80" autocomplete="off" placeholder="Tu nombre y apellidos" aria-describedby="card-holder-help"></label>

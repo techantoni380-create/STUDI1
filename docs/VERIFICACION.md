@@ -44,9 +44,9 @@
 
 ## Pendiente en el entorno real
 
-- No se ha realizado una inspección visual en navegador porque no hay navegador de pruebas compatible disponible en este entorno.
+- La revisión visual inicial quedó pendiente; se ha completado en las actualizaciones del 26/10/2026 indicadas al final.
 - No hay motor PHP ni instalación WordPress/WooCommerce en esta sesión: no se ha ejecutado el tema ni probado pasarela, pedidos o correos.
-- Probar todas las páginas y funciones en escritorio y móvil al extraer el ZIP.
+- Repetir la aceptación funcional en el hosting real antes de publicar.
 - Seguir la prueba de aceptación de INSTALACION-WOOCOMMERCE.md antes de habilitar ventas.
 
 ## Ajustes responsive — 19/10/2026
@@ -59,3 +59,42 @@
 - Enlaces locales y recursos comprobados en las siete páginas; sintaxis JavaScript comprobada.
 - Recursos sincronizados con el tema WordPress y ZIP del tema regenerado.
 - La instalación del navegador de pruebas no se pudo completar: no se afirma validación visual ni de interacciones en dispositivos reales. Comprobar la nueva versión en navegador antes de publicarla.
+
+
+ACTUALIZACIÓN 26/10/2026 · MEDIOS REALES
+- Siete páginas reconstruidas y enlaces locales de recursos comprobados.
+- 25 fotografías y 10 vídeos únicos en el contenido principal.
+- Horarios, tarifas, configuración de productos y lógica de inscripción comparados con la versión anterior sin cambios.
+- Carrusel: navegación manual, pausa y reanudación comprobadas en navegador.
+- Galería: apertura y cierre de fotografía ampliada comprobados.
+- Vídeo de ciclo indoor: reproducción comprobada en navegador. Los diez MP4 han sido transcodificados y verificados con ffmpeg.
+- Revisión visual móvil de Inicio y Actividades; comprobación de ausencia de desbordamiento horizontal de Gimnasio e Inscripción a 320 px.
+- Inscripción de pareja mantiene el cálculo 37 × 2 = 74 €.
+- Tema WordPress regenerado con los mismos recursos. No se ha ejecutado en un servidor PHP/WooCommerce en esta revisión.
+- Actualización preparada para revisión local, sin publicación.
+
+ACTUALIZACIÓN 26/10/2026 · DOSSIER DE RAÚL
+- Ocho páginas, incluida Servicios. Secciones de cinco servicios, cinco profesionales y doce clases generadas desde gym.json.
+- Tarifas completas centralizadas en Inscripción; navegación y accesos cruzados actualizados.
+- Cuotas mensuales y bonos contrastados con el dossier. Los cinco totales incluyen 15 € de seguro y se validan al construir.
+- Seguro informado junto al resumen de inscripción, sin incorporarlo automáticamente al cobro. Bonos informativos.
+- Revisión en navegador de equipo en escritorio, Servicios en móvil, catálogo de clases y navegación móvil.
+- A 320 px, Servicios, Clases e Inscripción no desbordan horizontalmente. Tabla de bonos ajustada y revisada visualmente, sin desplazamiento horizontal interno.
+- Se conservan 25 fotos y 10 vídeos únicos; recursos, enlaces y anclas locales comprobados en los ocho HTML.
+- Clase del martes a las 18:00 pendiente de confirmar; se conservan las dudas anteriores del horario.
+- Tema WordPress sincronizado, incluida la plantilla Servicios. No hay servidor PHP/WooCommerce para validar el funcionamiento del tema en producción.
+- Sin publicación ni cambios en el catálogo de productos.
+
+
+ACTUALIZACIÓN 26/10/2026 · BUCLES Y CORRECCIÓN DE RECURSOS
+- Reconstruidos cinco WebP vacíos y el MP4 de colchoneta incompleto desde sus originales.
+- 75 imágenes locales decodificadas; diez vídeos decodificados completos con ffmpeg, sin errores.
+- Bloque de tres vídeos en Inicio, dos en Gimnasio y cinco en Clases. Siguen siendo 25 fotos y 10 vídeos únicos.
+- Reproducción automática simultánea comprobada en navegador: los diez alcanzan readyState 4, sin errores, en silencio y con loop activo. Observado reinicio de los vídeos de Inicio al llegar al final.
+- Controles de pausa/reanudación comprobados; pausar uno mantiene los demás en marcha.
+- Galería de máquinas con movimiento CSS, marco verde y pausa/reanudación verificada. No se presentan las fotos animadas como nuevas grabaciones.
+- Fotografías de comunidad, funcional, fuerza y cardio comprobadas en el navegador.
+- Contacto con fotografía central ampliada; cifras de Servicios en verde lima.
+- Revisión visual de escritorio y móvil, y ausencia de desbordamiento en Inicio y Clases a 320/390 px.
+- La compilación rechaza archivos vacíos, WebP incompletos y MP4 sin su estructura de reproducción.
+- Versión HTML y tema WordPress sincronizados. Sigue pendiente la prueba del tema en un servidor PHP/WooCommerce real; no se ha publicado.

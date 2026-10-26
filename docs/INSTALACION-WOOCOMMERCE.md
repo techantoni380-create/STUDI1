@@ -13,7 +13,8 @@ Se entrega un tema clásico original. El catálogo, stock, carrito, cálculo de 
 |---|---|---|
 | Inicio | inicio | Se utiliza `front-page.php` al elegirla como portada estática |
 | Gimnasio | gimnasio | STUDI-1 · Gimnasio |
-| Actividades | actividades | STUDI-1 · Actividades |
+| Servicios | servicios | STUDI-1 · Servicios |
+| Clases | actividades | STUDI-1 · Actividades |
 | Tienda | tienda | Seleccionarla como página de tienda en WooCommerce |
 | Inscripción | inscripcion | STUDI-1 · Inscripción |
 | Carrito | carrito | Shortcode `[woocommerce_cart]` |
@@ -37,7 +38,7 @@ Crea **tres productos simples y virtuales**, con visibilidad de catálogo «Ocul
 | Cuota pareja | 37 € | 2 | 2 |
 | Cuota familiar | 35 € | Número elegido | Número elegido |
 
-1. Confirma período de cuota, condiciones de pareja/familia e impuestos antes de habilitar productos. El cartel no especifica esos datos. Añádelos a la descripción corta de cada producto.
+1. Las cuotas son mensuales, confirmado en el dossier del 26/10/2026. Antes de habilitar ventas, concreta las condiciones de pareja/familia, los impuestos y cómo se aplica el seguro anual de 15 € en altas y renovaciones. El código no suma ese seguro automáticamente: la demo calcula solo la cuota y lo indica junto al importe. Los bonos son informativos. Añade las condiciones definitivas a cada producto.
 2. En **cuota pareja y familiar desactiva «Vendido individualmente»**, porque la cantidad representa personas.
 3. Si una modalidad no tiene un producto válido, está agotada o comparte ID con otra, aparece desactivada. La pantalla toma los precios actuales del servidor y el checkout calcula el importe final.
 4. La primera plaza corresponde a la persona de los datos de facturación. Los nombres de sus acompañantes aparecen en carrito, pedido y metadatos de la línea. No se piden documentos ni datos de salud.
@@ -69,11 +70,11 @@ En el checkout clásico de WooCommerce se muestra la misma tarjeta cuando hay un
 
 ## Contenido y actualizaciones
 
-- Los diseños de Inicio/Gimnasio/Actividades se leen desde `content/pages/` dentro del tema. Son archivos de código, no bloques editables del editor de WordPress.
+- Los diseños de Inicio/Gimnasio/Servicios/Actividades se leen desde `content/pages/` dentro del tema. Son archivos de código, no bloques editables del editor de WordPress.
 - Cabecera y pie: `content/partials/header.html` y `footer.html`, renderizados por `header.php` y `footer.php`.
 - Para mantener una sola fuente, edita `src/` en el proyecto y ejecuta `python tools/package.py` antes de volver a instalar la versión actualizada.
 - Guarda una copia de cualquier cambio hecho directamente en el tema del servidor antes de reinstalarlo.
-- Las imágenes generadas, frases de muestra y páginas legales deben sustituirse o aprobarse antes de publicar.
+- El catálogo y la imagen provisional de la tienda, las condiciones de alta y las páginas legales deben completarse antes de publicar. Las fotos y vídeos del gimnasio ya son reales.
 
 ## Prueba de aceptación en el hosting
 

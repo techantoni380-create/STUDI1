@@ -25,9 +25,9 @@
     $('plan-name').textContent = plan.name;
     $('plan-total').textContent = plan.available === false ? 'Próximamente' : money(q.total);
     $('plan-calculation').textContent = plan.basis==='person'
-      ? `${money(plan.price)} × ${q.people} ${q.people===1?'persona':'personas'}`
+      ? `${money(plan.price)} / mes × ${q.people} ${q.people===1?'persona':'personas'}`
       : `${q.people} ${q.people===1?'persona':'personas'} · ${money(q.perPerson)} por persona`;
-    $('plan-note').textContent = 'Pago puntual de la inscripción. Consulta el período de la cuota y las condiciones de la modalidad elegida con el gimnasio.';
+    $('plan-note').textContent = 'Cuota mensual. Seguro anual: 15 € aparte. Consulta en recepción si corresponde abonarlo al realizar tu alta. El importe mostrado corresponde solo a la cuota seleccionada.';
     if (server) {
       $('plan-note').textContent += ' El importe final, con los impuestos aplicables, se confirma al pagar.';
       const description = $('enrollment-description');

@@ -17,14 +17,17 @@ add_action('after_setup_theme', function () {
 add_action('wp_enqueue_scripts', function () {
     $base = get_template_directory_uri();
     wp_enqueue_style('studi1', $base . '/assets/css/styles.css', array(), '2.0.0');
+    wp_enqueue_style('studi1-dossier', $base . '/assets/css/dossier.css', array('studi1'), '1.1.0');
+    wp_enqueue_style('studi1-media', $base . '/assets/css/real-media.css', array('studi1'), '2.0.0');
+    wp_enqueue_script('studi1-media', $base . '/assets/js/real-media.js', array(), '2.0.0', true);
     wp_enqueue_style('studi1-info', $base . '/assets/css/gym-info.css', array('studi1'), '1.0.0');
     wp_enqueue_style('studi1-commerce', $base . '/assets/css/woocommerce.css', array('studi1'), '2.0.0');
     wp_enqueue_style('studi1-enrollment', $base . '/assets/css/enrollment.css', array('studi1'), '1.1.0');
     wp_enqueue_style('studi1-logo', $base . '/assets/css/logo-animation.css', array('studi1'), '5.1.0');
-    wp_enqueue_script('studi1-gym-data', $base . '/assets/js/gym-data.js', array(), '3.0.0', true);
-    wp_enqueue_script('studi1', $base . '/assets/js/app.js', array('studi1-gym-data'), '2.2.0', true);
+    wp_enqueue_script('studi1-gym-data', $base . '/assets/js/gym-data.js', array(), '3.1.0', true);
+    wp_enqueue_script('studi1', $base . '/assets/js/app.js', array('studi1-gym-data'), '2.4.0', true);
     wp_enqueue_script('studi1-enrollment-model', $base . '/assets/js/enrollment-model.js', array('studi1-gym-data'), '2.0.0', true);
-    wp_enqueue_script('studi1-enrollment', $base . '/assets/js/enrollment.js', array('studi1-enrollment-model'), '2.0.0', true);
+    wp_enqueue_script('studi1-enrollment', $base . '/assets/js/enrollment.js', array('studi1-enrollment-model'), '2.1.0', true);
     if (function_exists('is_checkout') && is_checkout()) {
         wp_enqueue_style('studi1-payment-card', $base . '/assets/css/payment-card.css', array('studi1'), '1.0.0');
         wp_enqueue_script('studi1-payment-card', $base . '/assets/js/payment-card.js', array('jquery'), '1.0.0', true);
@@ -37,7 +40,7 @@ add_action('wp_enqueue_scripts', function () {
 
 function studi1_url($file) {
     $parts = explode('#', $file, 2);
-    $map = array('index.html' => '', 'gimnasio.html' => 'gimnasio', 'actividades.html' => 'actividades', 'tienda.html' => 'tienda', 'inscripcion.html' => 'inscripcion', 'legal.html' => 'informacion-legal');
+    $map = array('index.html' => '', 'gimnasio.html' => 'gimnasio', 'servicios.html' => 'servicios', 'actividades.html' => 'actividades', 'tienda.html' => 'tienda', 'inscripcion.html' => 'inscripcion', 'legal.html' => 'informacion-legal');
     if ($parts[0] === 'checkout.html' && function_exists('wc_get_checkout_url')) {
         $url = wc_get_checkout_url();
     } elseif ($parts[0] === 'tienda.html' && function_exists('wc_get_page_permalink') && wc_get_page_id('shop') > 0) {
@@ -60,7 +63,7 @@ function studi1_cart_link() {
 }
 
 function studi1_fragment($name, $partial = false) {
-    $allowed = $partial ? array('header', 'footer', 'rates') : array('index', 'gimnasio', 'actividades', 'legal');
+    $allowed = $partial ? array('header', 'footer', 'rates') : array('index', 'gimnasio', 'servicios', 'actividades', 'legal');
     if (!in_array($name, $allowed, true)) { return; }
     $path = get_template_directory() . '/content/' . ($partial ? 'partials/' : 'pages/') . $name . '.html';
     if (!is_readable($path)) { return; }
@@ -95,7 +98,7 @@ function studi1_config() {
     $gym = is_readable($path) ? json_decode(file_get_contents($path), true) : array();
     if (!is_array($gym)) { $gym = array(); }
     $pages = array();
-    foreach (array('index.html', 'gimnasio.html', 'actividades.html', 'tienda.html', 'inscripcion.html', 'index.html#contacto', 'actividades.html#horarios', 'inscripcion.html#tarifas') as $file) { $pages[$file] = studi1_url($file); }
+    foreach (array('index.html', 'gimnasio.html', 'servicios.html', 'actividades.html', 'tienda.html', 'inscripcion.html', 'index.html#contacto', 'gimnasio.html#equipo', 'actividades.html#clases', 'actividades.html#horarios', 'inscripcion.html#tarifas', 'inscripcion.html#entrenamientos', 'inscripcion.html#otros-servicios') as $file) { $pages[$file] = studi1_url($file); }
     $phone = get_theme_mod('studi1_phone', '') ?: ($gym['phone'] ?? '');
     return array_merge($gym, array(
         'mode' => 'woocommerce', 'assetBase' => get_template_directory_uri() . '/assets', 'pages' => $pages,
