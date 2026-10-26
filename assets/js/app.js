@@ -20,13 +20,13 @@
   $$('[data-close-dialog]').forEach(btn=>btn.addEventListener('click',()=>btn.closest('dialog').close()));
   $$('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target===d){const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}}));
   $$('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
-  $$('.nav-desktop [data-page]').forEach(a=>{if(a.dataset.page===document.body.dataset.page)a.setAttribute('aria-current','page');});
+  $$('.nav-desktop [data-page], .compact-links [data-page]').forEach(a=>{if(a.dataset.page===document.body.dataset.page)a.setAttribute('aria-current','page');});
   const menu=$('.menu-toggle'),mobile=$('#mobile-nav');
   function closeMenu(){if(!menu||!mobile)return;mobile.hidden=true;menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Abrir menú');}
   menu?.addEventListener('click',()=>{mobile.hidden=!mobile.hidden;menu.setAttribute('aria-expanded',String(!mobile.hidden));menu.setAttribute('aria-label',mobile.hidden?'Abrir menú':'Cerrar menú');});
   $$('#mobile-nav a').forEach(a=>a.addEventListener('click',closeMenu));
   document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
-  window.matchMedia('(min-width:801px)').addEventListener('change',e=>{if(e.matches)closeMenu();});
+  window.matchMedia('(min-width:1051px)').addEventListener('change',e=>{if(e.matches)closeMenu();});
   $$('[data-location]').forEach(el=>{if(cfg.address)el.textContent=cfg.address;});
   $$('[data-hours]').forEach(el=>{if(cfg.hours)el.textContent=cfg.hours;});
   const phoneNumber = (cfg.phone||'').replace(/[^+0-9]/g,'');
@@ -44,7 +44,7 @@
   const choices=$('#faq-choices');if(choices){choices.innerHTML=faqs.map((f,i)=>`<button type="button" data-faq="${i}">${esc(f[0])}</button>`).join('');choices.addEventListener('click',e=>{const b=e.target.closest('[data-faq]');if(!b)return;const answer=$('.assistant-answer');answer.textContent=faqs[Number(b.dataset.faq)][1];answer.hidden=false;$$('[data-faq]').forEach(x=>x.classList.toggle('active',x===b));});}
   const assistant=$('#assistant'),assistantLaunch=$('.assistant-launch');assistantLaunch?.addEventListener('click',()=>{if(assistant.open)assistant.close();else assistant.show();assistantLaunch.setAttribute('aria-expanded',String(assistant.open));});assistant?.addEventListener('close',()=>assistantLaunch.setAttribute('aria-expanded','false'));
   // Búsqueda local de páginas y productos, sin peticiones de red.
-  const searchEntries=[['Inicio','index.html'],['Gimnasio e instalaciones','gimnasio.html'],['Servicios: sala fitness, entrenamiento personal, alimentación y sauna','servicios.html'],['Equipo: Raúl, Elissa, María Florencia, Reduan y Alex','gimnasio.html#equipo'],['Clases dirigidas: Pilates con TRX, Cardio Box, Zumba, Yoga y Taichí','actividades.html#clases'],['Bonos y seguro anual','inscripcion.html#tarifas'],['Plan de alimentación y suplementos','inscripcion.html#otros-servicios'],['Actividades, fuerza, cardio y movilidad','actividades.html'],['Inscripción online','inscripcion.html'],['Tienda y productos','tienda.html'],['Contacto, teléfono y horario de apertura','index.html#contacto'],['Horario de clases: yoga, Pilates, Zumba y ciclo indoor','actividades.html#horarios'],['Cuotas y entrenamiento personal','inscripcion.html#tarifas']];
+  const searchEntries=[['Inicio','index.html'],['Gimnasio e instalaciones','gimnasio.html'],['Servicios: sala fitness, entrenamiento personal, alimentación y sauna','servicios.html'],['Equipo: Raúl, Elissa, María Florencia, Reduan y Alex','gimnasio.html#equipo'],['Clases dirigidas: Pilates con TRX, Cardio Box, Zumba, Yoga y Taichí','actividades.html#clases'],['Bonos y seguro anual','inscripcion.html#tarifas'],['Plan de alimentación y suplementos','inscripcion.html#otros-servicios'],['Actividades, fuerza, cardio y movilidad','actividades.html'],['Inscripción online','inscripcion.html'],['Tienda y productos','tienda.html'],['Contacto, teléfono y horario de apertura','contacto.html'],['Horario de clases: yoga, Pilates, Zumba y ciclo indoor','actividades.html#horarios'],['Cuotas y entrenamiento personal','inscripcion.html#tarifas']];
   const normalize=s=>s.toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g,'');
   function search(q=''){const results=searchEntries.filter(([t])=>normalize(t).includes(normalize(q)));$('#search-results').innerHTML=results.length?results.map(([title,url])=>`<a class="search-result" href="${esc(cfg.pages?.[url]||url)}">${esc(title)}<i data-icon="arrow"></i></a>`).join(''):'<p class="empty-cart">No hay resultados. Prueba con «gimnasio» o «tienda».</p>';icons($('#search-results'));}
   $$('[data-open-search]').forEach(b=>b.addEventListener('click',()=>{search();openDialog('#search-dialog');$('#site-search').focus();}));$('#site-search')?.addEventListener('input',e=>search(e.target.value));

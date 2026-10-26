@@ -1,0 +1,47 @@
+{
+  "mode": "Herramienta integrada ImageGen · edición de imágenes, no CLI",
+  "sections": [
+    {
+      "name": "gimnasio",
+      "paths": [
+        "/workspace/scratch/0ef564e581aa/studi1-edit/STUDI1-web/assets/img/real/gimnasio-panoramica-2048.webp"
+      ],
+      "prompt": "Use case: lighting-weather. Edit the supplied real STUDI-1 gym photograph into a deluxe architectural photograph. Improve exposure, richer believable color, clean neutral white balance, black equipment with crisp visible texture, vivid lime columns and warm wooden floor. Existing strip lights should glow bright neutral-white and illuminate the scene naturally. Preserve camera angle, all real equipment, architectural layout, mirrors and reflections. No new objects or people, no logos added, no web interface, no text overlay, no dark vignette, no fantasy redesign or excessive HDR. Keep the original wide 2.22:1 panorama. Bright welcoming daylight, punchier lime green and warm wood, cleaner shadows."
+    },
+    {
+      "name": "clases",
+      "paths": [
+        "/workspace/scratch/0ef564e581aa/studi1-edit/STUDI1-web/assets/img/real/actividades-sala-2048.webp"
+      ],
+      "prompt": "Use case: lighting-weather. Edit the supplied real STUDI-1 gym photograph into a deluxe architectural photograph. Improve exposure, richer believable color, clean neutral white balance, black equipment with crisp visible texture, vivid lime columns and warm wooden floor. Existing strip lights should glow bright neutral-white and illuminate the scene naturally. Preserve camera angle, all real equipment, architectural layout, mirrors and reflections. No new objects or people, no logos added, no web interface, no text overlay, no dark vignette, no fantasy redesign or excessive HDR. Switch ON all the actual existing overhead fluorescent fixtures, including the diagonal strip at the upper left, with realistic light on the wooden floor. More vivid blue and colored exercise balls, red mats, yellow straps. Keep the original wide 2.22:1 panorama."
+    },
+    {
+      "name": "inscripcion",
+      "paths": [
+        "/workspace/scratch/0ef564e581aa/studi1-edit/STUDI1-web/assets/img/real/inscripcion-sala-921.webp"
+      ],
+      "prompt": "Use case: lighting-weather. Edit the supplied real STUDI-1 gym photograph into a deluxe architectural photograph. Improve exposure, richer believable color, clean neutral white balance, black equipment with crisp visible texture, vivid lime columns and warm wooden floor. Existing strip lights should glow bright neutral-white and illuminate the scene naturally. Preserve camera angle, all real equipment, architectural layout, mirrors and reflections. No new objects or people, no logos added, no web interface, no text overlay, no dark vignette, no fantasy redesign or excessive HDR. Keep the original tall portrait composition, about 1:2.22, the exact bench and weights arrangement and existing turquoise mirror strip lights. Premium inviting light, crisp black benches, vivid reflected lime columns, rich wood. Eliminate the gloomy flat appearance without changing the actual room."
+    },
+    {
+      "name": "servicios",
+      "paths": [
+        "/workspace/scratch/0ef564e581aa/studi1-edit/STUDI1-web/assets/img/real/instalaciones-funcional-921.webp"
+      ],
+      "prompt": "Use case: lighting-weather. Edit the supplied real STUDI-1 gym photograph into a deluxe architectural photograph. Improve exposure, richer believable color, clean neutral white balance, black equipment with crisp visible texture, vivid lime columns and warm wooden floor. Existing strip lights should glow bright neutral-white and illuminate the scene naturally. Preserve camera angle, all real equipment, architectural layout, mirrors and reflections. No new objects or people, no logos added, no web interface, no text overlay, no dark vignette, no fantasy redesign or excessive HDR. Keep the exact tall 1:2.22 portrait framing and gym functional rack, exercise bikes, colorful balls, lime accents, brick wall and all real equipment. Crisp rich colors, natural soft shadows."
+    },
+    {
+      "name": "tienda",
+      "paths": [
+        "/workspace/scratch/0ef564e581aa/upload/WhatsApp Image 2026-10-26 at 10.03.57.jpeg",
+        "/workspace/scratch/0ef564e581aa/upload/WhatsApp Image 2026-10-26 at 10.03.58 (2).jpeg",
+        "/workspace/scratch/0ef564e581aa/upload/WhatsApp Image 2026-10-26 at 10.03.58.jpeg",
+        "/workspace/scratch/0ef564e581aa/upload/WhatsApp Image 2026-10-26 at 10.03.58 (1).jpeg",
+        "/workspace/scratch/0ef564e581aa/upload/WhatsApp Image 2026-10-26 at 10.03.59.jpeg"
+      ],
+      "prompt": "Use case: compositing. Asset: premium panoramic ecommerce hero photography for STUDI-1 gym. All five reference images show the REAL products to use. Arrange a curated still life on a textured midnight navy studio plinth: a large iO.GENIX ISO WHEY SUBLIME BLACK COOKIES tub from image 1, a white gold-lid blue-flavor creatine tub from image 2, one Life Pro Delicious Oatmeal Chocolate bag from image 3, one small white and gold supplement bottle from image 4, and the charcoal towel with the actual STUDI1 RAÚL BEAS lime-white logo from image 5 neatly folded in the foreground. Preserve real product shapes, label designs, brand names, packaging colors and the towel logo as closely as possible. Keep them photographic, no invented generic packaging, no additional brands. Arrange the whole group in the RIGHT 60 percent, in a natural elegant composition with differing heights and minimal overlap so labels remain visible; LEFT 40 percent is clean dark navy negative space for website text. Cinematic blue edge light and soft neutral studio key light, gold highlights, rich colors, realistic fabric and subtle contact shadows, high-end sport retail campaign. Wide panoramic 2.5:1 composition, generous breathing room. No website UI, no headline, no prices, no text outside the actual labels, no floating ingredients, no dumbbell or shaker, no people. This is one single coherent product scene, never a collage or split panel."
+    }
+  ],
+  "classesCorrection": "Use case: precise-object-edit. This is the already retouched photograph of the actual STUDI-1 class studio. Make exactly one correction: all the bright lime yellow-green structural columns/pillars, including the large foreground column, columns at the far left and columns seen in the mirrors, must have their ORIGINAL very pale ivory/off-white painted color. They are NOT green in this real room. Preserve the brighter lighting, switched-on fluorescent fixtures, vivid exercise balls, yellow suspension straps, red mats, warm wooden floor and entire composition exactly. Do not redesign or add equipment. Output same 2.22:1 panorama. Only correct the pillar paint color, no other changes.",
+  "galleryPrompt": "Use case: lighting-weather. Edit target: this exact real STUDI-1 gym interior photograph. Deliver professional deluxe real-estate/gym photography with noticeably brighter illumination, stronger clean contrast, luminous midtones, sharp natural material texture, deep black equipment retaining shadow detail, richer believable colors, clean neutral white balance and warm natural wooden floors. The grey walls must stay grey, pale walls stay pale, brick stays brick, only existing lime columns remain vivid lime. Enhance existing turquoise mirror-edge LEDs without inventing neon. Balance window and ceiling-light highlights. Preserve every machine, weight, bench, cable, plant, object, sign, reflection, wall, column and ceiling layout, and exact camera composition. Do NOT redesign, repaint walls, add equipment or people, change framing, write new words, remove gym objects, create a collage, or add interface overlays. Keep the tall original portrait 1:2.22 aspect ratio. This is a lighting, exposure, color and contrast retouch only; not a new imaginary gym. Strong premium natural photographic finish, not plastic HDR or cartoon.",
+  "salaAdditional": "Switch ON the EXISTING overhead strip fixtures, including the large one at the top, with realistic white illumination and restrained reflections on the floor. Keep the original pale wall colors and colorful exercise balls."
+}

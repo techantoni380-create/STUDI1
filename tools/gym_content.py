@@ -47,7 +47,7 @@ def generate():
     from dossier_content import generate_dossier
     generate_dossier(data)
     rows = sorted({s['time'] for day in data['days'] for s in day['sessions']} | {t for day in data['days'] for t in day['unreadable']})
-    schedule = '<section class="section wrap schedule-section" id="horarios"><div class="section-heading"><div><p class="eyebrow">CLASES DIRIGIDAS · 2026</p><h2 class="section-title">CADA DÍA,<br><span>UNA FORMA DE MOVERTE.</span></h2></div><p>Consulta los días y las horas de las sesiones. Las franjas pendientes de confirmar se indican en el horario.</p></div><div class="schedule-legend"><span><b class="lime-text">●</b> Horario de clases</span><a href="index.html#contacto">Ver horario de apertura <i data-icon="arrow"></i></a></div>'
+    schedule = '<section class="section wrap schedule-section" id="horarios"><div class="section-heading"><div><p class="eyebrow">CLASES DIRIGIDAS · 2026</p><h2 class="section-title">CADA DÍA,<br><span>UNA FORMA DE MOVERTE.</span></h2></div><p>Consulta los días y las horas de las sesiones. Las franjas pendientes de confirmar se indican en el horario.</p></div><div class="schedule-legend"><span><b class="lime-text">●</b> Horario de clases</span><a href="contacto.html">Ver horario de apertura <i data-icon="arrow"></i></a></div>'
     schedule += '<div class="schedule-desktop table-scroll" tabindex="0" role="region" aria-label="Horario semanal de clases"><table class="schedule-table"><caption>Horario de lunes a viernes. Confirma las franjas marcadas «Consultar».</caption><thead><tr><th scope="col">Hora</th>'
     schedule += ''.join(f'<th scope="col">{day["name"]}</th>' for day in data['days'])+'</tr></thead><tbody>'
     for time in rows:

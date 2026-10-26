@@ -24,27 +24,27 @@ address { font-style: normal; }
 .table-scroll:focus-visible { outline: 2px solid var(--lime); outline-offset: 4px; }
 .schedule-table, .price-table { width: 100%; border-collapse: collapse; }
 .schedule-table { min-width: 780px; table-layout: fixed; }
-.schedule-table caption, .price-table caption { text-align: left; padding: 15px 18px; font-size: 11px; color: var(--muted); background: #0c1724; }
+.schedule-table caption, .price-table caption { text-align: left; padding: 15px 18px; font-size: 11px; color: var(--muted); background: #141912; }
 .schedule-table th, .schedule-table td { padding: 15px 10px; text-align: center; vertical-align: middle; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); }
 .schedule-table tr > :last-child { border-right: 0; }
 .schedule-table tbody tr:last-child > * { border-bottom: 0; }
-.schedule-table thead th { color: var(--lime); text-transform: uppercase; font-size: 11px; letter-spacing: .07em; background: #152438; }
+.schedule-table thead th { color: var(--lime); text-transform: uppercase; font-size: 11px; letter-spacing: .07em; background: #21281d; }
 .schedule-table th:first-child { width: 78px; }
-.schedule-table tbody th { color: var(--lime); font-size: 13px; font-variant-numeric: tabular-nums; background: #101c29; }
+.schedule-table tbody th { color: var(--lime); font-size: 13px; font-variant-numeric: tabular-nums; background: #181e16; }
 .schedule-table td { font-size: 12px; line-height: 1.35; }
 .schedule-table td strong { font-weight: 600; }
 .schedule-table small { display: block; color: var(--muted); margin-top: 4px; font-size: 10px; }
-.schedule-table .has-class { background: #122237; }
+.schedule-table .has-class { background: #1f271b; }
 .schedule-table .uncertain { background: #2e291b; }
 .schedule-table .uncertain small, .schedule-table .unreadable { color: #efd18b; }
-.schedule-table .no-class { color: #506275; }
+.schedule-table .no-class { color: #606b5a; }
 .schedule-notes { padding: 20px 22px; margin-top: 20px; border-left: 3px solid var(--lime); background: var(--panel); border-radius: 0 12px 12px 0; }
 .schedule-notes p { color: var(--muted); font-size: 12px; line-height: 1.7; margin-bottom: 10px; }
 .schedule-notes strong { color: var(--ice); }
 .schedule-notes a { font-size: 12px; }
 .schedule-mobile { display: none; }
 .membership-rates { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-.rate-card { padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(135deg, #152638, #0e1925); }
+.rate-card { padding: 30px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(135deg, #21281d, #161b13); }
 .rate-card:first-child { border-color: var(--lime); }
 .rate-card h3 { font-size: 16px; font-weight: 600; }
 .rate-card .rate-price { color: var(--lime); font: 800 italic 64px/1.2 var(--display); margin: 14px 0 5px; }

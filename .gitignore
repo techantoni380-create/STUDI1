@@ -1,0 +1,5 @@
+/wordpress/
+*.zip
+*.tmp
+__pycache__/
+*.pyc

@@ -1,6 +1,6 @@
 /* Una única figura animada; el PNG reserva el tamaño de la cabecera. */
 .site-header .logo {
-  --logo-intro-duration: 5s;
+  --logo-intro-duration: 3s;
   position: relative;
 }
 .site-header .logo.logo-unified-active > img {

@@ -10,15 +10,15 @@ def heading(label,title,description=''):
 def generate_dossier(d):
  partials=ROOT/'src/partials'
  # Services page: no tariff duplication, no made-up sauna price or inclusion.
- services='''<main id="contenido"><section class="information-hero"><div class="wrap"><p class="eyebrow">SERVICIOS · STUDI-1 REUS</p><h1>UN OBJETIVO.<br><span>MUCHAS FORMAS DE AVANZAR.</span></h1><p>Entrenamiento, acompañamiento y bienestar en un gimnasio cercano y familiar.</p><nav class="section-jump" aria-label="Servicios disponibles">'''
+ services='''<main id="contenido"><section class="services-campaign campaign-head">{{include:services-hero-media}}<div class="wrap"><p class="eyebrow">SERVICIOS · STUDI-1 REUS</p><div class="campaign-copy"><h1>SUPÉRATE.<br><span>A TU MANERA.</span></h1><p>Entrenamiento, acompañamiento y bienestar en un gimnasio cercano y familiar.</p><a class="button lime" href="contacto.html">Encuentra tu entrenamiento <i data-icon="arrow"></i></a><nav class="section-jump" aria-label="Servicios disponibles">'''
  for service in d['services']:services+='<a href="#'+service['id']+'">'+escape(service['name'])+'</a>'
- services+='</nav></div></section><section class="section wrap service-grid" aria-label="Nuestros servicios">'
+ services+='</nav></div></div></section><section class="section wrap service-grid energy-scene" aria-label="Nuestros servicios"><span class="scene-monogram" aria-hidden="true">S<span>1</span></span>'
  for i,s in enumerate(d['services']):
   services+=f'<article class="service-card" id="{s["id"]}"><div class="service-top"><span class="service-icon"><i data-icon="{s["icon"]}"></i></span><span class="service-number">0{i+1}</span></div><h2>{escape(s["name"])}</h2><p>{escape(s["description"])}</p><a class="text-link" href="{s["link"]}">{escape(s["action"])} <i data-icon="arrow"></i></a></article>'
  services+='''</section><section class="wrap visit-cta"><div><p class="eyebrow">PERSONAS QUE TE ACOMPAÑAN</p><h2 class="section-title">TU OBJETIVO,<br><span>CON NUESTRO EQUIPO.</span></h2></div><a class="button lime" href="gimnasio.html#equipo">Conoce al equipo <i data-icon="users"></i></a></section></main>'''
  (ROOT/'src/pages/servicios.html').write_text(services+'\n')
  # Team: names and roles supplied by the client, without assigning unidentified photos.
- team='<section class="section wrap team-section" id="equipo">'+heading('NUESTRO EQUIPO','CERCA DE TI.<br><span>EN CADA PASO.</span>','Cinco profesionales que comparten una forma cercana y familiar de vivir el gimnasio.')+'<div class="team-grid">'
+ team='<section class="section wrap team-section energy-scene" id="equipo"><span class="scene-monogram" aria-hidden="true">S<span>1</span></span>'+heading('NUESTRO EQUIPO','CERCA DE TI.<br><span>EN CADA PASO.</span>','Cinco profesionales que comparten una forma cercana y familiar de vivir el gimnasio.')+'<div class="team-grid">'
  for m in d['team']:
   team+='<article class="team-card"><div class="team-identity"><span class="team-monogram" aria-hidden="true">'+m['initials']+'</span><div><h3>'+escape(m['name'])+'</h3><p class="team-role">'+escape(m['role'])+'</p></div></div><p class="team-specialties">'+escape(m['specialties'])+'</p><p>'+escape(m['description'])+'</p>'
   if m.get('story'):team+='<a class="text-link" href="#raul-beas">Su trayectoria deportiva <i data-icon="arrow"></i></a>'
@@ -26,7 +26,7 @@ def generate_dossier(d):
  team+='</div></section>'
  (partials/'team.html').write_text(team+'\n')
  # Full class descriptions live here; the timetable only adds days and hours.
- classes='<section class="section wrap class-catalog" id="clases">'+heading('CLASES DIRIGIDAS','ELIGE CÓMO<br><span>QUIERES MOVERTE.</span>','Conoce qué se trabaja en cada clase y encuentra tu sesión en el horario semanal.')+'<div class="class-cards">'
+ classes='<section class="section wrap class-catalog energy-scene" id="clases"><span class="scene-monogram" aria-hidden="true">S<span>1</span></span>'+heading('CLASES DIRIGIDAS','ELIGE CÓMO<br><span>QUIERES MOVERTE.</span>','Conoce qué se trabaja en cada clase y encuentra tu sesión en el horario semanal.')+'<div class="class-cards">'
  for c in d['classCatalog']:
   classes+='<article class="class-card"><h3>'+escape(c['name'])+'</h3><p>'+escape(c['description'])+'</p>'
   if c['supplement']:classes+='<a class="class-supplement" href="inscripcion.html#otros-servicios">Con suplemento · consultar ↗</a>'
@@ -34,9 +34,9 @@ def generate_dossier(d):
  classes+='</div><a class="button outline-blue catalog-schedule-link" href="#horarios">Encuentra tu horario <i data-icon="clock"></i></a></section>'
  (partials/'class-catalog.html').write_text(classes+'\n')
  # The only full price guide, reused by the WordPress enrollment page.
- rates='<section class="section wrap rates-section" id="tarifas">'+heading('TARIFAS · CUOTAS Y BONOS','ELIGE TU RITMO.<br><span>CONOCE TU CUOTA.</span>','Cuotas mensuales, bonos por duración y servicios adicionales. Consulta las condiciones de cada modalidad en recepción.')+'<nav class="section-jump" aria-label="Apartados de tarifas"><a href="#cuotas">Cuotas</a><a href="#bonos">Bonos</a><a href="#entrenamientos">Entrenamiento personal</a><a href="#otros-servicios">Otros servicios</a></nav><div id="cuotas" class="membership-rates">'
- for fee in d['fees']:
-  rates+=f'<article class="rate-card"><h3>{escape(fee["name"])}</h3><p class="rate-price">{euro(fee["price"])}<small>/ mes</small></p><p>{"Por persona" if fee["name"]!="Individual" else "Cuota individual"}</p></article>'
+ rates='<section class="section wrap rates-section energy-scene" id="tarifas"><span class="scene-monogram" aria-hidden="true">S<span>1</span></span>'+heading('TARIFAS · CUOTAS Y BONOS','ELIGE TU RITMO.<br><span>CONOCE TU CUOTA.</span>','Cuotas mensuales, bonos por duración y servicios adicionales. Consulta las condiciones de cada modalidad en recepción.')+'<nav class="section-jump" aria-label="Apartados de tarifas"><a href="#cuotas">Cuotas</a><a href="#bonos">Bonos</a><a href="#entrenamientos">Entrenamiento personal</a><a href="#otros-servicios">Otros servicios</a></nav><div id="cuotas" class="membership-rates">'
+ for fee, plan_key in zip(d['fees'], ['individual','couple','family']):
+  rates+=f'<button type="button" class="rate-card" data-choose-plan="membership-{plan_key}" aria-pressed="false"><span class="rate-name">{escape(fee["name"])}</span><span class="rate-price">{euro(fee["price"])}<small>/ mes</small></span><span class="rate-description">{"Por persona" if fee["name"]!="Individual" else "Cuota individual"}</span><span class="rate-action" data-rate-action>Elegir {escape(fee["name"].lower())} <span aria-hidden="true">↗</span></span></button>'
  rates+='</div><div class="insurance-note"><span class="service-icon"><i data-icon="info"></i></span><div><strong>Seguro anual: '+euro(d['annualInsurance'])+'</strong><p>Se añade a la cuota. Los totales de los bonos que aparecen a continuación ya incluyen el seguro anual.</p></div></div>'
  rates+='<section class="dossier-rate-block" id="bonos"><div class="rate-section-intro"><p class="eyebrow">BONOS POR DURACIÓN</p><h3>MÁS CONTINUIDAD.<br>OTRA CUOTA MENSUAL.</h3><p>Los bonos de 3, 6, 9 y 12 meses corresponden a meses consecutivos.</p></div><div class="table-scroll" tabindex="0" role="region" aria-label="Precios de bonos por duración"><table class="price-table pass-table"><caption>Totales del bono con seguro anual incluido</caption><thead><tr><th scope="col">Duración</th><th scope="col">Precio mensual</th><th scope="col">Total con seguro</th></tr></thead><tbody>'
  for p in d['durationPasses']:

@@ -15,6 +15,7 @@ Se entrega un tema clásico original. El catálogo, stock, carrito, cálculo de 
 | Gimnasio | gimnasio | STUDI-1 · Gimnasio |
 | Servicios | servicios | STUDI-1 · Servicios |
 | Clases | actividades | STUDI-1 · Actividades |
+| Contacto | contacto | STUDI-1 · Contacto |
 | Tienda | tienda | Seleccionarla como página de tienda en WooCommerce |
 | Inscripción | inscripcion | STUDI-1 · Inscripción |
 | Carrito | carrito | Shortcode `[woocommerce_cart]` |
@@ -102,3 +103,7 @@ El tema declara soporte WooCommerce y usa `woocommerce_content()` y los shortcod
 ## Actualizar los datos del gimnasio
 
 Edita `src/data/gym.json` y ejecuta `python tools/package.py`. Se regeneran contacto, apertura, horario de clases y tarifas en todas las páginas y en el tema. Las opciones de teléfono, dirección y apertura del Personalizador prevalecen cuando se rellenan. Consulta `DATOS-OFICIALES.md` para las dudas pendientes del material recibido.
+
+## Actualización visual de secciones
+
+El tema incluye page-contacto.php para una página independiente, las nuevas cabeceras, las ocho imágenes de instalaciones retocadas, la composición de tienda y las cinco fotos de productos. Crea la página Contacto con slug contacto y su plantilla. Las tres tarjetas de tarifas seleccionan la modalidad en el formulario; sus importes informativos proceden del dossier y el cobro real sigue usando los productos WooCommerce configurados. Prueba el tema y los importes en staging antes de activar ventas.

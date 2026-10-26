@@ -1,0 +1,118 @@
+/* Campañas STUDI-1: texto nativo y encuadres adaptados a cada pantalla. */
+.services-campaign{position:relative;isolation:isolate;overflow:hidden;min-height:680px;display:flex;align-items:center;padding:80px 0;background:#080908;border-bottom:1px solid #29382a}
+.services-campaign .hero-media{position:absolute;inset:0;z-index:-2}
+.services-campaign .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center}
+.services-campaign:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#090a08e8 0%,#090a08a8 35%,#090a0815 70%)}
+.services-campaign h1,.contact-campaign h1{font-family:var(--display);font-style:italic;font-weight:800;font-size:clamp(64px,7.4vw,108px);line-height:.98;letter-spacing:-.025em}
+.services-campaign h1 span,.contact-campaign h1 span{color:var(--lime)}
+.services-campaign .campaign-copy{max-width:690px}
+.services-campaign .campaign-copy>p:not(.eyebrow){font-size:16px;color:#d0d7d6;max-width:440px;line-height:1.8;margin:26px 0}
+.services-campaign .section-jump{max-width:580px;margin:30px 0 0;gap:8px}
+.services-campaign .section-jump a{background:#111b19c9;border-color:#3f5038;backdrop-filter:blur(8px);font-size:11px;padding:10px 13px}
+.services-campaign .section-jump a:hover{background:var(--lime);color:#161914}
+.contact-campaign{background:#0b0d0a;overflow:hidden;border-bottom:1px solid #2c3c27}
+.contact-campaign-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:650px;gap:48px}
+.contact-campaign-copy{padding:70px 0;position:relative;z-index:1}
+.contact-campaign h1{font-size:clamp(64px,7vw,100px)}
+.contact-campaign-copy>p:not(.eyebrow){font-size:16px;color:#c8cfc5;line-height:1.8;max-width:400px;margin:27px 0}
+.campaign-actions{display:flex;align-items:center;flex-wrap:wrap;gap:22px}
+.campaign-actions .text-link{font-size:12px}
+.contact-campaign-visual{position:relative;margin:0;height:650px;align-self:end}
+.contact-campaign-visual img{width:100%;height:100%;object-fit:cover;object-position:center top;border-radius:170px 0 0 0}
+.contact-visit{padding-block:85px}
+.contact-visit-heading{margin-bottom:35px;display:flex;align-items:end;justify-content:space-between;gap:30px}
+.contact-visit-heading .section-title span{color:var(--lime)}
+.contact-visit-heading>p{max-width:330px;color:var(--muted);font-size:14px;line-height:1.8}
+.contact-visit-grid{display:grid;grid-template-columns:minmax(260px,.75fr) minmax(0,1.5fr);gap:55px;align-items:center}
+.contact-visit .reception-photo{width:100%;float:none;margin:0;min-height:0;max-width:none}
+.contact-visit .reception-photo .photo-open{height:590px;min-height:0;max-height:none;width:100%;border-radius:18px}
+.contact-visit .reception-photo img{width:100%;height:100%;object-fit:cover;object-position:center 64%}
+.contact-visit .reception-photo figcaption{padding-top:13px;font-size:11px;color:var(--muted)}
+.contact-visit .contact-details{display:grid;grid-template-columns:1fr 1fr;gap:34px 28px;min-width:0}
+.contact-visit .contact-details>div{margin:0;gap:14px;min-width:0;padding-top:22px;border-top:1px solid #314036}
+.contact-visit .contact-details>div>div{min-width:0}
+.contact-visit .contact-details h3{font-size:15px;margin-bottom:10px}
+.contact-visit .contact-details small{display:block;margin-top:12px;line-height:1.7}
+.contact-visit .contact-details .contact-social{overflow-wrap:anywhere}
+.contact-visit .opening-hours>div{gap:10px;flex-wrap:wrap}
+.contact-visit .contact-schedule-link{margin-top:26px;display:inline-flex}
+@media(max-width:1050px){
+ .services-campaign{min-height:640px}.services-campaign h1{font-size:76px}.services-campaign .hero-media img{object-position:60% center}
+ .contact-campaign-grid{gap:25px;min-height:590px}.contact-campaign-visual{height:590px}.contact-campaign h1{font-size:76px}
+ .contact-visit-grid{gap:32px;grid-template-columns:.8fr 1.2fr}.contact-visit .contact-details{grid-template-columns:1fr;gap:22px}.contact-visit .reception-photo .photo-open{height:680px}
+}
+@media(max-width:700px){
+ .services-campaign{display:block;min-height:0;padding:325px 0 38px}
+ .services-campaign .hero-media{inset:0 0 auto;height:395px}
+ .services-campaign .hero-media img{object-position:86% center}
+ .services-campaign:after{background:linear-gradient(0deg,#0b0d0a 0%,#0b0d0a 44%,#0b0d0a00 85%)}
+ .services-campaign .campaign-copy{position:relative}
+ .services-campaign h1{font-size:clamp(45px,11.8vw,78px)}
+ .services-campaign .campaign-copy>p:not(.eyebrow){font-size:14px;margin:22px 0;max-width:430px}
+ .services-campaign .section-jump{margin-top:25px}.services-campaign .section-jump a{font-size:10px;min-height:42px;padding:10px}
+ .contact-campaign-grid{display:flex;flex-direction:column;gap:0;align-items:stretch}
+ .contact-campaign-copy{padding:42px 0 30px}.contact-campaign h1{font-size:clamp(44px,13vw,72px)}
+ .contact-campaign-copy>p:not(.eyebrow){font-size:14px;margin:22px 0}
+ .contact-campaign-visual{height:470px;width:100%;max-width:470px;align-self:center}
+ .contact-campaign-visual img{border-radius:100px 0 0 0;object-position:center 34%}
+ .contact-visit{padding-block:55px}.contact-visit-heading{display:block}.contact-visit-heading>p{margin-top:20px}
+ .contact-visit-grid{grid-template-columns:1fr;gap:30px}.contact-visit .reception-photo .photo-open{height:520px}
+ .contact-visit .reception-photo{max-width:430px;margin-inline:auto}.contact-visit .contact-details{grid-template-columns:1fr;gap:22px}
+}
+@media(prefers-reduced-motion:reduce){.services-campaign,.contact-campaign{scroll-behavior:auto}}
+
+/* Sistema compartido para las siete cabeceras con fotografía. */
+.campaign-head{--hero-white:#f5f7f1;--hero-accent:var(--lime);--hero-surface:#0b0d0a;background-color:var(--hero-surface)}
+.campaign-head h1,.campaign-head.hero .hero-copy h1,.campaign-head.enrollment-story h1{font-family:var(--display);font-weight:800;font-style:italic;line-height:.98;letter-spacing:-.025em;color:var(--hero-white);text-transform:uppercase;text-shadow:0 2px 15px #0003;overflow-wrap:normal;word-break:normal}
+.campaign-head h1 span,.campaign-head h1 .lime-text{color:var(--hero-accent)}
+.campaign-head .eyebrow,.campaign-head .eyebrow.white{color:var(--hero-accent);font-size:10px;font-weight:700;letter-spacing:.19em}
+.campaign-head.hero .hero-copy h1{font-size:clamp(64px,7.4vw,108px)}
+.campaign-head .hero-description,.campaign-head.enrollment-story .enrollment-story-copy>p:not(.eyebrow){font-size:16px;line-height:1.8;color:#d0d7d6;text-shadow:0 1px 10px #0005;margin-top:26px}
+.campaign-head .button.lime{background:var(--hero-accent);border-color:var(--hero-accent);color:#161914}
+.campaign-head .button.outline-blue{border-color:#819569;color:var(--hero-white);background:#0b1411b3;box-shadow:none}
+.campaign-head .button.outline-blue:hover{background:var(--hero-accent);border-color:var(--hero-accent);color:#161914}
+.campaign-head .text-link{color:#dce4d5}.campaign-head .text-link:hover{color:var(--hero-accent)}
+.campaign-head.hero:not(.deluxe-shop):after{background:linear-gradient(90deg,#090a08e8 0%,#090a08a8 36%,#090a0818 77%),linear-gradient(0deg,#0b0d0ac9,transparent 35%)}
+.campaign-head.inner-hero{height:auto;min-height:660px;display:flex;align-items:center;border-bottom:1px solid #29382a}
+.campaign-head.inner-hero .hero-copy{padding-block:76px;min-width:0}
+.campaign-head.inner-hero h1{max-width:900px}
+.campaign-head.inner-hero .hero-description{max-width:440px}
+.campaign-head.inner-hero .button{margin-top:28px}
+.campaign-head .tabs{gap:10px;margin-top:28px;max-width:490px}
+.campaign-head .tabs button{min-width:0;flex:1;padding:13px 24px;border-color:#586b45;background:#111b19d9;color:var(--hero-white);font-size:13px}
+.campaign-head .tabs button[aria-selected=true]{color:#161914;background:var(--hero-accent);border-color:var(--hero-accent)}
+.campaign-head .tabs button[aria-selected=true]:after{display:none}
+.campaign-head .tabs button:hover{border-color:var(--hero-accent)}
+.campaign-head.shop-hero{height:auto;min-height:640px;display:flex;align-items:center;border-bottom:1px solid #29382a}
+.campaign-head.shop-hero .hero-copy{padding-block:76px}
+.campaign-head.shop-hero:after{background:linear-gradient(90deg,#090a08db 0%,#090a0870 32%,transparent 64%),linear-gradient(0deg,#0b0d0ab3,transparent 30%)}
+.campaign-head.enrollment-story h1{font-size:clamp(56px,5.6vw,84px)}
+.campaign-head.enrollment-story .enrollment-story-copy{padding:48px 34px}
+.campaign-head.enrollment-story:after{background:linear-gradient(180deg,#090a08db 0%,#090a0895 38%,#090a080f 65%,#090a08db 100%)}
+.campaign-head .enrollment-perks{border-color:#445638}.campaign-head .enrollment-perks .icon{color:var(--hero-accent)}
+@media(max-width:1050px){
+ .campaign-head.hero .hero-copy h1{font-size:clamp(64px,7.8vw,82px)}
+ .campaign-head.inner-hero{min-height:590px}.campaign-head.inner-hero .hero-copy{padding-block:64px}
+ .campaign-head.shop-hero{min-height:590px}.campaign-head.shop-hero .hero-copy{padding-block:64px}
+ .campaign-head.enrollment-story h1{font-size:clamp(52px,6.4vw,74px)}
+ .campaign-head.enrollment-story .enrollment-story-copy{padding:40px 25px}
+}
+@media(max-width:700px){
+ .campaign-head.hero .hero-copy h1{font-size:clamp(46px,12.5vw,78px);line-height:.98;max-width:100%}
+ .campaign-head .eyebrow,.campaign-head .eyebrow.white{font-size:9px;gap:12px}
+ .campaign-head .hero-description,.campaign-head.enrollment-story .enrollment-story-copy>p:not(.eyebrow){font-size:14px;line-height:1.8;margin-top:22px}
+ .campaign-head.hero:not(.real-hero):not(.deluxe-shop):after{background:linear-gradient(0deg,#0b0d0af5 0%,#0b0d0ad6 36%,#0b0d0a40 78%,#0b0d0a20 100%)}
+ .campaign-head.inner-hero{min-height:620px;align-items:flex-end}
+ .campaign-head.inner-hero .hero-copy{padding-block:230px 42px}
+ .campaign-head.inner-hero .hero-media img{object-position:60% center}
+ .campaign-head.inner-hero:not(.activities-hero) h1{font-size:clamp(42px,11.7vw,72px);max-width:560px}
+ .campaign-head .tabs{gap:8px;margin-top:26px}.campaign-head .tabs button{padding:12px 14px;font-size:12px;min-height:44px}
+ .campaign-head.real-hero:after{background:linear-gradient(90deg,#090a08db,#090a0875 70%,#090a0830),linear-gradient(0deg,#0b0d0aee 0%,transparent 75%)}
+ .campaign-head.real-hero .hero-copy h1{font-size:clamp(52px,14vw,88px)}
+ .campaign-head.shop-hero{min-height:640px;align-items:flex-end}
+ .campaign-head.shop-hero .hero-copy{padding-block:285px 42px}
+ .campaign-head.shop-hero:after{background:linear-gradient(0deg,#0b0d0a 4%,#0b0d0af5 42%,#0b0d0a00 76%)}
+ .campaign-head.enrollment-story .enrollment-story-copy{padding:100px 25px 85px}
+ .campaign-head.enrollment-story h1{font-size:clamp(45px,13vw,76px)}
+ .campaign-head.enrollment-story:after{background:linear-gradient(180deg,#090a0866,#090a08b8 58%,#090a0880)}
+}

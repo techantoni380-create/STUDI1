@@ -1,0 +1,55 @@
+{
+  "architecture_prompt": "Use case: lighting-weather. Edit ONLY lighting, exposure, white balance, contrast and color of this exact real STUDI-1 photograph. Professional clean bright gym photography with richer natural color, vivid existing lime accents, neutral grey and pale walls, warm wood, detailed deep blacks and balanced highlights. Preserve the exact composition, camera angle, all objects, equipment, materials, architecture, signage, lettering and reflections. No added or removed objects, no redesigned interior, no people added, no cartoon or exaggerated HDR, no text overlay. Turn on existing overhead fixtures naturally if they are dark. Retain the original aspect ratio. ",
+  "people_prompt": "Use case: identity-preserve. Retouch this exact real photograph ONLY for professional brighter lighting, balanced exposure, clean contrast, neutral white balance and richer natural colors. Preserve ALL people exactly: identities, faces, ages, skin texture, wrinkles, expressions, eyes, hair, proportions, physique, tattoos, clothes, poses and hand positions. Preserve exact framing and aspect ratio, all background objects, signs and lettering. Do not beautify, rejuvenate, smooth faces, reshape bodies, add muscles, replace people, alter expressions, remove or add anybody, or redesign the background. Keep photographic reality; no HDR plastic look. Stronger professional light and color, but no new scene. ",
+  "campaign_prompts": [
+    {
+      "name": "servicios-campaign",
+      "prompt": "Use case: ads-marketing. Create an original premium fitness website hero photograph, panoramic 2.22:1 aspect ratio. A generic adult athletic male fitness model around 35 years old, with natural believable muscular build, short dark hair, subtle stubble, wearing a plain black sleeveless training top, performing a controlled single dumbbell curl, gaze focused down toward the dumbbell. Waist-up composition, model and fully visible dumbbell entirely in the RIGHT 55 percent; LEFT 45 percent is very dark midnight charcoal negative space for website text. Dark softly blurred gym background, cinematic directional studio key light, restrained lime green edge accent, crisp skin and clothing detail, premium athletic campaign photography, rich contrast with readable shadow detail. Anatomically correct hands and equipment, confident not aggressive. No text, numbers, lettering, badges, logos, UI, watermark or graphic layout. Original anonymous model, not the gym owner or any reference person. Clean sophisticated black and lime palette."
+    },
+    {
+      "name": "contacto-campaign",
+      "prompt": "Use case: ads-marketing. Create an original premium fitness advertising portrait, vertical 4:5 aspect ratio. A generic adult athletic female fitness model about 30 years old, dark brown hair in a neat high bun, standing naturally, looking confidently toward camera, wearing a plain elegant charcoal sports top and matching high-waisted training leggings, white towel casually around her neck. Holding a single modest black dumbbell down beside her hip, anatomically correct hand and equipment. Show from head to mid-thigh, keep head and dumbbell inside frame with breathing room. Bright clean professional soft studio lighting, realistic skin, believable athletic build, rich contrast, premium sports fashion campaign. Background: vivid acid lime #C8EF35 with a broad abstract off-white curved shape and a charcoal sliver near the right edge, graphic yet minimal. No text, slogans, letters, logos, numbers, watermark, social media interface, buttons or fake claims. Original anonymous model distinct from any reference person. High quality photographic cutout integrated in graphic lime backdrop."
+    }
+  ],
+  "corrections": [
+    {
+      "name": "actividades-movilidad",
+      "prompt": "Use case: precise-object-edit. First image is the retouched target. Second image is the original for exact wall/column color reference. Correct ONLY the three structural columns and their reflections: restore their actual ORIGINAL pale cream/off-white paint from image 2. They must NOT be vivid lime green. Keep the enhanced bright lighting, all existing objects, warm wooden floor, mirrors, straps, balls, and exact framing of image 1. Do not add or remove any element. Faithful photographic color correction only.",
+      "paths": [
+        "/workspace/scratch/0ef564e581aa/generated_images/exec-0a7a822d-a3d0-4558-82b4-276c8baa98b4.png",
+        "/workspace/scratch/0ef564e581aa/studi1-edit/STUDI1-web/assets/img/real/actividades-movilidad-2048.webp"
+      ]
+    },
+    {
+      "name": "recepcion",
+      "prompt": "Use case: precise-object-edit. First image is an enhanced target photo; second is the original reference. Restore the EXACT original printed poster on the front of the reception desk and the original small countertop flyers from image 2. Copy their visual appearance, original lettering and all numbers exactly as they are, retaining original lower resolution and indistinct small text rather than inventing legible words. Do NOT recreate or rewrite them. Keep the enhanced illumination and all other pixels/composition of image 1, the same neon text, plant, reception desk and floor. No other changes.",
+      "paths": [
+        "/workspace/scratch/0ef564e581aa/generated_images/exec-4d0320f5-48b5-469b-ada2-7e0c0ede8e4a.png",
+        "/workspace/scratch/0ef564e581aa/studi1-edit/STUDI1-web/assets/img/real/recepcion-921.webp"
+      ]
+    }
+  ],
+  "integrated_sources": {
+    "inicio-instalaciones": "/workspace/scratch/0ef564e581aa/generated_images/exec-a650b564-cb10-4bd9-81db-302b1153bbf5.png",
+    "inicio-actividades": "/workspace/scratch/0ef564e581aa/generated_images/exec-63b94afb-9a3a-4282-9f5f-fac09df0cb44.png",
+    "actividades-fuerza": "/workspace/scratch/0ef564e581aa/generated_images/exec-a5c4e2f0-456a-4d4c-a2ce-dc261e91088b.png",
+    "actividades-cardio": "/workspace/scratch/0ef564e581aa/generated_images/exec-48904ce4-4e00-4486-b436-5e864c94eddb.png",
+    "actividades-movilidad": "/workspace/scratch/0ef564e581aa/generated_images/exec-c80af612-881e-4f00-9569-6c8cbb58f928.png",
+    "recepcion": "/workspace/scratch/0ef564e581aa/generated_images/exec-74cbddf8-c2b0-48d6-b863-f52c7a8a2902.png",
+    "toalla": "/workspace/scratch/0ef564e581aa/generated_images/exec-b2591a1c-89c3-4795-affe-a5f61e490925.png",
+    "inicio-comunidad": "/workspace/scratch/0ef564e581aa/generated_images/exec-c7010ba0-b4a7-4de2-b20c-0c5419b6d405.png",
+    "raul-nacional": "/workspace/scratch/0ef564e581aa/generated_images/exec-07e4ffcd-5e8f-4251-a690-a79bad222d99.png",
+    "comunidad-encuentros": "/workspace/scratch/0ef564e581aa/generated_images/exec-a0904d36-b9d7-4bb0-93e1-e8548f44e5a4.png",
+    "comunidad-grupo": "/workspace/scratch/0ef564e581aa/generated_images/exec-f6ced477-bedd-4155-acb5-d8e40b9d4e80.png",
+    "comunidad-fiesta": "/workspace/scratch/0ef564e581aa/generated_images/exec-84add73b-b012-4a0e-b9ce-2b395739030e.png",
+    "comunidad-celebracion": "/workspace/scratch/0ef564e581aa/generated_images/exec-a7831363-27df-4d9a-a40a-9fccb47aba7d.png",
+    "servicios-campaign": "/workspace/scratch/0ef564e581aa/generated_images/exec-f855cdfd-089c-48d9-ad4a-ab8676bff946.png",
+    "contacto-campaign": "/workspace/scratch/0ef564e581aa/generated_images/exec-4ab5a7d8-9b43-42b6-87b9-3f0bf71a0dad.png"
+  },
+  "towel_prompt": "Use case: lighting-weather. Edit this exact two-panel real STUDI-1 towel product photo. Preserve both panels, every fold, exact towel design, all text and logo marks, lettering STUDI1 and RAÚL BEAS, composition and original 3:2 ratio. Enhance professional studio lighting, clean strong contrast, charcoal textile fiber detail, bright white lettering and vivid lime green logo. Photographic, natural, premium, no change to branding or towel form. No new text, no extra items, no frame.",
+  "additional_constraints": {
+    "recepcion": "Keep neon sign text and all posters exactly as source. Enhance neon glow without obscuring characters. See correction prompt for the final edit.",
+    "raul-nacional": "Preserve actual muscles, pose, tan and cup; balance blown highlights, no added muscles.",
+    "comunidad-celebracion": "Lock every text, font, graphic, logo and heart position exactly; adjust photographic lighting only."
+  }
+}

@@ -49,7 +49,7 @@
     let frame, timer, observer;
     const rawDuration = window.getComputedStyle(logo).getPropertyValue('--logo-intro-duration').trim();
     const parsedDuration = parseFloat(rawDuration) * (rawDuration.endsWith('ms') ? 1 : 1000);
-    const duration = Number.isFinite(parsedDuration) && parsedDuration > 0 ? parsedDuration : 5000;
+    const duration = Number.isFinite(parsedDuration) && parsedDuration > 0 ? parsedDuration : 3000;
 
     function sizeCanvas() {
       const box = original.getBoundingClientRect();

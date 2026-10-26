@@ -1,0 +1,124 @@
+/* Identidad cinematográfica: S1, luz lima y atmósferas de energía. */
+/* Logo mayor en la barra común, conservando el espacio de los controles. */
+.site-header .header-inner{height:96px}
+.site-header .logo{width:232px;flex:0 0 auto}
+@media(max-width:1150px){.site-header .logo{width:208px}.site-header .header-inner{gap:18px}}
+@media(max-width:1050px){.site-header .nav-desktop{display:none}.site-header .menu-toggle{display:inline-grid}.site-header .nav-actions{margin-left:auto}.site-header .header-inner{height:88px}}
+@media(max-width:560px){.site-header .header-inner{height:80px;gap:6px;width:calc(100% - 20px)}.site-header .nav-actions{gap:2px}.site-header .logo{width:clamp(133px,44vw,194px);max-width:calc(100% - 142px);flex:0 1 auto}}
+body{position:relative;isolation:isolate}
+/* Material de gimnasio en trazos vectoriales; no añade texto accesible ni peso fotográfico. */
+main:after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:url('../img/cinema/gym-equipment.svg') center 60px/1440px 1700px repeat-y;opacity:.9}
+@media(min-width:1700px){main:after{background-size:100% auto}}
+@media(max-width:700px){main:after{background-size:700px 827px;background-position:left 30px;opacity:.6}}
+.cinematic-ambient{position:fixed;inset:0;overflow:hidden;pointer-events:none;z-index:-1;background:linear-gradient(#080d0ab8,#080d0add),url('../img/cinema/energy-atmosphere-1600.webp') center/cover}
+.ambient-light{position:absolute;width:70vw;height:90vh;filter:blur(45px);opacity:.35;will-change:transform;background:radial-gradient(ellipse,#9fdd2b3d,transparent 64%);transform:rotate(-18deg);animation:ambient-force 16s ease-in-out infinite alternate}
+.ambient-light.one{left:-38vw;top:0}.ambient-light.two{right:-38vw;bottom:-10vh;animation-delay:-8s;animation-direction:alternate-reverse}
+.cinematic-entry{position:fixed;inset:0;z-index:22;pointer-events:none;overflow:hidden;opacity:0}
+.cinema-ready .cinematic-entry{animation:entry-power 1.8s ease-out both}
+.cinematic-entry:before{content:'';position:absolute;width:25%;height:150%;top:-25%;background:linear-gradient(90deg,transparent,#b4fa482b,#edffb952,transparent);filter:blur(25px);transform:translateX(-200%) skewX(-25deg);animation:entry-beam 1.8s ease-out both}
+.energy-scene{position:relative;isolation:isolate}
+.scene-monogram{position:absolute;right:1%;top:2%;z-index:-1;pointer-events:none;user-select:none;font:800 italic clamp(200px,35vw,530px)/.8 var(--display);letter-spacing:-.07em;color:#c8ef3507;-webkit-text-stroke:1px #c8ef3521;transform:none}
+.scene-monogram>span{color:#c8ef3515;-webkit-text-stroke:1px #c8ef3533}
+.hero>.scene-monogram{z-index:0;top:17%;right:8%;font-size:clamp(290px,44vw,690px);color:#c8ef3509;-webkit-text-stroke:1px #d8ff753d;opacity:.8}
+.hero>.hero-copy,.hero>.carousel-bottom{z-index:2}
+.energy-ribbon{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none;border-radius:inherit;opacity:.42}
+.energy-ribbon:before,.energy-ribbon:after{content:'';position:absolute;width:48%;height:150%;right:-20%;top:-25%;border-radius:50%;border-left:2px solid #c8ef357a;box-shadow:-14px 0 50px #97ed3419;transform:rotate(30deg);animation:force-ribbon 12s ease-in-out infinite alternate;animation-play-state:paused}
+.energy-ribbon:after{right:-24%;border-left:1px solid #efffb56e;animation-delay:-6s}
+.energy-visible>.energy-ribbon:before,.energy-visible>.energy-ribbon:after{animation-play-state:running}
+.home-film{background:linear-gradient(100deg,#071009c7,#0710098f),url('../img/cinema/energy-atmosphere-1600.webp') center/cover;border-color:#6c9340}
+.home-film>.scene-monogram{z-index:-1;left:-3%;right:auto;top:5%;font-size:420px;opacity:.8}
+.home-film>.home-film-copy,.home-film>.home-video-grid{position:relative;z-index:2}
+.enroll-banner{background:linear-gradient(90deg,#101c0ed9,#101c0e80),url('../img/cinema/energy-atmosphere-1600.webp') center 65%/cover}
+.visit-cta{background:linear-gradient(90deg,#0c160be8,#0c160b8f),url('../img/cinema/energy-atmosphere-1600.webp') center 70%/cover}
+.service-grid,.team-section,.class-catalog,.equipment-section,.rates-section{background:radial-gradient(ellipse at 100% 0,#8bbf2724,transparent 56%)}
+.team-section>.scene-monogram,.class-catalog>.scene-monogram{top:5%;right:4%;color:#c8ef3505;-webkit-text-stroke:1px #c8ef351c}
+.section-heading,.team-section>.section-title,.team-section>.eyebrow{position:relative;z-index:2}
+.service-card,.team-card,.class-card{backdrop-filter:blur(4px)}
+
+/* Raúl: tipografía detrás de su fotografía original, sin modificar el retrato. */
+.raul-story{padding-top:110px;position:relative;isolation:isolate;background:radial-gradient(ellipse at 22% 30%,#9dd43824,transparent 65%)}
+.raul-background-name{position:absolute;top:20px;right:0;z-index:-1;font:800 italic clamp(110px,18vw,270px)/.82 var(--display);letter-spacing:-.04em;color:#c8ef3509;-webkit-text-stroke:1px #c8ef352b;pointer-events:none;user-select:none;text-align:right}
+.raul-story-grid{gap:65px}
+.raul-main-photo{padding:0;overflow:hidden;border:1px solid #a5cf4669;border-radius:20px;background:linear-gradient(#10190c69,#0a130dcc),url('../img/cinema/energy-atmosphere-800.webp') center/cover;box-shadow:0 0 50px #9dda231c,0 25px 70px #0007;position:relative;isolation:isolate}
+.raul-poster-name{position:relative;z-index:2;padding:26px 24px 8px;font:800 italic clamp(52px,5.8vw,88px)/.85 var(--display);letter-spacing:-.035em;color:#eff8df;text-shadow:0 0 28px #91bd3626}
+.raul-poster-name span{color:var(--lime)}
+.raul-main-photo .raul-photo-catalunya{border-radius:0;margin:0 12px;width:calc(100% - 24px);aspect-ratio:2/3}
+.raul-main-photo .raul-photo-catalunya:after{content:'';position:absolute;inset:0;pointer-events:none;border:1px solid #c8ef3520;background:linear-gradient(180deg,#0b160b88,transparent 12%,transparent 90%,#0b160b88)}
+.raul-main-photo figcaption{padding:17px 15px;font-size:11px;color:#d1dfbf}
+.raul-achievements article{background:linear-gradient(140deg,#26351a,#0f180f);border-color:#526b32;transition:box-shadow .22s,border-color .22s}
+.raul-achievements article:hover{border-color:var(--lime);box-shadow:0 0 28px #b7ed342b}
+
+/* Cierre fotográfico compartido por todo el proyecto. */
+.site-footer{padding-top:0;background:radial-gradient(ellipse at 50% 0,#6f992429,transparent 70%),#090f0a;overflow:hidden;position:relative;isolation:isolate}
+.footer-campaign{position:relative;min-height:550px;isolation:isolate;display:flex;align-items:center;text-align:left;overflow:hidden;border-block:1px solid #8ab43d4a}
+.footer-campaign-media{position:absolute;inset:0;z-index:-2}
+.footer-campaign-media img{width:100%;height:100%;object-fit:cover;object-position:center}
+.footer-campaign:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#060d09ec 0%,#060d09b3 38%,#060d0900 70%),linear-gradient(0deg,#090f0ac4,transparent 30%)}
+.footer-campaign-copy{padding-block:75px;position:relative;z-index:2}
+.footer-campaign h2{font:800 italic clamp(55px,6.2vw,88px)/.98 var(--display);letter-spacing:-.025em;max-width:680px;color:#f5f7f1}
+.footer-campaign h2 span{color:var(--lime)}
+.footer-campaign .button-row{margin-top:30px;flex-wrap:wrap}
+.footer-campaign .button.outline-blue{background:#0b160acc;color:#f1ffd8;border-color:#a6cf47}
+.footer-energy-strip{background:var(--lime);color:#142008;position:relative}
+.footer-energy-strip>.wrap{display:flex;align-items:center;justify-content:space-between;gap:25px;padding-block:20px}
+.footer-energy-strip strong{font:800 italic clamp(24px,3vw,40px)/1 var(--display);letter-spacing:-.02em}
+.footer-energy-strip strong b{margin-right:18px;padding-right:20px;border-right:1px solid #20301455;font-size:1.2em}
+.cinema-toggle{background:#1a2a0c;color:#e8ffb7;border:1px solid #3a501c;border-radius:30px;padding:11px 18px;font-size:11px;white-space:nowrap;min-height:44px;cursor:pointer}
+.cinema-toggle:disabled{opacity:.8;cursor:default}
+.footer-energy-strip .cinema-toggle:hover{box-shadow:0 0 25px #324b1b55}
+.footer-energy-strip .cinema-toggle:focus-visible{outline-color:#18260e;box-shadow:0 0 0 6px #fff7}
+.site-footer .footer-grid{padding-top:58px;position:relative;z-index:2}
+.site-footer>.scene-monogram{top:auto;bottom:3%;right:-1%;font-size:430px;opacity:.65}
+.site-footer .footer-bottom{position:relative;z-index:2;border-color:#8cab4c2b}
+
+/* Acercamiento lento de cámara: únicamente se mueve la fotografía. */
+.campaign-head .hero-media,.campaign-head .contact-campaign-visual{overflow:hidden}
+.campaign-head .contact-campaign-visual{border-radius:170px 0 0 0}
+.campaign-head .header-motion-image{transform-origin:55% 48%;animation:header-camera 20s ease-in-out infinite alternate;animation-play-state:paused}
+.campaign-head.energy-visible .header-motion-image{animation-play-state:running}
+.real-hero .hero-slide:not(.is-active) .header-motion-image{animation-play-state:paused}
+.real-hero .hero-slide .header-motion-image{animation-duration:12s}
+.cinema-paused .header-motion-image,.cinema-hidden .header-motion-image,.real-hero.carousel-paused .header-motion-image{animation-play-state:paused!important}
+@keyframes header-camera{from{transform:scale(1.015) translate3d(-.35%,0,0)}to{transform:scale(1.065) translate3d(.45%,-.3%,0)}}
+@media(max-width:700px){
+ .campaign-head .contact-campaign-visual{border-radius:100px 0 0 0}
+ .campaign-head .header-motion-image{animation-name:header-camera-mobile}
+ @keyframes header-camera-mobile{from{transform:scale(1.01)}to{transform:scale(1.04)}}
+}
+
+@keyframes ambient-force{from{transform:translate3d(-3%,-4%,0) rotate(-18deg);opacity:.28}to{transform:translate3d(13%,9%,0) rotate(-8deg);opacity:.5}}
+@keyframes force-ribbon{from{transform:translate3d(0,-3%,0) rotate(30deg)}to{transform:translate3d(-12%,8%,0) rotate(38deg)}}
+@keyframes entry-power{0%,100%{opacity:0}20%,65%{opacity:.7}}
+@keyframes entry-beam{from{transform:translateX(-200%) skewX(-25deg)}to{transform:translateX(600%) skewX(-25deg)}}
+.cinema-paused .ambient-light,.cinema-paused .energy-ribbon:before,.cinema-paused .energy-ribbon:after,.cinema-hidden .ambient-light,.cinema-hidden .energy-ribbon:before,.cinema-hidden .energy-ribbon:after{animation-play-state:paused!important}
+.cinema-paused .cinematic-entry{display:none}
+@media(max-width:1050px){.footer-campaign{min-height:500px}.footer-campaign h2{font-size:64px}.raul-story-grid{gap:35px}.raul-poster-name{font-size:64px}}
+@media(max-width:700px){
+ .cinematic-ambient{background-image:linear-gradient(#080d0acf,#080d0ae5),url('../img/cinema/energy-atmosphere-800.webp')}
+ .ambient-light{width:95vw;filter:blur(26px)}
+ .hero>.scene-monogram{font-size:300px;right:3%;top:7%;opacity:.55}
+ .scene-monogram{font-size:260px;right:0;max-width:100%}
+ .home-film{background-image:linear-gradient(180deg,#07100980,#071009d9 60%),url('../img/cinema/energy-atmosphere-800.webp')}
+ .home-film>.scene-monogram{font-size:280px;top:30px;left:12px}
+ .energy-ribbon:before,.energy-ribbon:after{width:70%;right:-45%;opacity:.7}
+ .raul-story{padding-top:85px}.raul-background-name{font-size:112px;top:10px;right:8px;opacity:.65}
+ .raul-main-photo{max-width:390px}.raul-poster-name{font-size:64px;padding:23px 22px 10px}
+ .footer-campaign{min-height:660px;align-items:flex-end}
+ .footer-campaign-media{bottom:auto;height:400px}
+ .footer-campaign-media img{object-position:81% center}
+ .footer-campaign:after{background:linear-gradient(0deg,#090f0a 5%,#090f0a 39%,#090f0ab3 57%,#090f0a00 90%)}
+ .footer-campaign-copy{padding-block:320px 42px}
+ .footer-campaign h2{font-size:clamp(44px,11.8vw,70px)}
+ .footer-campaign .button-row{gap:12px;margin-top:24px}
+ .footer-campaign .button{font-size:11px;padding:14px 18px;min-height:46px}
+ .footer-energy-strip>.wrap{flex-direction:column;align-items:flex-start;gap:18px;padding-block:22px}
+ .footer-energy-strip strong{font-size:27px}.footer-energy-strip strong b{margin-right:10px;padding-right:12px}
+ .site-footer>.scene-monogram{font-size:280px;right:0;bottom:6%;opacity:.4}
+ .site-footer .footer-grid{padding-top:45px}
+}
+@media(prefers-reduced-motion:reduce){
+ .header-motion-image{animation:none!important;transform:none!important}
+ .ambient-light,.energy-ribbon:before,.energy-ribbon:after{animation:none!important}
+ .cinematic-entry{display:none!important}
+ .raul-achievements article{transition:none}
+}

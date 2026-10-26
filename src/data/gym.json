@@ -471,7 +471,7 @@
       "name": "Sauna",
       "icon": "sun",
       "description": "Un servicio complementario de bienestar y relajación. Consulta en recepción la disponibilidad y las condiciones de uso.",
-      "link": "index.html#contacto",
+      "link": "contacto.html",
       "action": "Consultar en recepción"
     }
   ],

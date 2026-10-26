@@ -23,7 +23,7 @@
   const image = logo && logo.querySelector('img');
   if (!image || !window.matchMedia || !window.requestAnimationFrame) return;
   const motion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const interval = 8000, sweep = 1150;
+    const interval = 2000, sweep = 1150;
   let timer, frame, canvas, away = false;
   const allowed = () => !away && !document.hidden && !motion.matches && image.naturalWidth && !logo.classList.contains('logo-unified-active');
   function stop() {

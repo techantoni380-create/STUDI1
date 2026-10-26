@@ -11,9 +11,18 @@
   const submit = $('enrollment-submit'), names = $('participant-inputs');
   const money = n => Number(n).toLocaleString('es-ES', { style:'currency', currency:data.currency || 'EUR' });
   const current = () => window.STUDI1_ENROLLMENT.quote(plans, select.value, family.value, data.enrollmentMaxPeople || 12);
+  const choices = [...document.querySelectorAll('[data-choose-plan]')];
   let extraCount = -1;
   function update() {
     const plan = plans.find(p => p.id === select.value);
+    choices.forEach(button => {
+      const option = plans.find(p => p.id === button.dataset.choosePlan);
+      const active = !!option && option.id === select.value;
+      button.setAttribute('aria-pressed', String(active));
+      button.disabled = !option || option.available === false;
+      const action = button.querySelector('[data-rate-action]');
+      if (action) action.textContent = button.disabled ? 'Consultar disponibilidad' : active ? 'Seleccionada · ir al formulario ↗' : 'Elegir esta modalidad ↗';
+    });
     const flexible = plan && plan.people === 0;
     $('family-people-wrap').hidden = !flexible;
     family.disabled = !flexible;
@@ -53,6 +62,18 @@
     }
   }
   select.addEventListener('change', update);
+  choices.forEach(button => button.addEventListener('click', () => {
+    const option = plans.find(p => p.id === button.dataset.choosePlan);
+    if (!option || option.available === false) return;
+    select.value = option.id;
+    form.hidden = false;
+    if ($('enrollment-review')) $('enrollment-review').hidden = true;
+    document.querySelectorAll('.steps li').forEach((li, i) => li.classList.toggle('active', i === 0));
+    update();
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    document.querySelector('.enrollment-form-wrap').scrollIntoView({behavior: reduced ? 'auto' : 'smooth', block: 'start'});
+    select.focus({preventScroll:true});
+  }));
   family.addEventListener('input', update);
   form.addEventListener('input', e => { if (e.target.setCustomValidity) e.target.setCustomValidity(''); });
   form.addEventListener('submit', e => {

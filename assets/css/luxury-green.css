@@ -1,0 +1,77 @@
+/* STUDI-1 · Carbón, verde profundo y lima. Superficies ligeras, sin fondos en vídeo. */
+:root{
+ --night:#101710;--bg:#080d0a;--panel:#131c14;--panel2:#1a251a;
+ --blue:#c8ef35;--electric:#c8ef35;--lime:#c8ef35;
+ --ice:#f5f7f1;--muted:#b5bdb0;--line:#34432e;
+ --lux-border:#435536;--lux-glow:#b9ed3b2e;
+}
+body{background-color:var(--bg);background-image:radial-gradient(ellipse at 0 20%,#31451b29,transparent 48%),radial-gradient(ellipse at 100% 80%,#3152271c,transparent 45%);color:var(--ice)}
+main{position:relative;isolation:isolate}
+main:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(ellipse 65% 560px at 100% 1000px,#8cc83b12,transparent 75%),radial-gradient(ellipse 55% 650px at 0 2350px,#6b902417,transparent 75%),repeating-linear-gradient(115deg,transparent 0 95px,#c8ef3505 96px,transparent 97px 190px);background-size:100% 2800px}
+.preview-bar{background:#182315;color:#b9c8ad;border-bottom:1px solid #c8ef351a}
+.site-header{background:#080e0bf5;border-color:#c8ef3524;box-shadow:0 10px 34px #0003}
+.site-footer{background:radial-gradient(ellipse at 20% 0,#405b1a26,transparent 65%),#080c09;border-color:#c8ef3529}
+.section-title span,.information-hero h1 span,.enrollment-form-wrap>h2>span,.text-link,.contact-social,.contact-schedule-link,.inline-tariffs{color:var(--lime)}
+.section-heading>p,.hero-description,.contact-details address{color:var(--muted)}
+
+/* Luz rasante sobre metal oscuro y líneas finas, con jerarquía por sección. */
+.home-film{position:relative;isolation:isolate;border-color:#5d763c;background:radial-gradient(ellipse at 4% 0,#a9df3833,transparent 50%),radial-gradient(ellipse at 95% 100%,#37672e29,transparent 60%),repeating-linear-gradient(135deg,#ffffff02 0 1px,transparent 1px 6px),linear-gradient(135deg,#1a2817,#0b120d 72%);box-shadow:0 26px 70px #0005,inset 0 1px 0 #e0ff9330}
+.home-film:before{content:'';position:absolute;left:4%;right:34%;top:0;height:1px;background:linear-gradient(90deg,transparent,#d6ff75aa,transparent);pointer-events:none}
+.enroll-banner{background:radial-gradient(ellipse at 85% 20%,#c8ef352b,transparent 55%),repeating-linear-gradient(115deg,transparent 0 110px,#c8ef350c 111px,transparent 112px 220px),linear-gradient(130deg,#25351b,#0d160f);border-color:#667e42;box-shadow:0 25px 65px #0005,inset 0 1px 0 #eaffb22b}
+.visit-cta{background:radial-gradient(ellipse at 95% 0,#9bd73824,transparent 58%),linear-gradient(115deg,#172514,#0d150e);border-color:#41592e;box-shadow:inset 0 1px 0 #dcff9220,0 18px 45px #0003}
+.enrollment-page{background:radial-gradient(ellipse at 12% 12%,#a0d73418,transparent 45%),radial-gradient(ellipse at 100% 38%,#306b3420,transparent 55%)}
+.contact-visit{position:relative}.contact-visit:before{content:'';position:absolute;inset:12% -3% 0;z-index:-1;border-radius:50%;background:radial-gradient(ellipse at 20% 40%,#99c23913,transparent 65%);pointer-events:none}
+.raul-story{background:radial-gradient(ellipse at 0 40%,#b5d64b0c,transparent 58%)}
+.table-scroll{background:linear-gradient(130deg,#182217,#0d150f);border-color:#435b30;box-shadow:0 20px 50px #0003,inset 0 1px 0 #e5ffb018}
+.schedule-table thead th,.price-table thead th{background:#1e2e18;color:#e9f4d9}
+.schedule-table .has-class{background:#1d2c19}.schedule-table tbody th{background:#111b11}
+.schedule-table .uncertain{background:#2e291b}
+
+:is(.service-card,.team-card,.class-card,.product-card,.activity-side,.enrollment-form-wrap,.order-summary,.checkout-layout form,.other-service-rates,.schedule-day,.insurance-note){background:radial-gradient(ellipse at 100% 0,#b4d95b0c,transparent 65%),linear-gradient(140deg,#1b2719,#101811);border-color:#3d5031;box-shadow:inset 0 1px 0 #efffd514,0 15px 42px #0002}
+.membership-rates .rate-card{background:radial-gradient(ellipse at 90% 0,#c8ef351a,transparent 62%),linear-gradient(140deg,#22331c,#0e180f);border-color:#5c7440;box-shadow:inset 0 1px 0 #efffd51c,0 16px 38px #0003}
+.membership-rates .rate-card[aria-pressed=true]{border-color:var(--lime);box-shadow:0 0 26px #c8ef3526,inset 0 0 30px #c8ef3508}
+.rate-price,.rate-card .rate-price,.price-table td strong,.other-service-rates strong{color:var(--lime)}
+.real-video{border-color:#405332;background:#0e160f;box-shadow:0 15px 35px #0004}
+.photo-open{border-color:#4e6539}.film-controls button{background:#111b13d9;border-color:#b5d59666}
+.assistant-launch{background:linear-gradient(140deg,#263820,#111b13);color:var(--ice);border-color:#6c8950;box-shadow:0 6px 30px #0008,0 0 18px #c8ef350c}
+.robot-face{background:linear-gradient(#283d20,#0a130c);color:var(--lime);border-color:#8ca86d}
+.robot-face:before,.robot-face:after{border-color:var(--lime);box-shadow:0 -1px 6px #c8ef3566}
+.assistant-panel,dialog{background:radial-gradient(ellipse at 100% 0,#8ab93318,transparent 60%),#111a13;border-color:#596e42;box-shadow:0 24px 90px #000b}
+.assistant-answer{background:#0a140c;border-color:#4b6434;color:#dbe7d0}
+.search-result{color:#d4dfcb;border-color:#35452c}
+.section-jump a,.discovery-nav a,.faq-choices button,.filter-group button,.motion-toggle{border-color:#536b3b;background:#142013;color:#e4ecd9}
+.discovery-nav .icon,.service-icon,.team-monogram{color:var(--lime)}
+.button.outline-blue{color:var(--lime);border-color:#9bc24d;background:#0c160edb}
+.button.lime,.button.blue,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button{color:#10170a;background:var(--lime);border-color:var(--lime)}
+.campaign-head .button.lime{color:#10170a}
+.campaign-head .button.outline-blue{color:var(--lime)}
+.tabs button[aria-selected=true],.filter-group button.active,.filter-group button[aria-pressed=true]{background:var(--lime);border-color:var(--lime);color:#111809}
+.rates-section .section-jump a{animation:none;box-shadow:0 0 16px #c8ef350e;border-color:#607c40}
+.rates-section .table-scroll,.rates-section .other-service-rates{border-color:#526d35;box-shadow:0 0 25px #c8ef3510}
+.rates-section .price-table tbody tr:hover,.rates-section .other-service-rates article:hover{background:#263b1d}
+
+/* El mismo brillo al usar ratón o teclado; sin movimiento continuo. */
+:is(.service-card,.team-card,.class-card,.product-card,.rate-card,.image-card,.photo-open,.real-video){transition:border-color .22s ease,box-shadow .22s ease,transform .22s ease}
+:is(.section-jump a,.discovery-nav a,.faq-choices button,.filter-group button,.tabs button,.motion-toggle,.raul-values span,.button,.icon-button,.film-controls button,.assistant-launch){transition:border-color .22s ease,box-shadow .22s ease,background-color .22s ease,color .22s ease}
+@media(hover:hover){
+ :is(.service-card,.team-card,.class-card,.product-card,.rate-card,.image-card):hover{border-color:#b8e84e;box-shadow:0 0 0 1px #c8ef3520,0 0 30px #a4df362b,0 18px 45px #0005;transform:translateY(-3px)}
+ :is(.section-jump a,.discovery-nav a,.faq-choices button,.filter-group button,.tabs button,.motion-toggle,.raul-values span,.icon-button,.film-controls button,.assistant-launch):hover{border-color:var(--lime);box-shadow:0 0 22px #b5eb393d,inset 0 0 16px #c8ef350b;color:var(--lime)}
+ :is(.tabs button[aria-selected=true],.filter-group button.active,.filter-group button[aria-pressed=true]):hover{color:#111809}
+ .button:hover{box-shadow:0 0 28px #c8ef3545;border-color:var(--lime)}
+ .button.outline-blue:hover{background:#24361c;color:#e7ffb4;box-shadow:0 0 25px #c8ef3540}
+ .photo-open:hover,.real-video:hover{border-color:var(--lime);box-shadow:0 0 28px #c8ef352a}
+ :is(.text-link,.site-header a,.site-footer a):hover{color:var(--lime);text-shadow:0 0 15px #c8ef3550}
+}
+:is(.service-card,.team-card,.class-card,.product-card,.rate-card,.image-card,.real-video):focus-within{border-color:var(--lime);box-shadow:0 0 26px #c8ef3530}
+:is(button,a,input,select,textarea,summary):focus-visible{outline:2px solid var(--lime);outline-offset:4px;box-shadow:0 0 22px #c8ef352a}
+:is(input,select,textarea):focus{border-color:var(--lime);box-shadow:0 0 0 3px #c8ef351c}
+::selection{background:var(--lime);color:#10170a}
+@media(max-width:700px){
+ main:before{background-size:100% 2200px;opacity:.7}
+ .home-film{background:radial-gradient(ellipse at 0 0,#a9df3826,transparent 45%),linear-gradient(140deg,#1b2918,#0c130e 65%)}
+ .contact-visit:before{inset:0;opacity:.7}
+}
+@media(prefers-reduced-motion:reduce){
+ :is(.service-card,.team-card,.class-card,.product-card,.rate-card,.image-card,.photo-open,.real-video,.button,.section-jump a,.discovery-nav a,.faq-choices button,.filter-group button,.tabs button,.motion-toggle,.raul-values span,.icon-button,.film-controls button,.assistant-launch){transition:none}
+ :is(.service-card,.team-card,.class-card,.product-card,.rate-card,.image-card):hover{transform:none}
+}

@@ -11,6 +11,7 @@ PAGES = {
  'actividades':('actividades','Actividades','Fuerza, cardio y movilidad. Encuentra tu forma de entrenar en STUDI-1.'),
  'tienda':('tienda','Tienda','Proteínas y accesorios. Tienda STUDI-1 con recogida o envío.'),
  'inscripcion':('inscripcion','Inscripción online','Inscripción a STUDI-1 en dos pasos, sin crear una cuenta.'),
+ 'contacto':('contacto','Contacto','Contacta con STUDI-1 en Reus: dirección, teléfono, redes sociales y horario de apertura.'),
  'checkout':('checkout','Finalizar compra','Revisa tu selección de productos STUDI-1.'),
  'legal':('legal','Información legal','Información legal de la propuesta STUDI-1.')
 }

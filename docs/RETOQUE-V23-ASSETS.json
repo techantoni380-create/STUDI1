@@ -1,0 +1,202 @@
+{
+  "inicio-instalaciones": [
+    {
+      "width": 640,
+      "height": 1423,
+      "path": "assets/img/deluxe/inicio-instalaciones-640.webp"
+    },
+    {
+      "width": 841,
+      "height": 1870,
+      "path": "assets/img/deluxe/inicio-instalaciones-841.webp"
+    }
+  ],
+  "inicio-actividades": [
+    {
+      "width": 640,
+      "height": 1423,
+      "path": "assets/img/deluxe/inicio-actividades-640.webp"
+    },
+    {
+      "width": 841,
+      "height": 1870,
+      "path": "assets/img/deluxe/inicio-actividades-841.webp"
+    }
+  ],
+  "actividades-fuerza": [
+    {
+      "width": 640,
+      "height": 1423,
+      "path": "assets/img/deluxe/actividades-fuerza-640.webp"
+    },
+    {
+      "width": 841,
+      "height": 1870,
+      "path": "assets/img/deluxe/actividades-fuerza-841.webp"
+    }
+  ],
+  "actividades-cardio": [
+    {
+      "width": 640,
+      "height": 1423,
+      "path": "assets/img/deluxe/actividades-cardio-640.webp"
+    },
+    {
+      "width": 841,
+      "height": 1870,
+      "path": "assets/img/deluxe/actividades-cardio-841.webp"
+    }
+  ],
+  "actividades-movilidad": [
+    {
+      "width": 640,
+      "height": 288,
+      "path": "assets/img/deluxe/actividades-movilidad-640.webp"
+    },
+    {
+      "width": 1280,
+      "height": 576,
+      "path": "assets/img/deluxe/actividades-movilidad-1280.webp"
+    },
+    {
+      "width": 1600,
+      "height": 720,
+      "path": "assets/img/deluxe/actividades-movilidad-1600.webp"
+    }
+  ],
+  "recepcion": [
+    {
+      "width": 640,
+      "height": 1423,
+      "path": "assets/img/deluxe/recepcion-640.webp"
+    },
+    {
+      "width": 841,
+      "height": 1870,
+      "path": "assets/img/deluxe/recepcion-841.webp"
+    }
+  ],
+  "toalla": [
+    {
+      "width": 640,
+      "height": 427,
+      "path": "assets/img/deluxe/toalla-640.webp"
+    },
+    {
+      "width": 1280,
+      "height": 853,
+      "path": "assets/img/deluxe/toalla-1280.webp"
+    },
+    {
+      "width": 1536,
+      "height": 1024,
+      "path": "assets/img/deluxe/toalla-1536.webp"
+    }
+  ],
+  "inicio-comunidad": [
+    {
+      "width": 640,
+      "height": 853,
+      "path": "assets/img/deluxe/inicio-comunidad-640.webp"
+    },
+    {
+      "width": 1080,
+      "height": 1440,
+      "path": "assets/img/deluxe/inicio-comunidad-1080.webp"
+    }
+  ],
+  "raul-nacional": [
+    {
+      "width": 640,
+      "height": 929,
+      "path": "assets/img/deluxe/raul-nacional-640.webp"
+    },
+    {
+      "width": 1041,
+      "height": 1511,
+      "path": "assets/img/deluxe/raul-nacional-1041.webp"
+    }
+  ],
+  "comunidad-encuentros": [
+    {
+      "width": 640,
+      "height": 853,
+      "path": "assets/img/deluxe/comunidad-encuentros-640.webp"
+    },
+    {
+      "width": 1080,
+      "height": 1440,
+      "path": "assets/img/deluxe/comunidad-encuentros-1080.webp"
+    }
+  ],
+  "comunidad-grupo": [
+    {
+      "width": 640,
+      "height": 853,
+      "path": "assets/img/deluxe/comunidad-grupo-640.webp"
+    },
+    {
+      "width": 1080,
+      "height": 1440,
+      "path": "assets/img/deluxe/comunidad-grupo-1080.webp"
+    }
+  ],
+  "comunidad-fiesta": [
+    {
+      "width": 640,
+      "height": 480,
+      "path": "assets/img/deluxe/comunidad-fiesta-640.webp"
+    },
+    {
+      "width": 1280,
+      "height": 960,
+      "path": "assets/img/deluxe/comunidad-fiesta-1280.webp"
+    },
+    {
+      "width": 1448,
+      "height": 1086,
+      "path": "assets/img/deluxe/comunidad-fiesta-1448.webp"
+    }
+  ],
+  "comunidad-celebracion": [
+    {
+      "width": 640,
+      "height": 960,
+      "path": "assets/img/deluxe/comunidad-celebracion-640.webp"
+    },
+    {
+      "width": 1024,
+      "height": 1536,
+      "path": "assets/img/deluxe/comunidad-celebracion-1024.webp"
+    }
+  ],
+  "servicios-campaign": [
+    {
+      "width": 640,
+      "height": 288,
+      "path": "assets/img/deluxe/servicios-campaign-640.webp"
+    },
+    {
+      "width": 1280,
+      "height": 576,
+      "path": "assets/img/deluxe/servicios-campaign-1280.webp"
+    },
+    {
+      "width": 1600,
+      "height": 720,
+      "path": "assets/img/deluxe/servicios-campaign-1600.webp"
+    }
+  ],
+  "contacto-campaign": [
+    {
+      "width": 640,
+      "height": 800,
+      "path": "assets/img/deluxe/contacto-campaign-640.webp"
+    },
+    {
+      "width": 1080,
+      "height": 1350,
+      "path": "assets/img/deluxe/contacto-campaign-1080.webp"
+    }
+  ]
+}

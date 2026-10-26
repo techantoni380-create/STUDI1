@@ -1,0 +1,26 @@
+{
+  "tool": "Built-in image_gen",
+  "shop_prompt": "Use case: lighting-weather. Edit target: the provided STUDI-1 gym product campaign image. Change ONLY the blue studio background, blue atmospheric haze, and blue reflected environmental rim lighting to deep charcoal, dark forest green and restrained yellow-lime green highlights matching #C8EF35. Premium luxury fitness editorial lighting, subtle green glow and dark textured stone platform. Keep the exact wide 5:2 framing and composition, with the left 40 percent as dark empty copy space. Keep ALL product containers, towel, actual label text, logos, typography, packaging colors, their scale, positions, shapes and details exactly as in the source. The blue printed graphics on the protein and creatine labels must remain blue because they are part of the actual products. Do not recolor the packaging or towel. No new objects, no text overlays, no added branding, no watermark. Only change the environmental background and ambient light from blue to green. Preserve realistic product photography.",
+  "background_and_footer_prompts": [
+    {
+      "name": "footer-training",
+      "args": {
+        "prompt": "Use case: ads-marketing. Premium STUDI-1 gym website footer campaign photograph, wide 5:2 composition. A generic athletic adult woman in her 30s with dark hair tied back, wearing a professional forest-green sports top and high-waisted bright lime-green leggings, doing a controlled seated weighted abdominal crunch with a green weight plate held at chest height. Realistic healthy athletic body, natural face and anatomy, focused expression, full head visible. Subject occupies RIGHT 55 percent of image, framed from head to knees in gym interior; LEFT 45 percent dark charcoal negative space for website text. Cinematic lime-green rim lighting and one soft overhead light, subtle green gym atmosphere, dark premium equipment blurred in background, confident energetic mood. Accurate plate and hands. No text, no typography, no logos, no watermarks, no prices, no promotional badges, no collage. This is a new illustrative campaign model, not a portrait of a real team member.",
+        "transparent_background": false
+      }
+    },
+    {
+      "name": "energy-atmosphere",
+      "args": {
+        "prompt": "Use case: stylized-concept. Wide 16:9 abstract cinematic power-energy background for a luxury gym brand. Deep charcoal black textured titanium surface with flowing sculptural curves and fine embossed contour lines, luminous yellow-lime green energy filaments flowing diagonally from lower-left to upper-right along the edges, soft emerald-black atmospheric haze and a few restrained glowing particles. Rich dark center with clean negative space for website content. Premium tactile brushed metal, subtle film grain, dramatic soft volumetric rim lighting, dynamic force and movement conveyed by elegant shaped ribbons, high contrast without blown highlights. Main colors near-black #080D0A, forest green #1A351C and electric yellow-green #C8EF35. No text, no letters, no logos, no people, no objects, no interface, no watermark. Clean cinematic sports campaign artwork, not cyberpunk or a gaming dashboard.",
+        "transparent_background": false
+      }
+    }
+  ],
+  "integrated_assets": [
+    "assets/img/deluxe/tienda-green-{640,1280,1600}.webp",
+    "assets/img/cinema/footer-training-{640,1280,1600}.webp",
+    "assets/img/cinema/energy-atmosphere-{800,1600}.webp"
+  ],
+  "note": "La fotografía original de Raúl se conserva. El nombre y el fondo de su sección se componen en HTML/CSS; no se integra ningún recorte generado."
+}

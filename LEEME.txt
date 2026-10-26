@@ -2,28 +2,34 @@ STUDI-1 · WEB ESENCIAL · DOSSIER, FOTOS Y VÍDEOS REALES · 26/10/2026
 
 1. Extrae este ZIP entero en una carpeta NUEVA, sin mezclarlo con versiones anteriores.
 2. Abre index.html con Chrome, Edge o Firefox.
-3. Navega por Inicio, Gimnasio, Servicios, Clases, Tienda e Inscripción.
+3. Navega por Inicio, Gimnasio, Servicios, Clases, Tienda, Contacto e Inscripción.
 
 No abras index.html directamente dentro del ZIP: primero extrae todos los archivos.
 La demo funciona sin instalar nada y sin conexión. No cobra ni envía formularios.
 
 QUÉ INCLUYE
-- Seis páginas principales, contacto dentro de Inicio, checkout y borrador legal.
+- Siete páginas principales, incluido Contacto independiente, checkout y borrador legal: nueve HTML.
 - Dirección y teléfono en Reus, horario de apertura, horario de clases del 16/10/2026 y dossier de servicios, equipo y tarifas recibido el 26/10/2026.
 - Cinco servicios, cinco profesionales y doce clases, con tarifas completas centralizadas en Inscripción.
 - Cuotas mensuales, bonos de 1 a 12 meses, seguro anual y servicios adicionales.
 - Horario semanal en ordenador y horarios plegables por día en móvil.
 - Logo PNG transparente mejorado a partir del JPEG recibido: «STUDI / RAÚL BEAS / 1», con los textos inferiores originales.
-- Transformación del logo durante 5 segundos en la primera entrada o al recargar.
-- Destello metálico al acabar la entrada y cada 8 segundos, sin repetir el giro.
-- Diseño oscuro, azul #2448D8, acento azul eléctrico, lima #C8EF35 y hielo #F4F7FB.
-- 25 fotografías reales y 10 vídeos, distribuidos sin repetir archivos entre secciones.
-- Cabecera de Inicio con 3 panorámicas y cambio cada 8 segundos.
+- Transformación del logo durante 3 segundos en la primera entrada o al recargar.
+- Destello metálico al acabar la entrada y cada 2 segundos, sin repetir el giro.
+- Identidad cinematográfica en carbón #080D0A, verde profundo, lima #C8EF35 y blanco #F5F7F1.
+- Fondos de energía, monogramas S1, cartel de Raúl Beas y footer fotográfico compartido.
+- Etiquetas y tarjetas con brillo verde al pasar el ratón; foco de teclado visible.
+- 25 fotografías originales del gimnasio, cinco fotos de productos y 10 vídeos.
+- Cabecera DELUXE con 3 fotos retocadas: color más intenso, luz equilibrada y luminarias encendidas en la sala de clases.
+- Portada de primera pantalla completa bajo el menú; fotos cada 5 segundos, sin numeración ni flechas y con pausa discreta.
 - Galerías ampliables y fotos de instalaciones con movimiento suave y marco verde.
 - Vídeos automáticos en bucle, silenciosos al inicio, con pausa, sonido y ampliación.
 - Tres vídeos juntos en Inicio, dos en Gimnasio y cinco en Clases.
-- Fotografía de recepción ampliada y números de Servicios en verde.
-- La imagen provisional de tienda queda pendiente de la fase de productos.
+- Recepción retocada, más luminosa y ampliable.
+- Nuevas cabeceras de campaña en Servicios y Contacto, en negro y lima.
+- Trece fotos adicionales retocadas: accesos de Inicio, comunidad, Raúl, categorías de Clases, toalla y recepción.
+- Diez vídeos mejorados desde los originales: luz, color y nitidez moderada. No son 4K nativo.
+- Tienda con composición de productos reales y cinco fotografías ampliables. Catálogo y precios de muestra pendientes de la fase de productos.
 - Header, footer y head con fuentes únicas en src/partials.
 - CSS y JavaScript separados, fuentes locales y diseño adaptable.
 - Galería, vídeo con control, búsqueda local, pestañas de actividades.
@@ -38,11 +44,14 @@ src/partials/footer.html    Pie, asistente y ventanas compartidas.
 src/partials/head.html      Metadatos y enlaces CSS/JS.
 src/pages/                 Contenido independiente de cada página.
 assets/css/styles.css      Diseño de toda la web.
+assets/css/luxury-green.css     Paleta verde, superficies y brillo de interacción.
+assets/css/cinematic.css        Fondos, monogramas, cartel de Raúl y footer.
+assets/js/cinematic.js          Luces decorativas y control de pausa.
 assets/css/logo-animation.css   Duración y colocación de la animación.
 assets/js/logo-animation.js     Primera entrada, recargas y accesibilidad.
 assets/js/logo-morph.js         Giro y apertura continua del logo.
 assets/js/logo-morph-data.js    Máscaras geométricas del PNG oficial.
-assets/js/logo-shine.js         Reflejo de luz cada 8 segundos.
+assets/js/logo-shine.js         Reflejo de luz cada 2 segundos.
 assets/js/enrollment-model.js   Cálculo de personas e importes de presentación.
 assets/js/enrollment.js         Selector, acompañantes y resumen.
 assets/css/enrollment.css       Estilos del formulario compartido.
@@ -75,12 +84,12 @@ El tema es propio; no es el tema comercial Astra.
 ANIMACIÓN DEL LOGO
 Movimiento inspirado en la referencia de Mercedes, adaptado a STUDI-1:
 1. La S y el 1 del propio PNG forman un monograma compacto.
-2. Gira 4 vueltas en 1,45 segundos, acelera y frena con suavidad.
+2. Gira 4 vueltas, acelera y frena con suavidad dentro de la secuencia de 3 segundos.
 3. Tras una pausa breve, el monograma se abre hacia el nombre completo.
 4. Aparecen los descriptores y permanece el PNG original, sin efectos.
 Las transiciones usan máscaras complementarias y el acabado original.
 No hay partículas, círculos auxiliares ni copias fantasma superpuestas.
-Dura 5 segundos. Se reproduce en la primera entrada de la sesión de pestaña
+Dura 3 segundos. Se reproduce en la primera entrada de la sesión de pestaña
 y cada vez que se recarga. No se repite al navegar entre páginas del sitio,
 ni al volver con Atrás/Adelante, ni al pasar el ratón por encima.
 Prueba: abre index.html; visita Gimnasio (logo fijo); pulsa Ctrl+R (animación).
@@ -88,7 +97,7 @@ El logo conserva su espacio y sigue siendo un enlace durante la secuencia.
 Respeta «reducir movimiento»: en ese caso muestra el PNG directamente.
 Al cambiar de pestaña se finaliza el efecto para dejar el logo visible.
 El destello recorre solo la superficie visible del PNG, dura 1,15 s y sus
-inicios están separados por 8 s. Se pausa en segundo plano y con movimiento
+inicios están separados por 2 s. Se pausa en segundo plano y con movimiento
 reducido. No altera el giro ni se repite la introducción al navegar.
 Usa sessionStorage solo para un indicador de reproducción, sin datos personales.
 Si el navegador bloquea ese almacenamiento, evita repetir mediante la referencia
@@ -105,8 +114,12 @@ ESTADO REAL
 HTML demo y código de integración preparados. No existe conexión a un hosting,
 pasarela, pedidos, correo o base de datos en esta entrega. El tema requiere
 WordPress + WooCommerce instalados, configuración y prueba en un entorno real.
-Las fotografías y vídeos del gimnasio son reales. Los productos/precios de la
-tienda y su imagen de cabecera siguen siendo de muestra.
+Las fotografías y vídeos proceden del gimnasio. Portada, cabeceras de Gimnasio y Clases,
+Inscripción y las ocho imágenes de instalaciones se han retocado con edición generativa
+de luz y color. Servicios, Contacto y el footer utilizan imágenes de campaña generadas;
+sus modelos son ilustrativos y no representan miembros del equipo. La cabecera de tienda es una
+composición publicitaria basada en los productos recibidos. Las fichas y precios de
+compra de la demo siguen siendo de muestra; las cinco fotos nuevas no inventan precios.
 Las cuotas y tarifas se han actualizado con el dossier de Raúl.
 El texto legal no es final.
 
@@ -159,3 +172,53 @@ Las imágenes y los diez vídeos se han decodificado para comprobar su integrida
 Los navegadores pueden limitar el autoplay por sus propias preferencias o ahorro
 de energía; si sucede, se puede iniciar cada vídeo desde su control de reproducción.
 La galería de máquinas anima las fotografías disponibles; no son grabaciones nuevas.
+
+CABECERA DELUXE — 26/10/2026
+Las tres fotos de portada tienen versiones WebP de 640, 1280 y 1870 px.
+Los originales anteriores se conservan en assets/img/real/. El acabado retocado
+está en assets/img/deluxe/. Detalles y prompts en docs/CABECERA-DELUXE.md.
+El diseño se adapta a escritorio y móvil; en pantallas muy bajas se mantiene
+una altura mínima para que el contenido y los controles no queden recortados.
+
+RETOQUE DE SECCIONES Y GALERÍA — 26/10/2026
+Cabeceras más luminosas en Gimnasio, Servicios, Clases, Tienda e Inscripción.
+Ocho fotos de instalaciones mejoradas, también al ampliarlas.
+Contacto abre su propia página desde los menús, pie y accesos principales.
+Individual, Pareja y Familiar son tarjetas seleccionables conectadas al formulario.
+Etiquetas e importes con brillo suave, respetando reducir movimiento.
+Los WebP están en assets/img/deluxe/; los prompts y asignación en
+docs/RETOQUE-PROMPTS.json y docs/RETOQUE-SECCIONES.md.
+
+ACTUALIZACIÓN VISUAL v23
+Detalle y límites de calidad: docs/RETOQUE-V23.md. Nuevos recursos en assets/img/deluxe/ y assets/video/deluxe/.
+
+ACTUALIZACIÓN v24 · CABECERAS
+Las siete páginas con imagen de cabecera comparten estilo de campaña: tipografía grande e inclinada, blanco/lima y fondo oscuro. Diseño móvil y tableta revisado. Detalles: docs/CABECERAS-UNIFICADAS.md.
+
+ACTUALIZACIÓN v25 · ENERGÍA CINEMATOGRÁFICA
+Verde lima en toda la interfaz, fondos con formas y líneas luminosas, S1 en gran
+formato, cartel de Raúl Beas y nuevo cierre fotográfico en todas las páginas.
+La foto real de Raúl se conserva; el nombre y las luces se componen en HTML/CSS.
+El botón «Pausar efectos» detiene la atmósfera decorativa y el movimiento de cabeceras y recuerda la preferencia
+en este navegador. Carrusel y vídeos conservan sus controles independientes.
+Se respeta reducir movimiento. La tienda mantiene los colores impresos de los
+envases reales, con su fondo publicitario ahora verde. Sin publicación.
+Detalles y prompts: docs/CINEMATIC-V25.md y docs/CINEMATIC-PROMPTS-V25.json.
+
+ACTUALIZACIÓN v26 · LOGO Y MOVIMIENTO
+Logo de la barra principal más grande en las nueve páginas. Animación inicial
+de 3 segundos y destello cada 2 segundos. Las siete cabeceras con fotografía
+tienen acercamiento lento de cámara; el carrusel continúa cambiando cada 5 s.
+Fondo con siluetas vectoriales de mancuernas, discos, kettlebells, bancos,
+bicicletas y barras. Se mantiene el estilo verde y la lectura del contenido.
+Pausa general de efectos y compatibilidad con reducir movimiento.
+Ver docs/LOGO-MOVIMIENTO-V26.md. Sin publicación.
+
+ACTUALIZACIÓN v27 · MÓVIL Y TABLETA — 27/10/2026
+Composición compacta inspirada en las capturas de Migros: buscador visible,
+accesos rápidos, fotos horizontales, mensaje en tarjeta y tres accesos juntos.
+Vídeos de Inicio en una fila deslizable. Cabeceras interiores más cortas e
+Inscripción en una columna para tableta. Escritorio y estilo verde conservados.
+Detalle: docs/RESPONSIVE-V27.md. Para GitHub usa STUDI1-GitHub.zip, sin WordPress.
+Lee docs/GITHUB-PAGES.md si un commit anterior contiene el ZIP grande.
+No se ha publicado esta actualización.

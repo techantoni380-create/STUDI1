@@ -1,0 +1,162 @@
+[
+  {
+    "name": "clase-en-colchoneta",
+    "source": "WhatsApp Video 2026-10-26 at 09.59.33 (1).mp4",
+    "source_size": [
+      576,
+      1280
+    ],
+    "output_size": [
+      576,
+      1280
+    ],
+    "duration": 45.226,
+    "bytes": 20453098,
+    "filters": "hqdn3d=1.2:1.0:2.4:2.0,eq=contrast=1.055:brightness=0.005:saturation=1.08:gamma=1.06:gamma_weight=0.75,scale=-2:1280:flags=lanczos,unsharp=5:5:0.38:3:3:0,setsar=1",
+    "audio": true
+  },
+  {
+    "name": "entrenamiento-con-pelota",
+    "source": "WhatsApp Video 2026-10-26 at 09.59.33.mp4",
+    "source_size": [
+      476,
+      848
+    ],
+    "output_size": [
+      606,
+      1080
+    ],
+    "duration": 33.659002,
+    "bytes": 13383074,
+    "filters": "hqdn3d=1.2:1.0:2.4:2.0,eq=contrast=1.055:brightness=0.015:saturation=1.08:gamma=1.13:gamma_weight=0.75,scale=-2:1080:flags=lanczos,unsharp=5:5:0.38:3:3:0,setsar=1",
+    "audio": true
+  },
+  {
+    "name": "clase-en-grupo",
+    "source": "WhatsApp Video 2026-10-26 at 09.59.34 (1).mp4",
+    "source_size": [
+      576,
+      1280
+    ],
+    "output_size": [
+      576,
+      1280
+    ],
+    "duration": 35.428571,
+    "bytes": 17132747,
+    "filters": "hqdn3d=1.2:1.0:2.4:2.0,eq=contrast=1.055:brightness=0.005:saturation=1.08:gamma=1.06:gamma_weight=0.75,scale=-2:1280:flags=lanczos,unsharp=5:5:0.38:3:3:0,setsar=1",
+    "audio": true
+  },
+  {
+    "name": "suspension-en-grupo",
+    "source": "WhatsApp Video 2026-10-26 at 09.59.34 (2).mp4",
+    "source_size": [
+      480,
+      854
+    ],
+    "output_size": [
+      608,
+      1080
+    ],
+    "duration": 24.808005,
+    "bytes": 7273747,
+    "filters": "hqdn3d=1.2:1.0:2.4:2.0,eq=contrast=1.055:brightness=0.015:saturation=1.08:gamma=1.13:gamma_weight=0.75,scale=-2:1080:flags=lanczos,unsharp=5:5:0.38:3:3:0,setsar=1",
+    "audio": true
+  },
+  {
+    "name": "circuito-de-suelo",
+    "source": "WhatsApp Video 2026-10-26 at 09.59.34 (3).mp4",
+    "source_size": [
+      480,
+      854
+    ],
+    "output_size": [
+      608,
+      1080
+    ],
+    "duration": 21.666667,
+    "bytes": 9194947,
+    "filters": "hqdn3d=1.2:1.0:2.4:2.0,eq=contrast=1.055:brightness=0.005:saturation=1.08:gamma=1.06:gamma_weight=0.75,scale=-2:1080:flags=lanczos,unsharp=5:5:0.38:3:3:0,setsar=1",
+    "audio": true
+  },
+  {
+    "name": "trabajo-de-core",
+    "source": "WhatsApp Video 2026-10-26 at 09.59.34 (4).mp4",
+    "source_size": [
+      476,
+      850
+    ],
+    "output_size": [
+      604,
+      1080
+    ],
+    "duration": 64.229002,
+    "bytes": 12096981,
+    "filters": "hqdn3d=1.2:1.0:2.4:2.0,eq=contrast=1.055:brightness=0.005:saturation=1.08:gamma=1.06:gamma_weight=0.75,scale=-2:1080:flags=lanczos,unsharp=5:5:0.38:3:3:0,setsar=1",
+    "audio": true
+  },
+  {
+    "name": "ciclo-indoor",
+    "source": "WhatsApp Video 2026-10-26 at 09.59.34.mp4",
+    "source_size": [
+      478,
+      850
+    ],
+    "output_size": [
+      608,
+      1080
+    ],
+    "duration": 20.233333,
+    "bytes": 8779534,
+    "filters": "hqdn3d=1.2:1.0:2.4:2.0,eq=contrast=1.055:brightness=0.015:saturation=1.08:gamma=1.13:gamma_weight=0.75,scale=-2:1080:flags=lanczos,unsharp=5:5:0.38:3:3:0,setsar=1",
+    "audio": true
+  },
+  {
+    "name": "suspension-en-colchoneta",
+    "source": "WhatsApp Video 2026-10-26 at 09.59.35 (1).mp4",
+    "source_size": [
+      368,
+      496
+    ],
+    "output_size": [
+      736,
+      992
+    ],
+    "duration": 32.335011,
+    "bytes": 13031266,
+    "filters": "hqdn3d=1.2:1.0:2.4:2.0,eq=contrast=1.055:brightness=0.015:saturation=1.08:gamma=1.13:gamma_weight=0.75,scale=-2:992:flags=lanczos,unsharp=5:5:0.38:3:3:0,setsar=1",
+    "audio": true
+  },
+  {
+    "name": "control-en-suspension",
+    "source": "WhatsApp Video 2026-10-26 at 09.59.35 (2).mp4",
+    "source_size": [
+      368,
+      368
+    ],
+    "output_size": [
+      736,
+      736
+    ],
+    "duration": 24.250998,
+    "bytes": 7185626,
+    "filters": "hqdn3d=1.2:1.0:2.4:2.0,eq=contrast=1.055:brightness=0.015:saturation=1.08:gamma=1.13:gamma_weight=0.75,scale=-2:736:flags=lanczos,unsharp=5:5:0.38:3:3:0,setsar=1",
+    "audio": true
+  },
+  {
+    "name": "movilidad-con-cintas",
+    "source": "WhatsApp Video 2026-10-26 at 09.59.35.mp4",
+    "source_size": [
+      478,
+      850
+    ],
+    "output_size": [
+      608,
+      1080
+    ],
+    "duration": 20.766667,
+    "bytes": 6798451,
+    "filters": "hqdn3d=1.2:1.0:2.4:2.0,eq=contrast=1.055:brightness=0.005:saturation=1.08:gamma=1.06:gamma_weight=0.75,scale=-2:1080:flags=lanczos,unsharp=5:5:0.38:3:3:0,setsar=1",
+    "audio": true
+  }
+]

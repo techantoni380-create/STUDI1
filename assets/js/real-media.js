@@ -4,22 +4,20 @@
   const carousel = document.querySelector('[data-carousel]');
   if (carousel) {
     const slides = [...carousel.querySelectorAll('[data-slide]')];
-    const dots = [...carousel.querySelectorAll('[data-slide-to]')];
     const pause = carousel.querySelector('[data-slide-pause]');
     const caption = carousel.querySelector('[data-slide-caption]');
     const status = carousel.querySelector('[data-slide-status]');
     const labels = ['Sala de musculación', 'Máquinas y equipamiento', 'Sala de clases'];
     const motion = matchMedia('(prefers-reduced-motion: reduce)');
-    let current = 0, timer, paused = motion.matches, hovered = false, visible = true;
-    const interval = Number(carousel.dataset.interval) || 8000;
+    let current = 0, timer, paused = motion.matches, visible = true;
+    const interval = Number(carousel.dataset.interval) || 5000;
     function schedule() {
       clearTimeout(timer);
-      if (!paused && !hovered && visible && !document.hidden) timer = setTimeout(() => show(current + 1), interval);
+      if (!paused && visible && !document.hidden) timer = setTimeout(() => show(current + 1), interval);
     }
     function show(index, manual = false) {
       current = (index + slides.length) % slides.length;
       slides.forEach((slide, i) => { slide.classList.toggle('is-active', i === current); slide.setAttribute('aria-hidden', String(i !== current)); });
-      dots.forEach((dot, i) => dot.setAttribute('aria-pressed', String(i === current)));
       caption.textContent = labels[current];
       status.setAttribute('aria-live', manual ? 'polite' : 'off');
       status.textContent = `Foto ${current + 1} de ${slides.length}: ${labels[current]}`;
@@ -27,17 +25,14 @@
       schedule();
     }
     function updatePause() {
-      pause.textContent = paused ? '▶' : 'Ⅱ';
+      carousel.classList.toggle('carousel-paused', paused);
+      pause.querySelector('[data-pause-icon]').textContent = paused ? '▶' : 'Ⅱ';
+      pause.querySelector('[data-pause-label]').textContent = paused ? 'Reanudar' : 'Pausar';
       pause.setAttribute('aria-label', paused ? 'Reanudar presentación' : 'Pausar presentación');
       pause.setAttribute('aria-pressed', String(paused));
       schedule();
     }
     pause.addEventListener('click', () => { paused = !paused; updatePause(); });
-    dots.forEach((dot, i) => dot.addEventListener('click', () => show(i, true)));
-    carousel.querySelector('[data-slide-next]').addEventListener('click', () => show(current + 1, true));
-    carousel.querySelector('[data-slide-prev]').addEventListener('click', () => show(current - 1, true));
-    carousel.addEventListener('mouseenter', () => { hovered = true; schedule(); });
-    carousel.addEventListener('mouseleave', () => { hovered = false; schedule(); });
     // El foco de teclado detiene el avance hasta que el visitante lo reanuda.
     carousel.addEventListener('focusin', event => { if (event.target !== pause) { paused = true; updatePause(); } });
     carousel.querySelector('.carousel-controls').addEventListener('keydown', event => {
@@ -51,6 +46,17 @@
     mobileView.addEventListener('change', placeAssistant);
     if ('IntersectionObserver' in window) new IntersectionObserver(entries => { visible = entries[0].isIntersecting; placeAssistant(); schedule(); }, {threshold: .1}).observe(carousel);
     placeAssistant();
+    // Encaja la portada bajo la cabecera real, también con la barra de WordPress.
+    const header = document.querySelector('.site-header');
+    function fitHero() {
+      const height = element => element ? element.getBoundingClientRect().height : 0;
+      const occupied = height(header) + height(document.querySelector('.preview-bar')) + height(document.getElementById('wpadminbar'));
+      carousel.style.setProperty('--hero-top', `${occupied}px`);
+    }
+    fitHero();
+    window.addEventListener('resize', fitHero);
+    window.addEventListener('pageshow', fitHero);
+    if (header && 'ResizeObserver' in window) new ResizeObserver(fitHero).observe(header);
     updatePause();
     carousel.dataset.currentSlide = '0';
   }
