@@ -1,0 +1,26 @@
+STUDI-1 · REVISIÓN V28 · 27/10/2026
+
+Cambios: cinco retratos identificados, carrusel de Inicio, mosaico de Gimnasio,
+fichas individuales, docentes confirmados en Clases y franja tipográfica.
+Identidad carbón/lima conservada; azul eléctrico reservado a interacción del equipo.
+
+Verificación realizada:
+- Compilación de las nueve páginas desde sus fuentes.
+- Referencias locales y anclas: sin recursos ausentes ni IDs duplicados.
+- Fotografías idénticas a los cinco archivos recibidos.
+- Comparación con v27: datos comerciales, horarios, tarifas, trayectoria de Raúl,
+  scripts de inscripción y estilo responsive anterior conservados.
+- Navegador: selección de perfiles, apertura/cierre, Escape, recuperación del foco,
+  enlaces entre perfiles y clases, teclas de selección y pausa de franja.
+- Inicio revisado a anchos 320, 360, 393, 768, 820, 1024 y 1366 px.
+- Gimnasio y Clases revisados a 320, 393, 768 y 1024 px, sin desbordamiento horizontal.
+- Revisión visual de escritorio, móvil y tableta mediante navegador y marcos adaptables.
+  No sustituye una prueba en dispositivos físicos; no se ha probado Safari/iOS real.
+- Tema WordPress regenerado con los nuevos recursos y contenido.
+  No se ha instalado en un servidor WordPress ni conectado pagos.
+
+El carrusel del equipo es manual para permitir leer cada ficha. Las cabeceras
+mantienen sus 5 segundos por foto. La franja tipográfica y el relámpago respetan
+la opción de reducir movimiento y el control global Pausar efectos.
+
+NO PUBLICADO. La tienda sigue siendo de muestra; la fase de productos está pendiente.

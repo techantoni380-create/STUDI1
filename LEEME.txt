@@ -1,4 +1,4 @@
-STUDI-1 · WEB ESENCIAL · DOSSIER, FOTOS Y VÍDEOS REALES · 26/10/2026
+STUDI-1 · WEB ESENCIAL · EQUIPO CON FOTOS Y PERFILES · V28 · 27/10/2026
 
 1. Extrae este ZIP entero en una carpeta NUEVA, sin mezclarlo con versiones anteriores.
 2. Abre index.html con Chrome, Edge o Firefox.
@@ -6,6 +6,19 @@ STUDI-1 · WEB ESENCIAL · DOSSIER, FOTOS Y VÍDEOS REALES · 26/10/2026
 
 No abras index.html directamente dentro del ZIP: primero extrae todos los archivos.
 La demo funciona sin instalar nada y sin conexión. No cobra ni envía formularios.
+
+NOVEDADES V28 · EQUIPO STUDI-1
+- Inicio: carrusel manual después de los accesos principales, con Raúl como primer perfil.
+- Cinco retratos aportados por el cliente: Raúl, Eli, Flor, Redu y Alex.
+- Selector con brillo azul y un relámpago breve al cambiar de profesional.
+- Gimnasio: mosaico del equipo con Raúl destacado y acceso a cada ficha.
+- Fichas con nombre completo, función, especialidades y descripción del dossier.
+- Clases: enlaces a Raúl y Flor solo en las disciplinas confirmadas; no se han asignado docentes a otras clases.
+- Franja tipográfica «STUDI-1 · FUERZA · ENERGÍA · REUS», con pausa.
+- En móvil, los selectores aparecen encima de la foto y permiten desplazamiento horizontal.
+- Navegación con teclado, cierre de fichas con Escape y respeto por movimiento reducido/Pausar efectos.
+- Horarios, tarifas, pagos, cabeceras, vídeos y estructura móvil anterior conservados.
+- Versión local de revisión: no se ha publicado ni modificado ningún repositorio remoto.
 
 QUÉ INCLUYE
 - Siete páginas principales, incluido Contacto independiente, checkout y borrador legal: nueve HTML.
@@ -42,6 +55,10 @@ EDITAR
 src/partials/header.html    Cabecera y menú compartidos.
 src/partials/footer.html    Pie, asistente y ventanas compartidas.
 src/partials/head.html      Metadatos y enlaces CSS/JS.
+src/data/team-presentation.json  Fotos, nombres cortos, textos de presentación y clases confirmadas.
+tools/team_content.py       Genera carrusel, mosaico, fichas y enlaces de instructores.
+assets/css/team.css         Diseño y adaptación del equipo.
+assets/js/team.js           Selección, teclado, fichas y pausa de la franja.
 src/pages/                 Contenido independiente de cada página.
 assets/css/styles.css      Diseño de toda la web.
 assets/css/luxury-green.css     Paleta verde, superficies y brillo de interacción.

@@ -1,0 +1,7 @@
+[
+  {"name":"Raúl Beas","id":"raul","shortName":"Raúl","photo":"raul.jpg","width":763,"height":1024,"teaser":"La experiencia que impulsa STUDI-1. La cercanía que te acompaña en cada entrenamiento.","tags":["Entrenamiento personal","Clases dirigidas"],"classes":["Pilates","Pilates con TRX","Body Tono","Core","Ciclo Indoor"]},
+  {"name":"Elissa Santos","id":"eli","shortName":"Eli","photo":"eli.jpg","width":1024,"height":1536,"teaser":"Atención, organización y entrenamiento. Una cara cercana en tu día a día en el gimnasio.","tags":["Entrenamiento personal","Sala fitness"],"classes":[]},
+  {"name":"María Florencia","id":"flor","shortName":"Flor","photo":"flor.jpg","width":1086,"height":1448,"teaser":"Técnica, movimiento y motivación para ayudarte a encontrar tu propio ritmo.","tags":["Pilates y movilidad","Tonificación"],"classes":["Pilates","Movilidad","Tono Suau"]},
+  {"name":"Reduan Gzouli","id":"redu","shortName":"Redu","photo":"redu.jpg","width":767,"height":1024,"teaser":"A tu lado en la sala: técnica, constancia y un entrenamiento que avanza contigo.","tags":["Entrenamiento personal","Sala fitness"],"classes":[]},
+  {"name":"Alex Dengra","id":"alex","shortName":"Alex","photo":"alex.jpg","width":1024,"height":1536,"teaser":"Dinamismo y buen ambiente para dar lo mejor de ti, en la sala y en las clases.","tags":["Entrenamiento personal","Clases dirigidas"],"classes":[]}
+]

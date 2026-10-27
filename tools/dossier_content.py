@@ -1,6 +1,7 @@
 """Contenido editorial de Raúl: un único origen para servicios, equipo y tarifas."""
 from pathlib import Path
 from html import escape
+from team_content import generate_team, instructor_links, slug
 ROOT=Path(__file__).resolve().parents[1]
 
 def euro(v):
@@ -17,18 +18,12 @@ def generate_dossier(d):
   services+=f'<article class="service-card" id="{s["id"]}"><div class="service-top"><span class="service-icon"><i data-icon="{s["icon"]}"></i></span><span class="service-number">0{i+1}</span></div><h2>{escape(s["name"])}</h2><p>{escape(s["description"])}</p><a class="text-link" href="{s["link"]}">{escape(s["action"])} <i data-icon="arrow"></i></a></article>'
  services+='''</section><section class="wrap visit-cta"><div><p class="eyebrow">PERSONAS QUE TE ACOMPAÑAN</p><h2 class="section-title">TU OBJETIVO,<br><span>CON NUESTRO EQUIPO.</span></h2></div><a class="button lime" href="gimnasio.html#equipo">Conoce al equipo <i data-icon="users"></i></a></section></main>'''
  (ROOT/'src/pages/servicios.html').write_text(services+'\n')
- # Team: names and roles supplied by the client, without assigning unidentified photos.
- team='<section class="section wrap team-section energy-scene" id="equipo"><span class="scene-monogram" aria-hidden="true">S<span>1</span></span>'+heading('NUESTRO EQUIPO','CERCA DE TI.<br><span>EN CADA PASO.</span>','Cinco profesionales que comparten una forma cercana y familiar de vivir el gimnasio.')+'<div class="team-grid">'
- for m in d['team']:
-  team+='<article class="team-card"><div class="team-identity"><span class="team-monogram" aria-hidden="true">'+m['initials']+'</span><div><h3>'+escape(m['name'])+'</h3><p class="team-role">'+escape(m['role'])+'</p></div></div><p class="team-specialties">'+escape(m['specialties'])+'</p><p>'+escape(m['description'])+'</p>'
-  if m.get('story'):team+='<a class="text-link" href="#raul-beas">Su trayectoria deportiva <i data-icon="arrow"></i></a>'
-  team+='</article>'
- team+='</div></section>'
- (partials/'team.html').write_text(team+'\n')
+ generate_team(d)
  # Full class descriptions live here; the timetable only adds days and hours.
  classes='<section class="section wrap class-catalog energy-scene" id="clases"><span class="scene-monogram" aria-hidden="true">S<span>1</span></span>'+heading('CLASES DIRIGIDAS','ELIGE CÓMO<br><span>QUIERES MOVERTE.</span>','Conoce qué se trabaja en cada clase y encuentra tu sesión en el horario semanal.')+'<div class="class-cards">'
  for c in d['classCatalog']:
-  classes+='<article class="class-card"><h3>'+escape(c['name'])+'</h3><p>'+escape(c['description'])+'</p>'
+  classes+='<article class="class-card" id="clase-'+slug(c['name'])+'"><h3>'+escape(c['name'])+'</h3><p>'+escape(c['description'])+'</p>'
+  classes+=instructor_links(d,c['name'])
   if c['supplement']:classes+='<a class="class-supplement" href="inscripcion.html#otros-servicios">Con suplemento · consultar ↗</a>'
   classes+='</article>'
  classes+='</div><a class="button outline-blue catalog-schedule-link" href="#horarios">Encuentra tu horario <i data-icon="clock"></i></a></section>'
