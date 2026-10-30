@@ -1,0 +1,40 @@
+STUDI-1 · v33 · Arreglos 3 y Contacto + adaptación responsive
+30/10/2026 · Entrega local; no publicada.
+
+IDENTIDAD
+- Nuevo PNG con transparencia real (assets/img/logo-oficial.png).
+- Eslogan blanco de cabecera trazado además como texto HTML sobre fondo transparente: más nítido al reducirlo, sin placa negra. El PNG se conserva como recurso independiente.
+- Separación corta S/1 en CTA y monograma vectorial del carrusel.
+- RAÚL BEAS / GIMNÀS de las franjas más legible, con texto nativo.
+- Se conserva la entrada animada y el reflejo del logo; máscaras adaptadas al tamaño del nuevo archivo.
+
+SERVICIOS, CLASES Y TIENDA
+- Tipografías, etiquetas, introducciones, botones y pies de fotos/vídeos ampliados.
+- Dos tarjetas de Servicios en la primera fila: el selector usa el tipo article para que la decoración no altere la composición.
+- Pestañas de actividades equilibradas, fichas de clases y enlaces al horario más grandes.
+- Tabla semanal más legible y vista por días en móvil; teléfono destacado.
+- Bloques informativos centrados y notas con mejor lectura.
+- Retirada la fila Volver del pie común; los cierres de diálogos se conservan.
+- 30 artículos ilustrativos en el catálogo estático (18 de nutrición y 12 de accesorios). Precios, stock y fotos son de demostración; las fotos de categoría no identifican un producto concreto. No se crean artículos reales en WooCommerce.
+
+CONTACTO
+- Texto y acciones de portada más grandes.
+- Dirección, horario, teléfono y redes en cuatro paneles, adaptados a una columna en pantallas estrechas.
+- Teléfono muy destacado y pulsable; enlace al horario y pie de recepción mayores.
+
+RESPONSIVE
+- Móviles pequeños, Android/iPhone y tablet: tipos fluidos, tarjetas reorganizadas y botones con superficie táctil mayor.
+- Campos a 16 px para evitar el zoom automático de formularios en iOS.
+- Altura dinámica y áreas seguras para menú, diálogos y asistente.
+- Vídeos verticales en una columna en móvil, imágenes adaptables, clases/productos en dos columnas para tablet y una para móvil.
+- Horario móvil por días, conservando la tabla de escritorio.
+- Movimiento reducido respetado.
+
+COMPROBACIONES
+- Reconstrucción de las nueve páginas y comprobación de recursos locales e IDs.
+- Sintaxis de todos los JavaScript; 30 IDs únicos con imágenes, categorías y precios válidos.
+- Sin botones de ampliar fotos ni Volver en el pie.
+- Datos de tarifas/horario, inscripción y fotos originales del equipo iguales a v32.
+- PNG RGBA con canal alfa 0–255; paquete WordPress reconstruido sin catálogo ficticio.
+- No se ha podido hacer la revisión visual: el navegador de pruebas falla por un error del entorno de ejecución (directorio de sesiones de solo lectura). No se afirma verificación en Safari/iOS, Chrome/Android ni dispositivos físicos.
+- Pendiente validación visual en navegador real y ejecución del tema en WordPress; PHP no está disponible en este entorno.

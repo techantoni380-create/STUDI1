@@ -3,14 +3,6 @@
   'use strict';
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const motionAllowed = () => !reduceMotion.matches && !document.documentElement.classList.contains('cinema-paused');
-  const pulse = element => {
-    if (!element || !motionAllowed()) return;
-    element.classList.remove('coach-electric');
-    void element.offsetWidth;
-    element.classList.add('coach-electric');
-    window.setTimeout(() => element.classList.remove('coach-electric'), 700);
-  };
-
   document.querySelectorAll('[data-coach-carousel]').forEach(carousel => {
     const slides = [...carousel.querySelectorAll('[data-coach-slide]')];
     const picks = [...carousel.querySelectorAll('[data-coach-select]')];
@@ -28,8 +20,8 @@
       if (left < picker.scrollLeft || left + pick.offsetWidth > picker.scrollLeft + picker.clientWidth) {
         picker.scrollTo({left: Math.max(0, left - (picker.clientWidth - pick.offsetWidth) / 2), behavior: motionAllowed() ? 'smooth' : 'auto'});
       }
-      pulse(pick);
-      pulse(slides[index].querySelector('.coach-portrait'));
+
+
       if (moveFocus) pick.focus({preventScroll: true});
     };
     picks.forEach((pick, i) => {
@@ -76,7 +68,7 @@
       if (!dialog.open) dialog.showModal();
       dialog.scrollTop = 0;
       dialog.querySelector('.coach-close').focus({preventScroll: true});
-      pulse(from);
+
       return true;
     };
     document.querySelectorAll('[data-coach-open]').forEach(link => {
@@ -103,20 +95,23 @@
   }
 
   document.querySelectorAll('[data-coach-marquee]').forEach(strip => {
-    const button = strip.querySelector('[data-marquee-toggle]');
-    let localPaused = false;
-    const update = () => {
-      const globallyPaused = !motionAllowed();
-      const paused = localPaused || globallyPaused;
-      strip.dataset.paused = String(paused);
-      button.setAttribute('aria-pressed', String(paused));
-      button.setAttribute('aria-label', globallyPaused ? 'Texto sin movimiento por la configuración de efectos' : paused ? 'Reanudar texto en movimiento' : 'Pausar texto en movimiento');
-      button.disabled = globallyPaused;
-      button.firstElementChild.textContent = paused ? '▷' : 'Ⅱ';
+    const track = strip.querySelector('.coach-marquee-track');
+    const group = track.firstElementChild;
+    const content = group.innerHTML;
+    const fit = () => {
+      group.innerHTML = content;
+      // Each identical half covers the viewport, including ultrawide screens.
+      const baseWidth = group.getBoundingClientRect().width;
+      if (baseWidth <= 0 || strip.clientWidth <= 0) return;
+      const copies = Math.max(1, Math.ceil(strip.clientWidth / baseWidth));
+      group.innerHTML = content.repeat(copies);
+      track.lastElementChild.innerHTML = group.innerHTML;
+      const distance = group.getBoundingClientRect().width;
+      track.style.setProperty('--marquee-duration', `${distance / 72}s`);
     };
-    button.addEventListener('click', () => { localPaused = !localPaused; update(); });
-    new MutationObserver(update).observe(document.documentElement, {attributes: true, attributeFilter: ['class']});
-    reduceMotion.addEventListener('change', update);
-    update();
+    if ('ResizeObserver' in window) new ResizeObserver(fit).observe(strip);
+    window.addEventListener('resize', fit);
+    if (document.fonts) document.fonts.ready.then(fit);
+    fit();
   });
 })();

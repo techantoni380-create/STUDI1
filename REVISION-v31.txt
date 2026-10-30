@@ -1,0 +1,27 @@
+STUDI-1 · REVISIÓN V31 · 30/10/2026
+
+Cambios:
+- Retratos de los cinco profesionales con contain, marco vertical y proporciones originales.
+- Mosaico: nombres debajo de las fotos, sin ampliación al pasar el ratón.
+- Franja lima con monograma S1 inspirado en el rótulo aportado; fuente local Anton;
+  «TU RITMO. TU FUERZA.» y «FITNESS · CLASES DIRIGIDAS · ENTRENOS PERSONALES».
+- Texto gris/blanco apagado a blanco puro. Verdes, fondos y texto oscuro sobre lima conservados.
+- Volver en cabecera y fichas; retorno interno con historial y posición de lectura.
+- Fotografías de galería estáticas; desactivada la vista de imagen aislada y el zoom.
+- Productos: imagen pasiva, botón Ver detalles conservado. WooCommerce sin zoom/lightbox.
+- Caché de CSS y scripts actualizada en versión estática y tema WordPress.
+
+Verificación:
+- Nueve HTML reconstruidos: recursos presentes, IDs únicos, ninguna galería con botón de ampliación.
+- Retratos originales y datos del gimnasio idénticos a v30.
+- Sintaxis JavaScript comprobada en scripts modificados.
+- Ocho escenarios de lógica de retorno probados con un entorno simulado:
+  navegación interna, anclas, entrada directa, nueva pestaña, almacenamiento bloqueado,
+  rechazo de retorno externo, restauración de posición y clics externos/modificados.
+- Inventario de colores: sin texto gris neutro en las declaraciones revisadas.
+- Integridad ZIP y recursos WebP/MP4 comprobada por el constructor.
+- Vista previa no disponible: preview relay unavailable. Esta versión no se ha comprobado
+  visualmente en navegador ni en dispositivos físicos. La simulación no sustituye esa prueba.
+- PHP/WordPress no ejecutados en este entorno; probar el tema en staging antes de producción.
+
+No publicado. No se han conectado pagos ni modificado datos, precios, horarios o vídeos.

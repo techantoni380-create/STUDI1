@@ -1,13 +1,16 @@
-<main id="contenido" class="enrollment-page">
-<section class="wrap enrollment-layout">
+{{include:entry-marquee}}
+<main id="contenido" class="enrollment-page enrollment-guided">
+{{include:rates-choice}}
+<noscript><p class="wrap plan-note">Activa JavaScript para elegir una cuota y completar la inscripción, o contacta con el gimnasio.</p></noscript>
+<section class="wrap enrollment-layout enrollment-followup" id="inscripcion-datos" hidden aria-label="Datos y pago de la cuota elegida">
   <div class="enrollment-story campaign-head">
     <img src="assets/img/deluxe/inscripcion-hero-840.webp" srcset="assets/img/deluxe/inscripcion-hero-640.webp 640w, assets/img/deluxe/inscripcion-hero-840.webp 840w" sizes="100vw" width="840" height="1868" alt="Bancos y peso libre de STUDI-1 con iluminación mejorada" class="enrollment-photo" fetchpriority="high" loading="eager" decoding="async">
-    <div class="enrollment-story-copy"><p class="eyebrow white">GIMNASIO EN REUS <span class="lime-line"></span></p><h1>TU RITMO.<br><span>TU FUERZA.</span></h1><p>En solitario, en pareja o en familia.<br>Encuentra tu forma de entrenar.</p></div>
+    <div class="enrollment-story-copy"><p class="eyebrow white">GIMNASIO EN REUS <span class="lime-line"></span></p><h2 class="enrollment-story-title">TU RITMO.<br><span>TU FUERZA.</span></h2><p>En solitario, en pareja o en familia.<br>Encuentra tu forma de entrenar.</p></div>
     <div class="enrollment-perks"><span><i data-icon="dumbbell"></i> Tu gimnasio</span><span><i data-icon="users"></i> A tu manera</span><span><i data-icon="lock"></i> Pago puntual</span></div>
   </div>
   <div class="enrollment-form-wrap">
-    <p class="eyebrow">INSCRIPCIÓN ONLINE</p><h2>APÚNTATE A <span>STUDI-1</span></h2><p>Elige tu cuota mensual individual, de pareja o familiar. Sin crear una cuenta. <a class="inline-tariffs" href="#tarifas">Ver tarifas y bonos</a></p>
-    <ol class="steps"><li class="active"><span>1</span> Modalidad y datos</li><li><span>2</span> Revisar y pagar</li></ol>
+    <p class="eyebrow">TU INSCRIPCIÓN · PASO A PASO</p><h2>TU PRÓXIMO <span>PASO.</span></h2><p>Completa los datos de tu inscripción. Después podrás revisar el importe. <a class="inline-tariffs" href="#tarifas">Cambiar de tarifa ↑</a></p>
+    <ol class="steps enrollment-steps" aria-label="Pasos de inscripción"><li class="complete"><span>✓</span> Tarifa</li><li class="active" aria-current="step"><span>2</span> Tus datos</li><li><span>3</span> Revisar y pagar</li></ol>
     <form id="enrollment-form" data-mode="demo">
       {{include:enrollment-fields}}
       <h3 class="enrollment-contact-title">Datos de la persona titular</h3>
@@ -15,7 +18,7 @@
       <label for="email">Correo electrónico *<input id="email" type="email" name="email" autocomplete="email" required maxlength="150" placeholder="tu@correo.com"></label>
       <label for="phone">Teléfono *<input id="phone" type="tel" name="phone" autocomplete="tel" required minlength="7" maxlength="25" placeholder="Tu teléfono"></label>
       <label class="checkbox"><input type="checkbox" name="terms" required><span>Acepto las <a href="legal.html#condiciones">condiciones de inscripción</a> y he leído la <a href="legal.html#privacidad">política de privacidad</a>. *</span></label>
-      <button class="button lime full large" id="enrollment-submit" type="submit" disabled>Continuar <i data-icon="arrow"></i></button>
+      <button class="button lime full large" id="enrollment-submit" type="submit" disabled>Revisar y continuar al pago <i data-icon="arrow"></i></button>
       <noscript><p>Activa JavaScript para elegir tu inscripción o llama al 675 72 83 43.</p></noscript>
       <p class="privacy-caption"><i data-icon="lock"></i> Demostración: tus datos no se envían ni se guardan.</p>
     </form>
@@ -36,5 +39,5 @@
     </section>
   </div>
 </section>
-{{include:rates}}
+{{include:rates-details}}
 </main>

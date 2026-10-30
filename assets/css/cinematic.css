@@ -44,7 +44,7 @@ main:after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;b
 .raul-poster-name span{color:var(--lime)}
 .raul-main-photo .raul-photo-catalunya{border-radius:0;margin:0 12px;width:calc(100% - 24px);aspect-ratio:2/3}
 .raul-main-photo .raul-photo-catalunya:after{content:'';position:absolute;inset:0;pointer-events:none;border:1px solid #c8ef3520;background:linear-gradient(180deg,#0b160b88,transparent 12%,transparent 90%,#0b160b88)}
-.raul-main-photo figcaption{padding:17px 15px;font-size:11px;color:#d1dfbf}
+.raul-main-photo figcaption{padding:17px 15px;font-size:11px;color:#fff}
 .raul-achievements article{background:linear-gradient(140deg,#26351a,#0f180f);border-color:#526b32;transition:box-shadow .22s,border-color .22s}
 .raul-achievements article:hover{border-color:var(--lime);box-shadow:0 0 28px #b7ed342b}
 
@@ -55,7 +55,7 @@ main:after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;b
 .footer-campaign-media img{width:100%;height:100%;object-fit:cover;object-position:center}
 .footer-campaign:after{content:'';position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#060d09ec 0%,#060d09b3 38%,#060d0900 70%),linear-gradient(0deg,#090f0ac4,transparent 30%)}
 .footer-campaign-copy{padding-block:75px;position:relative;z-index:2}
-.footer-campaign h2{font:800 italic clamp(55px,6.2vw,88px)/.98 var(--display);letter-spacing:-.025em;max-width:680px;color:#f5f7f1}
+.footer-campaign h2{font:800 italic clamp(55px,6.2vw,88px)/.98 var(--display);letter-spacing:-.025em;max-width:680px;color:#fff}
 .footer-campaign h2 span{color:var(--lime)}
 .footer-campaign .button-row{margin-top:30px;flex-wrap:wrap}
 .footer-campaign .button.outline-blue{background:#0b160acc;color:#f1ffd8;border-color:#a6cf47}

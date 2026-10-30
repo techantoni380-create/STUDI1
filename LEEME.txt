@@ -1,4 +1,15 @@
-STUDI-1 · WEB ESENCIAL · EQUIPO CON FOTOS Y PERFILES · V28 · 27/10/2026
+v36: carrusel adicional en Inicio, entre el equipo y el bloque de Raúl.
+
+VERSIÓN v35 — Franja verde animada en la entrada de todas las páginas, sin puntos finales.
+Ver REVISION-v35.txt. Sin publicar.
+
+VERSIÓN v34 — Corregida la duplicación del eslogan. Solo se muestra el PNG con las letras blancas.
+
+VERSIÓN v33 — Arreglos acumulados, Contacto y responsive.
+Ver REVISION-v33.txt para cambios y límites de verificación.
+No publicada. Catálogo estático de 30 artículos de demostración.
+
+STUDI-1 · WEB ESENCIAL · ARREGLOS 1 Y 2 · V32 · 30/10/2026
 
 1. Extrae este ZIP entero en una carpeta NUEVA, sin mezclarlo con versiones anteriores.
 2. Abre index.html con Chrome, Edge o Firefox.
@@ -7,18 +18,65 @@ STUDI-1 · WEB ESENCIAL · EQUIPO CON FOTOS Y PERFILES · V28 · 27/10/2026
 No abras index.html directamente dentro del ZIP: primero extrae todos los archivos.
 La demo funciona sin instalar nada y sin conexión. No cobra ni envía formularios.
 
-NOVEDADES V28 · EQUIPO STUDI-1
-- Inicio: carrusel manual después de los accesos principales, con Raúl como primer perfil.
-- Cinco retratos aportados por el cliente: Raúl, Eli, Flor, Redu y Alex.
-- Selector con brillo azul y un relámpago breve al cambiar de profesional.
-- Gimnasio: mosaico del equipo con Raúl destacado y acceso a cada ficha.
-- Fichas con nombre completo, función, especialidades y descripción del dossier.
-- Clases: enlaces a Raúl y Flor solo en las disciplinas confirmadas; no se han asignado docentes a otras clases.
-- Franja tipográfica «STUDI-1 · FUERZA · ENERGÍA · REUS», con pausa.
-- En móvil, los selectores aparecen encima de la foto y permiten desplazamiento horizontal.
-- Navegación con teclado, cierre de fichas con Escape y respeto por movimiento reducido/Pausar efectos.
-- Horarios, tarifas, pagos, cabeceras, vídeos y estructura móvil anterior conservados.
-- Versión local de revisión: no se ha publicado ni modificado ningún repositorio remoto.
+NOVEDADES V32 · ARREGLO 1
+- Franja continua compacta con S1 entre frases, en Inicio y el pie de todas las páginas.
+- Velocidad constante de 72 píxeles/segundo: aproximación a la referencia Gold’s Gym;
+  no se ha podido medir la velocidad exacta de la referencia.
+- Retirados los botones de pausa de la franja, la portada y los efectos decorativos.
+  Se respeta la preferencia del sistema de movimiento reducido. Los vídeos conservan controles.
+- Cabecera común más legible, menú y llamada a inscripción mayores, S1 en el botón,
+  lema del logo en blanco y resplandor verde. Sin la antigua fila bajo el menú.
+- Volver se conserva al final del contenido y en las fichas.
+- Asistente virtual con retrato de Raúl, identificado como asistente virtual.
+- Etiquetas, presentación del equipo, frases y botones destacados más grandes.
+- Foto de grupo con mayor espacio y texto de comunidad ampliado; tres vídeos alineados.
+- Bloques de inscripción y contacto con brillo verde; pie con franja animada.
+- Trayectoria de Raúl ampliada sin añadir títulos ni resultados deportivos nuevos.
+- Fotos, tarifas, horarios e inscripción conservados. Sin publicar.
+- Revisión visual pendiente: el navegador de comprobación no arranca en este entorno.
+
+ARREGLO 2 · GIMNASIO
+- Resultados deportivos reorganizados: fichas a la izquierda, foto en el centro
+  y contexto de competición a la derecha; distribución apilada en móvil.
+- Cabecera, títulos de secciones, introducciones y pies de foto/vídeo ampliados.
+- Texto de comunidad ampliado bajo la foto principal, sin duplicar la introducción.
+- Todos los cambios se adaptan mediante reglas para móvil, tableta y ordenador;
+  pendiente comprobación visual por indisponibilidad del navegador de revisión.
+
+HISTORIAL DE VERSIONES ANTERIORES
+NOVEDADES V31 · EQUIPO, FRANJA S1 Y NAVEGACIÓN
+- Cinco retratos completos, sin zoom ni recorte, en Inicio, Gimnasio y fichas.
+- Nombres debajo de la imagen en el mosaico del equipo.
+- Franja lima con tipografía Anton recta y gruesa, monograma S1 inspirado en el rótulo
+  aportado por el cliente y «TU RITMO. TU FUERZA.».
+- Línea complementaria: «FITNESS · CLASES DIRIGIDAS · ENTRENOS PERSONALES».
+- Textos grises y blancos apagados sustituidos por blanco puro; verdes y fondos conservados.
+- Botón Volver en la barra de navegación y controles Volver en las fichas.
+- Las fotos de galería son estáticas: sin ampliación, ventanas de foto ni zoom al pasar el ratón.
+- La cabecera conserva el cambio de imágenes y los vídeos mantienen sus controles.
+- Las imágenes de productos son pasivas; «Ver detalles» mantiene la ficha del producto.
+- Verificaciones de código, recursos y lógica de navegación completadas.
+- Vista previa en navegador no disponible en este entorno durante esta revisión.
+- Sin publicar. Para GitHub usar STUDI1-GitHub.zip.
+
+NOVEDADES V30 · FRANJA STUDI-1
+- Estrellas sustituidas por el monograma S1, formado con la S y el 1 del logo oficial.
+- Tipografía Anton local, alta, gruesa y recta, inspirada en la referencia del cliente.
+- Fondo verde lima, texto oscuro y movimiento continuo con pausa.
+- El resto de las mejoras v29 se mantiene.
+
+NOVEDADES V29 · FOTOGRAFÍA, INTERACCIÓN VERDE E INSCRIPCIÓN
+- Seis fotos nuevas retocadas con luz, contraste, color y detalle, optimizadas en WebP.
+- Inicio: foto de Raúl de espaldas en un bloque destacado con acceso a su trayectoria; foto panorámica de comunidad completa.
+- Clases: dos fotos de TRX y una de trabajo con balones, fijas.
+- Gimnasio: foto de celebración de grupo en la sección Comunidad.
+- Carrusel del equipo: flechas laterales ‹ › verdes y selección con brillo verde; eliminado el relámpago sobre las fotos.
+- Etiquetas, botones y marcos coherentes en verde lima.
+- Inscríbete: primero las tres tarifas; al elegir una se despliegan los datos debajo, seguidos del resumen y la demostración de pago.
+- No hay cuota preseleccionada visualmente al entrar. Cambiar de tarifa actualiza personas e importe.
+- La demo no envía datos ni cobra. WordPress conserva el checkout nativo de WooCommerce para el pago real futuro.
+- Horarios, tarifas, servicios, vídeos, fichas del equipo y cabeceras anteriores conservados.
+- No se ha publicado ni modificado ningún repositorio remoto.
 
 QUÉ INCLUYE
 - Siete páginas principales, incluido Contacto independiente, checkout y borrador legal: nueve HTML.
@@ -35,19 +93,19 @@ QUÉ INCLUYE
 - 25 fotografías originales del gimnasio, cinco fotos de productos y 10 vídeos.
 - Cabecera DELUXE con 3 fotos retocadas: color más intenso, luz equilibrada y luminarias encendidas en la sala de clases.
 - Portada de primera pantalla completa bajo el menú; fotos cada 5 segundos, sin numeración ni flechas y con pausa discreta.
-- Galerías ampliables y fotos de instalaciones con movimiento suave y marco verde.
+- Galerías fijas y fotos de instalaciones fijas con marco verde.
 - Vídeos automáticos en bucle, silenciosos al inicio, con pausa, sonido y ampliación.
 - Tres vídeos juntos en Inicio, dos en Gimnasio y cinco en Clases.
-- Recepción retocada, más luminosa y ampliable.
+- Recepción retocada, más luminosa y fija.
 - Nuevas cabeceras de campaña en Servicios y Contacto, en negro y lima.
 - Trece fotos adicionales retocadas: accesos de Inicio, comunidad, Raúl, categorías de Clases, toalla y recepción.
 - Diez vídeos mejorados desde los originales: luz, color y nitidez moderada. No son 4K nativo.
-- Tienda con composición de productos reales y cinco fotografías ampliables. Catálogo y precios de muestra pendientes de la fase de productos.
+- Tienda con composición de productos reales y cinco fotografías integradas. Catálogo y precios de muestra pendientes de la fase de productos.
 - Header, footer y head con fuentes únicas en src/partials.
 - CSS y JavaScript separados, fuentes locales y diseño adaptable.
 - Galería, vídeo con control, búsqueda local, pestañas de actividades.
 - Tienda: filtros, detalle de producto, carrito persistente, cantidades, recogida/envío.
-- Inscripción demo en 2 pasos; no almacena ni envía datos personales.
+- Inscripción demo en 3 pasos; no almacena ni envía datos personales.
 - Asistente guiado con 10 respuestas, sin IA ni datos de socios.
 - Tema WordPress original preparado para WooCommerce y un alta como producto virtual.
 
@@ -58,7 +116,13 @@ src/partials/head.html      Metadatos y enlaces CSS/JS.
 src/data/team-presentation.json  Fotos, nombres cortos, textos de presentación y clases confirmadas.
 tools/team_content.py       Genera carrusel, mosaico, fichas y enlaces de instructores.
 assets/css/team.css         Diseño y adaptación del equipo.
+assets/css/refinement.css   Fotos nuevas, flechas verdes e inscripción con tarifas primero.
+src/partials/strength-feature.html  Bloque destacado de Raúl.
+src/partials/class-life.html        Galería de las nuevas fotos de Clases.
+RETOQUES-v29.json           Procedencia e instrucciones de los seis retoques.
 assets/js/team.js           Selección, teclado, fichas y pausa de la franja.
+assets/js/navigation.js     Volver a la página/sección anterior sin guardar formularios.
+assets/img/s1-franja.svg    Monograma S1 vectorial para la franja.
 src/pages/                 Contenido independiente de cada página.
 assets/css/styles.css      Diseño de toda la web.
 assets/css/luxury-green.css     Paleta verde, superficies y brillo de interacción.
@@ -93,7 +157,10 @@ reconstruir se sustituyen por src/pages + src/partials. No necesitas servidor
 para abrir los HTML: los componentes se incluyen al construir.
 
 WORDPRESS / HOSTINGER
-El ZIP instalable es wordpress/studi1-esencial.zip.
+El ZIP instalable completo es wordpress/studi1-esencial.zip.
+Para reducir el tamaño del paquete, la carpeta de fuentes del tema no duplica
+assets/ ni content/: esos recursos se regeneran desde la raíz ejecutando
+python tools/package.py. Para instalar, utiliza el ZIP del tema ya incluido.
 Lee docs/INSTALACION-WOOCOMMERCE.md para completar el montaje real.
 No subas la carpeta HTML encima de una instalación WordPress existente.
 El tema es propio; no es el tema comercial Astra.

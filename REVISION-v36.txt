@@ -1,0 +1,5 @@
+STUDI-1 v36 — Carrusel adicional en Inicio
+
+Se añade la franja verde animada después de Todo el equipo y antes del bloque La fuerza se construye, conservando las franjas de entrada y cierre. Mismo componente responsive y textos sin puntos finales.
+
+Comprobación estructural de las nueve páginas y paquetes estático y WordPress. Revisión visual en navegador pendiente. No publicado.

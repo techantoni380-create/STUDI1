@@ -15,7 +15,7 @@ for path in sorted(ROOT.rglob('*')):
     if not path.is_file():
         continue
     relative = path.relative_to(ROOT)
-    if relative.parts[0] == 'wordpress' or '__pycache__' in relative.parts:
+    if relative.parts[0] in {'wordpress', 'dist'} or '__pycache__' in relative.parts:
         continue
     if any(part.startswith('.') and part not in allowed_hidden for part in relative.parts):
         continue

@@ -1,0 +1,7 @@
+STUDI-1 v35 — Carrusel de marca en todas las cabeceras
+
+Franja verde con S1, RAÚL BEAS / GIMNÀS y palabras grandes. Ubicada al pie de las seis portadas principales y debajo de la navegación en Inscripción, Checkout y Legal. Integrada en la página: conserva su lugar bajo la portada y no tapa contenido al desplazarse. Se mantiene la franja de cierre; se traslada la franja intermedia de Inicio a su portada.
+
+Textos: TU RITMO, TU FUERZA, FITNESS, CLASES DIRIGIDAS, ENTRENOS PERSONALES. Sin puntos finales en ninguna franja. Movimiento continuo a 72 px/s, mitades idénticas y cobertura ajustada al ancho. Tamaños adaptados a móvil/tablet y respeto de movimiento reducido.
+
+Comprobaciones: nueve páginas con una franja de entrada y una de cierre, posiciones, recursos e IDs válidos; prueba aislada del bucle para móvil, escritorio y ultraancho, incluida protección cuando el ancho es cero. Paquetes estático y WordPress reconstruidos. No hay revisión visual en navegador ni ejecución PHP: sigue pendiente por las limitaciones de entorno comunicadas. No publicado.

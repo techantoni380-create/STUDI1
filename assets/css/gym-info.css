@@ -37,7 +37,7 @@ address { font-style: normal; }
 .schedule-table .has-class { background: #1f271b; }
 .schedule-table .uncertain { background: #2e291b; }
 .schedule-table .uncertain small, .schedule-table .unreadable { color: #efd18b; }
-.schedule-table .no-class { color: #606b5a; }
+.schedule-table .no-class { color:#fff; }
 .schedule-notes { padding: 20px 22px; margin-top: 20px; border-left: 3px solid var(--lime); background: var(--panel); border-radius: 0 12px 12px 0; }
 .schedule-notes p { color: var(--muted); font-size: 12px; line-height: 1.7; margin-bottom: 10px; }
 .schedule-notes strong { color: var(--ice); }

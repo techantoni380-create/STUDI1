@@ -1,7 +1,7 @@
 /* Acabado común para cabeceras, contacto y selección de cuotas. */
 .inner-hero.deluxe-hero:after,.activities-hero.deluxe-hero:after{background:linear-gradient(90deg,#0a0e09e0 0%,#0c100a9c 36%,#0f130d0d 76%),linear-gradient(0deg,#0e110cc7,transparent 40%)}
 .deluxe-hero .hero-media img{object-position:center}
-.deluxe-hero .hero-description{color:#f5f7f1;text-shadow:0 2px 12px #0009}
+.deluxe-hero .hero-description{color:#fff;text-shadow:0 2px 12px #0009}
 .services-photo-hero{position:relative;isolation:isolate;overflow:hidden;min-height:640px;display:flex;align-items:center;padding-block:65px}
 .services-photo-hero .hero-media{position:absolute;inset:0 0 0 46%;z-index:-2;height:100%}
 .services-photo-hero .hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 50%}

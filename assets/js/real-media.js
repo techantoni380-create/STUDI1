@@ -4,7 +4,6 @@
   const carousel = document.querySelector('[data-carousel]');
   if (carousel) {
     const slides = [...carousel.querySelectorAll('[data-slide]')];
-    const pause = carousel.querySelector('[data-slide-pause]');
     const caption = carousel.querySelector('[data-slide-caption]');
     const status = carousel.querySelector('[data-slide-status]');
     const labels = ['Sala de musculación', 'Máquinas y equipamiento', 'Sala de clases'];
@@ -26,17 +25,11 @@
     }
     function updatePause() {
       carousel.classList.toggle('carousel-paused', paused);
-      pause.querySelector('[data-pause-icon]').textContent = paused ? '▶' : 'Ⅱ';
-      pause.querySelector('[data-pause-label]').textContent = paused ? 'Reanudar' : 'Pausar';
-      pause.setAttribute('aria-label', paused ? 'Reanudar presentación' : 'Pausar presentación');
-      pause.setAttribute('aria-pressed', String(paused));
       schedule();
     }
-    pause.addEventListener('click', () => { paused = !paused; updatePause(); });
-    // El foco de teclado detiene el avance hasta que el visitante lo reanuda.
-    carousel.addEventListener('focusin', event => { if (event.target !== pause) { paused = true; updatePause(); } });
-    carousel.querySelector('.carousel-controls').addEventListener('keydown', event => {
-      if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') { event.preventDefault(); show(current + (event.key === 'ArrowRight' ? 1 : -1), true); }
+    carousel.addEventListener('focusin', () => { paused = true; updatePause(); });
+    carousel.addEventListener('focusout', event => {
+      if (!carousel.contains(event.relatedTarget)) { paused = motion.matches; updatePause(); }
     });
     document.addEventListener('visibilitychange', schedule);
     motion.addEventListener('change', () => { paused = motion.matches; updatePause(); });
@@ -115,31 +108,4 @@
     update();
     start();
   });
-  const galleryMotion = document.querySelector('[data-gallery-motion]');
-  if (galleryMotion) {
-    const gallery = document.querySelector('.cinematic-gallery');
-    const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-    let paused = reduced.matches;
-    function updateGallery() {
-      gallery.classList.toggle('motion-paused', paused);
-      galleryMotion.setAttribute('aria-pressed', String(paused));
-      galleryMotion.innerHTML = `${paused ? '▶' : 'Ⅱ'} <span>${paused ? 'Activar movimiento' : 'Pausar movimiento'}</span>`;
-    }
-    galleryMotion.addEventListener('click', () => { paused = !paused; updateGallery(); });
-    reduced.addEventListener('change', () => { paused = reduced.matches; updateGallery(); });
-    updateGallery();
-  }
-  const dialog = document.getElementById('photo-dialog');
-  if (dialog) {
-    const large = document.getElementById('photo-dialog-image');
-    const caption = document.getElementById('photo-dialog-caption');
-    document.querySelectorAll('[data-photo]').forEach(button => button.addEventListener('click', () => {
-      const original = button.querySelector('img');
-      large.src = original.src; large.alt = original.alt;
-      large.srcset = original.srcset; large.sizes = '95vw';
-      caption.textContent = original.alt;
-      dialog.showModal();
-    }));
-    dialog.addEventListener('close', () => { large.removeAttribute('src'); large.removeAttribute('srcset'); });
-  }
 })();

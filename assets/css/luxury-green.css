@@ -2,13 +2,13 @@
 :root{
  --night:#101710;--bg:#080d0a;--panel:#131c14;--panel2:#1a251a;
  --blue:#c8ef35;--electric:#c8ef35;--lime:#c8ef35;
- --ice:#f5f7f1;--muted:#b5bdb0;--line:#34432e;
+ --ice:#fff;--muted:#fff;--line:#34432e;
  --lux-border:#435536;--lux-glow:#b9ed3b2e;
 }
 body{background-color:var(--bg);background-image:radial-gradient(ellipse at 0 20%,#31451b29,transparent 48%),radial-gradient(ellipse at 100% 80%,#3152271c,transparent 45%);color:var(--ice)}
 main{position:relative;isolation:isolate}
 main:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(ellipse 65% 560px at 100% 1000px,#8cc83b12,transparent 75%),radial-gradient(ellipse 55% 650px at 0 2350px,#6b902417,transparent 75%),repeating-linear-gradient(115deg,transparent 0 95px,#c8ef3505 96px,transparent 97px 190px);background-size:100% 2800px}
-.preview-bar{background:#182315;color:#b9c8ad;border-bottom:1px solid #c8ef351a}
+.preview-bar{background:#182315;color:#fff;border-bottom:1px solid #c8ef351a}
 .site-header{background:#080e0bf5;border-color:#c8ef3524;box-shadow:0 10px 34px #0003}
 .site-footer{background:radial-gradient(ellipse at 20% 0,#405b1a26,transparent 65%),#080c09;border-color:#c8ef3529}
 .section-title span,.information-hero h1 span,.enrollment-form-wrap>h2>span,.text-link,.contact-social,.contact-schedule-link,.inline-tariffs{color:var(--lime)}
@@ -37,9 +37,9 @@ main:before{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;
 .robot-face{background:linear-gradient(#283d20,#0a130c);color:var(--lime);border-color:#8ca86d}
 .robot-face:before,.robot-face:after{border-color:var(--lime);box-shadow:0 -1px 6px #c8ef3566}
 .assistant-panel,dialog{background:radial-gradient(ellipse at 100% 0,#8ab93318,transparent 60%),#111a13;border-color:#596e42;box-shadow:0 24px 90px #000b}
-.assistant-answer{background:#0a140c;border-color:#4b6434;color:#dbe7d0}
-.search-result{color:#d4dfcb;border-color:#35452c}
-.section-jump a,.discovery-nav a,.faq-choices button,.filter-group button,.motion-toggle{border-color:#536b3b;background:#142013;color:#e4ecd9}
+.assistant-answer{background:#0a140c;border-color:#4b6434;color:#fff}
+.search-result{color:#fff;border-color:#35452c}
+.section-jump a,.discovery-nav a,.faq-choices button,.filter-group button,.motion-toggle{border-color:#536b3b;background:#142013;color:#fff}
 .discovery-nav .icon,.service-icon,.team-monogram{color:var(--lime)}
 .button.outline-blue{color:var(--lime);border-color:#9bc24d;background:#0c160edb}
 .button.lime,.button.blue,.woocommerce a.button,.woocommerce button.button,.woocommerce input.button{color:#10170a;background:var(--lime);border-color:var(--lime)}

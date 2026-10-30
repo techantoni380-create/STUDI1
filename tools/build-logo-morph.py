@@ -6,8 +6,8 @@ import json
 
 ROOT = Path(__file__).resolve().parents[1]
 image = Image.open(ROOT/'assets/img/logo-oficial.png')
-if image.size != (2143, 734):
-    raise SystemExit('Las máscaras son específicas del logo oficial 2143 × 734. Adaptarlas antes de regenerar.')
+if image.size not in {(2143, 734), (2142, 734)}:
+    raise SystemExit('Las máscaras corresponden al logo horizontal de 734 px de alto. Adaptarlas para otro diseño.')
 W, H = 256, 256*734/2143
 def polygon(points):
     return [[round(x*W/2143,6),round(y*H/734,6)] for x,y in points]

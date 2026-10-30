@@ -1,0 +1,11 @@
+STUDI-1 · REVISIÓN V30 · 28/10/2026
+Cambio localizado en la franja tipográfica de Inicio:
+- Sustitución de las estrellas por un monograma S1 compuesto en CSS con la S
+  y el 1 del PNG oficial, usando las mismas regiones que la animación del header.
+- Fuente local Anton, recta y condensada, con licencia OFL incluida.
+- Fondo lima, texto oscuro, repetición continua y control de pausa conservados.
+- Ajuste del título del bloque de Raúl para evitar recorte en pantallas de 320 px.
+Validado en navegador: logotipos visibles, estrellas ausentes, pausa y reanudación;
+revisión de escritorio y móvil, sin desbordamiento horizontal de la página.
+Las 9 páginas se reconstruyen; WordPress comparte los mismos recursos.
+No se ha instalado WordPress ni publicado ningún cambio.

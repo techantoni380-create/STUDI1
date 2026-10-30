@@ -1,0 +1,25 @@
+STUDI-1 · REVISIÓN V29 · 28/10/2026
+
+Seis nuevas fotografías retocadas y optimizadas, Raúl destacado en Inicio,
+TRX/fitball en Clases y comunidad en Inicio/Gimnasio. Flechas laterales verdes,
+selección verde y eliminación del relámpago del equipo.
+Inscripción: cuota primero; datos y revisión del pago debajo tras seleccionar.
+
+Verificación:
+- Nueve HTML reconstruidos; recursos locales presentes, imágenes con texto alternativo,
+  sin IDs duplicados. WebP y MP4 validados por el constructor.
+- Datos de gimnasio, horarios, tarifas, equipo y modelo de cálculo idénticos a v28.
+- JavaScript de equipo e inscripción: sintaxis válida.
+- Navegador: formulario oculto al inicio, ninguna cuota marcada; pareja 74 €,
+  individual 39 €, familiar de 3 personas 105 € y de 4 personas 140 €.
+- 13 personas se rechaza; acompañantes y total cambian con la cuota.
+- Datos de prueba: avance a revisión, total correcto y regreso a edición.
+- Carrusel: siguiente/anterior; ampliación de foto nueva de Raúl con archivo retocado.
+- Revisión visual en marcos de móvil, tableta y escritorio. Sin desbordamiento
+  horizontal en los anchos comprobados. No se han usado dispositivos físicos.
+- Tema WordPress actualizado con recursos y fragmentos compartidos.
+  Sin ejecución PHP/WordPress en este entorno; requiere prueba en staging antes de producción.
+- El ZIP de GitHub excluye WordPress, ZIP internos y archivos individuales de 100 MB o más.
+
+La versión estática sigue siendo una demostración sin cobros ni envío de datos.
+No se ha configurado una pasarela, instalado WordPress ni publicado esta actualización.

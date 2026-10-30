@@ -12,16 +12,25 @@
   const money = n => Number(n).toLocaleString('es-ES', { style:'currency', currency:data.currency || 'EUR' });
   const current = () => window.STUDI1_ENROLLMENT.quote(plans, select.value, family.value, data.enrollmentMaxPeople || 12);
   const choices = [...document.querySelectorAll('[data-choose-plan]')];
+  const followup = $('inscripcion-datos');
+  let hasChosen = !followup;
   let extraCount = -1;
+  function setStep(review) {
+    document.querySelectorAll('.enrollment-steps li').forEach((li, i) => {
+      li.classList.toggle('active', i === (review ? 2 : 1));
+      li.classList.toggle('complete', i < (review ? 2 : 1));
+      if (i === (review ? 2 : 1)) li.setAttribute('aria-current','step'); else li.removeAttribute('aria-current');
+    });
+  }
   function update() {
     const plan = plans.find(p => p.id === select.value);
     choices.forEach(button => {
       const option = plans.find(p => p.id === button.dataset.choosePlan);
-      const active = !!option && option.id === select.value;
+      const active = hasChosen && !!option && option.id === select.value;
       button.setAttribute('aria-pressed', String(active));
       button.disabled = !option || option.available === false;
       const action = button.querySelector('[data-rate-action]');
-      if (action) action.textContent = button.disabled ? 'Consultar disponibilidad' : active ? 'Seleccionada · ir al formulario ↗' : 'Elegir esta modalidad ↗';
+      if (action) action.textContent = button.disabled ? 'Consultar disponibilidad' : active ? 'Seleccionada · continuar debajo ↓' : 'Elegir esta tarifa ↓';
     });
     const flexible = plan && plan.people === 0;
     $('family-people-wrap').hidden = !flexible;
@@ -65,10 +74,12 @@
   choices.forEach(button => button.addEventListener('click', () => {
     const option = plans.find(p => p.id === button.dataset.choosePlan);
     if (!option || option.available === false) return;
+    hasChosen = true;
+    if (followup) followup.hidden = false;
     select.value = option.id;
     form.hidden = false;
     if ($('enrollment-review')) $('enrollment-review').hidden = true;
-    document.querySelectorAll('.steps li').forEach((li, i) => li.classList.toggle('active', i === 0));
+    setStep(false);
     update();
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     document.querySelector('.enrollment-form-wrap').scrollIntoView({behavior: reduced ? 'auto' : 'smooth', block: 'start'});
@@ -100,12 +111,12 @@
     $('payment-demo-total').textContent = money(q.total);
     document.dispatchEvent(new CustomEvent('studi1:review', { detail: { name: `${$('first-name').value.trim()} ${$('last-name').value.trim()}` } }));
     form.hidden = true; $('enrollment-review').hidden = false;
-    document.querySelectorAll('.steps li').forEach((li,i)=>li.classList.toggle('active',i===1));
+    setStep(true);
     $('enrollment-back').focus();
   });
   $('enrollment-back')?.addEventListener('click', () => {
     $('enrollment-review').hidden = true; form.hidden = false;
-    document.querySelectorAll('.steps li').forEach((li,i)=>li.classList.toggle('active',i===0));
+    setStep(false);
     select.focus();
   });
   $('enrollment-confirm')?.addEventListener('click', () => {

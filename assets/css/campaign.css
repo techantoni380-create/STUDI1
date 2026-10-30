@@ -6,7 +6,7 @@
 .services-campaign h1,.contact-campaign h1{font-family:var(--display);font-style:italic;font-weight:800;font-size:clamp(64px,7.4vw,108px);line-height:.98;letter-spacing:-.025em}
 .services-campaign h1 span,.contact-campaign h1 span{color:var(--lime)}
 .services-campaign .campaign-copy{max-width:690px}
-.services-campaign .campaign-copy>p:not(.eyebrow){font-size:16px;color:#d0d7d6;max-width:440px;line-height:1.8;margin:26px 0}
+.services-campaign .campaign-copy>p:not(.eyebrow){font-size:16px;color:#fff;max-width:440px;line-height:1.8;margin:26px 0}
 .services-campaign .section-jump{max-width:580px;margin:30px 0 0;gap:8px}
 .services-campaign .section-jump a{background:#111b19c9;border-color:#3f5038;backdrop-filter:blur(8px);font-size:11px;padding:10px 13px}
 .services-campaign .section-jump a:hover{background:var(--lime);color:#161914}
@@ -14,7 +14,7 @@
 .contact-campaign-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:650px;gap:48px}
 .contact-campaign-copy{padding:70px 0;position:relative;z-index:1}
 .contact-campaign h1{font-size:clamp(64px,7vw,100px)}
-.contact-campaign-copy>p:not(.eyebrow){font-size:16px;color:#c8cfc5;line-height:1.8;max-width:400px;margin:27px 0}
+.contact-campaign-copy>p:not(.eyebrow){font-size:16px;color:#fff;line-height:1.8;max-width:400px;margin:27px 0}
 .campaign-actions{display:flex;align-items:center;flex-wrap:wrap;gap:22px}
 .campaign-actions .text-link{font-size:12px}
 .contact-campaign-visual{position:relative;margin:0;height:650px;align-self:end}
@@ -62,16 +62,16 @@
 @media(prefers-reduced-motion:reduce){.services-campaign,.contact-campaign{scroll-behavior:auto}}
 
 /* Sistema compartido para las siete cabeceras con fotografía. */
-.campaign-head{--hero-white:#f5f7f1;--hero-accent:var(--lime);--hero-surface:#0b0d0a;background-color:var(--hero-surface)}
+.campaign-head{--hero-white:#fff;--hero-accent:var(--lime);--hero-surface:#0b0d0a;background-color:var(--hero-surface)}
 .campaign-head h1,.campaign-head.hero .hero-copy h1,.campaign-head.enrollment-story h1{font-family:var(--display);font-weight:800;font-style:italic;line-height:.98;letter-spacing:-.025em;color:var(--hero-white);text-transform:uppercase;text-shadow:0 2px 15px #0003;overflow-wrap:normal;word-break:normal}
 .campaign-head h1 span,.campaign-head h1 .lime-text{color:var(--hero-accent)}
 .campaign-head .eyebrow,.campaign-head .eyebrow.white{color:var(--hero-accent);font-size:10px;font-weight:700;letter-spacing:.19em}
 .campaign-head.hero .hero-copy h1{font-size:clamp(64px,7.4vw,108px)}
-.campaign-head .hero-description,.campaign-head.enrollment-story .enrollment-story-copy>p:not(.eyebrow){font-size:16px;line-height:1.8;color:#d0d7d6;text-shadow:0 1px 10px #0005;margin-top:26px}
+.campaign-head .hero-description,.campaign-head.enrollment-story .enrollment-story-copy>p:not(.eyebrow){font-size:16px;line-height:1.8;color:#fff;text-shadow:0 1px 10px #0005;margin-top:26px}
 .campaign-head .button.lime{background:var(--hero-accent);border-color:var(--hero-accent);color:#161914}
 .campaign-head .button.outline-blue{border-color:#819569;color:var(--hero-white);background:#0b1411b3;box-shadow:none}
 .campaign-head .button.outline-blue:hover{background:var(--hero-accent);border-color:var(--hero-accent);color:#161914}
-.campaign-head .text-link{color:#dce4d5}.campaign-head .text-link:hover{color:var(--hero-accent)}
+.campaign-head .text-link{color:#fff}.campaign-head .text-link:hover{color:var(--hero-accent)}
 .campaign-head.hero:not(.deluxe-shop):after{background:linear-gradient(90deg,#090a08e8 0%,#090a08a8 36%,#090a0818 77%),linear-gradient(0deg,#0b0d0ac9,transparent 35%)}
 .campaign-head.inner-hero{height:auto;min-height:660px;display:flex;align-items:center;border-bottom:1px solid #29382a}
 .campaign-head.inner-hero .hero-copy{padding-block:76px;min-width:0}

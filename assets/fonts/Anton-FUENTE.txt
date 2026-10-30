@@ -1,0 +1,4 @@
+Anton · Vernon Adams / The Anton Project Authors.
+Fuente: https://github.com/google/fonts/tree/main/ofl/anton
+Archivo original Anton-Regular.ttf, sin modificaciones. Licencia: Anton-OFL.txt.
+Uso local exclusivamente en la franja tipográfica de STUDI-1.

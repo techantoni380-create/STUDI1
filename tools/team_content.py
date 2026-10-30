@@ -16,9 +16,6 @@ def members(data):
 def portrait(m, css='', alt=True):
     return f'<img class="{css}" src="assets/img/team/{m["photo"]}" width="{m["width"]}" height="{m["height"]}" alt="{e(m["name"]) if alt else ""}" loading="lazy" decoding="async">'
 
-def bolt():
-    return '<svg class="coach-bolt" viewBox="0 0 180 100" aria-hidden="true"><path pathLength="1" d="M0 48 46 40 36 59 91 38 79 60 126 43 117 62 180 50"/></svg>'
-
 def instructor_links(data, name):
     matches = [m for m in members(data) if name.casefold() in [c.casefold() for c in m['classes']]]
     if not matches:
@@ -38,11 +35,11 @@ def generate_team(data):
     title = '<p class="eyebrow">PERSONAS QUE TE IMPULSAN</p><h2 class="section-title">EL EQUIPO.<br><span>TU IMPULSO.</span></h2>'
     home = '<section class="section wrap coach-home energy-scene" id="equipo-inicio" aria-labelledby="coach-home-title"><div class="coach-heading"><div>'+title.replace('class="section-title"','class="section-title" id="coach-home-title"')+'</div><p>Cinco profesionales. Una misma energía. <br>Elige a quién quieres conocer.</p></div><div class="coach-carousel" data-coach-carousel role="region" aria-label="Conoce al equipo de STUDI-1" aria-roledescription="carrusel"><div class="coach-stage">'
     for i, m in enumerate(people):
-        home += f'<article class="coach-slide" data-coach-slide="{m["id"]}" id="coach-slide-{m["id"]}" aria-label="{i+1} de {len(people)}: {e(m["name"])}"'+(' hidden' if i else '')+'>'+f'<div class="coach-portrait" data-coach-swipe>{portrait(m)}<span class="coach-photo-mark" aria-hidden="true">S1</span>{bolt()}</div><div class="coach-slide-copy"><p class="coach-kicker">{e(m["role"])}</p><h3>{e(m["name"])}</h3><p class="coach-teaser">{e(m["teaser"])}</p><div class="coach-tags">'+''.join('<span>'+e(t)+'</span>' for t in m['tags'])+f'</div><a class="coach-profile-link" href="gimnasio.html#perfil-{m["id"]}" data-coach-open="{m["id"]}">Conoce a {m["shortName"]} <span aria-hidden="true">↗</span></a></div></article>'
-    home += '</div><div class="coach-picker" role="group" aria-label="Selecciona un profesional">'
+        home += f'<article class="coach-slide" data-coach-slide="{m["id"]}" id="coach-slide-{m["id"]}" aria-label="{i+1} de {len(people)}: {e(m["name"])}"'+(' hidden' if i else '')+'>'+f'<div class="coach-portrait" data-coach-swipe>{portrait(m)}<span class="coach-photo-mark" aria-hidden="true">S1</span></div><div class="coach-slide-copy"><p class="coach-kicker">{e(m["role"])}</p><h3>{e(m["name"])}</h3><p class="coach-teaser">{e(m["teaser"])}</p><div class="coach-tags">'+''.join('<span>'+e(t)+'</span>' for t in m['tags'])+f'</div><a class="coach-profile-link" href="gimnasio.html#perfil-{m["id"]}" data-coach-open="{m["id"]}">Conoce a {m["shortName"]} <span aria-hidden="true">↗</span></a></div></article>'
+    home += '<div class="coach-side-controls"><button type="button" data-coach-step="-1" aria-label="Profesional anterior"><span aria-hidden="true">‹</span></button><button type="button" data-coach-step="1" aria-label="Profesional siguiente"><span aria-hidden="true">›</span></button></div></div><div class="coach-picker" role="group" aria-label="Selecciona un profesional">'
     for i, m in enumerate(people):
-        home += f'<button class="coach-pick" type="button" data-coach-select="{m["id"]}" aria-controls="coach-slide-{m["id"]}" aria-pressed="{str(i==0).lower()}">{portrait(m, alt=False)}<span>{m["shortName"]}</span>{bolt()}</button>'
-    home += '</div><div class="coach-carousel-bottom"><a class="coach-all-link" href="gimnasio.html#equipo">Todo el equipo <span aria-hidden="true">↗</span></a><div class="coach-arrows"><button type="button" data-coach-step="-1" aria-label="Profesional anterior">←</button><button type="button" data-coach-step="1" aria-label="Profesional siguiente">→</button></div></div><p class="coach-sr" data-coach-status aria-live="polite" aria-atomic="true"></p></div></section>'
+        home += f'<button class="coach-pick" type="button" data-coach-select="{m["id"]}" aria-controls="coach-slide-{m["id"]}" aria-pressed="{str(i==0).lower()}">{portrait(m, alt=False)}<span>{m["shortName"]}</span></button>'
+    home += '</div><div class="coach-carousel-bottom"><a class="coach-all-link" href="gimnasio.html#equipo">Todo el equipo <span aria-hidden="true">↗</span></a><span class="coach-carousel-hint">Elige tu profesional</span></div><p class="coach-sr" data-coach-status aria-live="polite" aria-atomic="true"></p></div></section>'
     # Put the choices before the portrait so selecting on mobile keeps it in view.
     a = home.index('<div class="coach-picker"')
     b = home.index('<div class="coach-carousel-bottom"', a)
@@ -53,7 +50,7 @@ def generate_team(data):
 
     grid = '<section class="section wrap coach-team energy-scene" id="equipo"><div class="coach-heading"><div>'+title+'</div><p>Conoce a quienes te acompañan. <br>Dentro y fuera de la sala.</p></div><div class="coach-grid">'
     for i, m in enumerate(people):
-        grid += f'<details class="coach-card'+(' coach-card-lead' if i == 0 else '')+f'" id="perfil-{m["id"]}"><summary data-coach-open="{m["id"]}" aria-label="Conoce a {e(m["name"])}">{portrait(m)}<span class="coach-card-shade"></span><span class="coach-card-copy"><span class="coach-kicker">{e(m["role"])}</span><span class="coach-card-name">{e(m["name"])}</span><span class="coach-card-action">Ver perfil <span aria-hidden="true">↗</span></span></span>{bolt()}</summary><div class="coach-fallback-bio">{bio(m)}</div></details>'
+        grid += f'<details class="coach-card'+(' coach-card-lead' if i == 0 else '')+f'" id="perfil-{m["id"]}"><summary data-coach-open="{m["id"]}" aria-label="Conoce a {e(m["name"])}"><span class="coach-card-photo">{portrait(m)}</span><span class="coach-card-copy"><span class="coach-kicker">{e(m["role"])}</span><span class="coach-card-name">{e(m["name"])}</span><span class="coach-card-action">Ver perfil <span aria-hidden="true">↗</span></span></span></summary><div class="coach-fallback-bio">{bio(m)}</div></details>'
     grid += '</div></section>'
     (partials/'team.html').write_text(grid+'\n')
 
@@ -63,5 +60,8 @@ def generate_team(data):
     dialog += '</dialog>'
     (partials/'team-dialog.html').write_text(dialog+'\n')
 
-    words = '<span>STUDI-1</span><b>✦</b><span>FUERZA</span><b>✦</b><span>ENERGÍA</span><b>✦</b><span>REUS</span><b>✦</b>'
-    (partials/'team-marquee.html').write_text('<div class="coach-marquee" data-coach-marquee role="region" aria-label="STUDI-1 · Fuerza · Energía · Reus"><div class="coach-marquee-window" aria-hidden="true"><div class="coach-marquee-track"><div>'+words+'</div><div>'+words+'</div></div></div><button type="button" data-marquee-toggle aria-label="Pausar texto en movimiento" aria-pressed="false"><span aria-hidden="true">Ⅱ</span></button></div>\n')
+    # Compact continuous strip, shared by the homepage and footer.
+    mark = '<span class="coach-marquee-brand"><img src="assets/img/s1-franja.svg" width="1050" height="1060" alt=""><span>RAÚL BEAS</span><small>GIMNÀS</small></span>'
+    phrases = ['TU RITMO', 'TU FUERZA', 'FITNESS', 'CLASES DIRIGIDAS', 'ENTRENOS PERSONALES']
+    words = ''.join(mark+'<span class="coach-marquee-word">'+word+'</span>' for word in phrases)
+    (partials/'team-marquee.html').write_text('<div class="coach-marquee" data-coach-marquee role="region" aria-label="STUDI-1 · Tu ritmo · Tu fuerza · Fitness, clases dirigidas y entrenos personales"><div class="coach-marquee-window" aria-hidden="true"><div class="coach-marquee-track"><div>'+words+'</div><div>'+words+'</div></div></div></div>\n')

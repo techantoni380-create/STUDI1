@@ -1,0 +1,47 @@
+STUDI-1 · V32 · ARREGLOS 1 Y 2 · 30/10/2026
+
+ARREGLO 1
+Franja S1 compacta: logo entre cada frase, tipografía Anton, colores originales,
+movimiento continuo en Inicio y en el pie de las nueve páginas.
+72 px/s constantes, ajustados al ancho real al cargar la fuente y redimensionar.
+Velocidad aproximada a la referencia; no se pudo medir la animación de Gold’s Gym.
+Sin controles de pausa de franja, portada ni efectos. La preferencia de movimiento
+reducido del sistema permanece activa; vídeos con controles propios.
+Cabecera compartida con navegación más grande, S1 en la llamada a inscripción,
+lema blanco y resplandor verde. Fila Volver/REUS retirada de la cabecera.
+Enlace Volver al final del contenido; fichas mantienen su control de regreso.
+Asistente virtual identificado como tal con el retrato de Raúl.
+Textos destacados ampliados, foto de grupo con mayor espacio y contenido ampliado,
+tres vídeos alineados, bloques de inscripción/contacto con brillo verde.
+
+ARREGLO 2
+En Gimnasio: títulos, introducciones y pies de fotografías/vídeos más grandes.
+Resultados deportivos: fichas a la izquierda, retrato central y contexto a la derecha;
+se adapta a dos columnas en tableta y una columna en móvil.
+Retrato de competición sin recorte CSS. Enlaces a los resultados conservados.
+Texto bajo la foto de celebración ampliado.
+
+VERIFICACIÓN
+- 9 páginas generadas; etiquetas equilibradas, IDs únicos y recursos locales presentes.
+- No quedan botones de pausa de franja/portada/efectos, ni lightbox de fotografías.
+- Sintaxis JavaScript de los archivos modificados y navegación comprobada.
+- Simulación Node: portada sin botón, ciclo 5 s, rótulos, foco, pestaña oculta y
+  preferencia de movimiento reducido. No equivale a una prueba de navegador.
+- 8 escenarios de navegación simulados: regreso entre páginas/anclas, entrada directa,
+  nueva pestaña, almacenamiento bloqueado, destinos externos, scroll y clic modificado.
+- Fotografías del equipo, vídeos, precios, horarios y lógica de inscripción conservados.
+- Recursos WebP/MP4 y ZIPs verificados por las herramientas del proyecto.
+- Recursos compartidos sincronizados con el instalador WordPress; cachés v32.
+
+LÍMITES
+El navegador de revisión falló al arrancar. No se han verificado visualmente estos
+cambios en móvil, tableta u ordenador durante esta revisión. La previsualización local
+arrancó y fue detenida; no se realizó ninguna publicación.
+PHP no está disponible aquí: revisar el tema en un WordPress de pruebas antes de usarlo.
+La tienda sigue siendo una muestra y el recorrido de pago sigue sin realizar cobros.
+
+ENTREGA
+STUDI1-GitHub.zip: proyecto estático sin WordPress ni archivos individuales >=100 MiB.
+STUDI1-web.zip: fuentes compartidas y el instalador WordPress completo incluido.
+Las copias duplicadas assets/content del tema no se incluyen sueltas en el ZIP exterior;
+se regeneran con python tools/package.py. El instalador WordPress sí las contiene.

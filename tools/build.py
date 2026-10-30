@@ -15,9 +15,21 @@ PAGES = {
  'checkout':('checkout','Finalizar compra','Revisa tu selección de productos STUDI-1.'),
  'legal':('legal','Información legal','Información legal de la propuesta STUDI-1.')
 }
+def static_photos(text):
+ def replace_photo(match):
+  attrs=match[1]
+  attrs=re.sub(r'\s+(?:type|aria-label)="[^"]*"', '', attrs)
+  attrs=re.sub(r'\s+data-photo(?:="[^"]*")?', '', attrs)
+  inner=re.sub(r'<span\b[^>]*class="photo-zoom"[^>]*>.*?</span>', '', match[2], flags=re.S)
+  return '<div'+attrs+'>'+inner+'</div>'
+ text=re.sub(r'<button\b([^>]*\bdata-photo(?:[\s=][^>]*)?)>(.*?)</button>', replace_photo, text, flags=re.S)
+ text=re.sub(r'<button\b[^>]*\bdata-gallery-motion[^>]*>.*?</button>', '', text, flags=re.S)
+ text=re.sub(r'<dialog\b[^>]*id="photo-dialog"[^>]*>.*?</dialog>', '', text, flags=re.S)
+ return text
+
 def render(text, depth=0):
  if depth > 8: raise ValueError('Demasiados componentes anidados.')
- return re.sub(r'\{\{include:([a-z-]+)\}\}', lambda m: render((ROOT/'src/partials'/f'{m[1]}.html').read_text(), depth+1), text)
+ return static_photos(re.sub(r'\{\{include:([a-z-]+)\}\}', lambda m: render((ROOT/'src/partials'/f'{m[1]}.html').read_text(), depth+1), text))
 
 def build():
  # Evita entregar recursos vacíos o WebP incompletos aunque su ruta exista.

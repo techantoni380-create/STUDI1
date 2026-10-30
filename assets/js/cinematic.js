@@ -3,25 +3,9 @@
  'use strict';
  const root = document.documentElement;
  const motion = matchMedia('(prefers-reduced-motion: reduce)');
- const button = document.querySelector('[data-cinema-toggle]');
- let paused = false;
- try { paused = localStorage.getItem('studi1-cinema-paused') === 'true'; } catch (_) {}
- function update() {
-  const stopped = paused || motion.matches;
-  root.classList.toggle('cinema-paused', stopped);
-  if (button) {
-   button.disabled = motion.matches;
-   button.setAttribute('aria-pressed', String(stopped));
-   button.textContent = motion.matches ? 'Movimiento reducido' : stopped ? 'Reanudar efectos' : 'Pausar efectos';
-  }
- }
+ function update() { root.classList.toggle('cinema-paused', motion.matches); }
  update();
  root.classList.add('cinema-ready');
- if (button) button.addEventListener('click', () => {
-  paused = !paused;
-  try { localStorage.setItem('studi1-cinema-paused', String(paused)); } catch (_) {}
-  update();
- });
  motion.addEventListener('change', update);
  function visibility() { root.classList.toggle('cinema-hidden', document.hidden); }
  document.addEventListener('visibilitychange', visibility);

@@ -1,0 +1,5 @@
+STUDI-1 v34 — Corrección puntual del logo
+
+Se elimina la segunda copia HTML del eslogan y el recorte CSS del PNG. El logo completo y transparente muestra una sola vez las dos líneas blancas. La entrada animada y el reflejo usan el mismo PNG. No se modifica el resto del diseño v33.
+
+Comprobado: nueve cabeceras sin logo-caption, mismo PNG sin modificación, tema y ZIPs reconstruidos. La revisión visual en navegador sigue pendiente por el fallo del entorno ya comunicado. No publicado.

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "raul-espaldas",
+    "file": "1000114545.png",
+    "prompt": "Retoca esta fotografía real para la web del gimnasio STUDI-1. Retoque fotográfico profesional, no recreación ni ilustración. Conserva fielmente todas las personas, su identidad facial, edad aparente, cuerpo y proporciones, manos, ropa, tatuajes, poses, equipamiento, arquitectura y composición de la foto original. No inventes ni borres personas, no cambies colores de ropa, no añadas logos, texto ni objetos. Corrige dominante de color, recupera sombras y luces, reduce ruido/compresión y mejora la nitidez de forma natural, sin piel de plástico ni HDR exagerado. Entrega una sola foto retocada, sin collage ni marco. Imagen de campaña impactante: el hombre de espaldas agarrando la barra y su reflejo tienen que conservarse exactamente. Ilumina su espalda, hombros y brazos con volumen realista y detalle limpio, negros profundos sin empastarlos. Añade solo un toque muy sutil de luz de contorno verde lima propia de la marca, no rayos ni efectos gráficos. El tatuaje y la musculatura deben conservar su diseño y tamaño. Mantén el encuadre con ambos brazos y manos completos y fondo de gimnasio reconocible. Formato apaisado cercano al original, máxima calidad.",
+    "generated_path": "assets/img/retocadas/raul-espaldas.webp",
+    "asset": "assets/img/retocadas/raul-espaldas.webp",
+    "method": "Herramienta integrada image_gen; conversión WebP para la web."
+  },
+  {
+    "id": "trx-de-pie",
+    "file": "1000118324.jpg",
+    "prompt": "Retoca esta fotografía real para la web del gimnasio STUDI-1. Retoque fotográfico profesional, no recreación ni ilustración. Conserva fielmente todas las personas, su identidad facial, edad aparente, cuerpo y proporciones, manos, ropa, tatuajes, poses, equipamiento, arquitectura y composición de la foto original. No inventes ni borres personas, no cambies colores de ropa, no añadas logos, texto ni objetos. Corrige dominante de color, recupera sombras y luces, reduce ruido/compresión y mejora la nitidez de forma natural, sin piel de plástico ni HDR exagerado. Entrega una sola foto retocada, sin collage ni marco. Foto editorial luminosa de clase TRX de pie. Potencia claridad de rostros y textura de la madera y equilibra fluorescentes blancos. Amarillos y verdes vivos pero naturales. Reencuadra recortando únicamente parte del suelo vacío inferior para una fotografía horizontal 4:3; conserva todas las personas visibles, incluido el instructor de la derecha, sin alterar posturas ni correas.",
+    "generated_path": "assets/img/retocadas/trx-de-pie.webp",
+    "asset": "assets/img/retocadas/trx-de-pie.webp",
+    "method": "Herramienta integrada image_gen; conversión WebP para la web."
+  },
+  {
+    "id": "trx-core",
+    "file": "1000118316.jpg",
+    "prompt": "Retoca esta fotografía real para la web del gimnasio STUDI-1. Retoque fotográfico profesional, no recreación ni ilustración. Conserva fielmente todas las personas, su identidad facial, edad aparente, cuerpo y proporciones, manos, ropa, tatuajes, poses, equipamiento, arquitectura y composición de la foto original. No inventes ni borres personas, no cambies colores de ropa, no añadas logos, texto ni objetos. Corrige dominante de color, recupera sombras y luces, reduce ruido/compresión y mejora la nitidez de forma natural, sin piel de plástico ni HDR exagerado. Entrega una sola foto retocada, sin collage ni marco. Foto editorial de clase de suspensión con participantes haciendo planchas. Da claridad, contraste equilibrado y color profesional. Reencuadra recortando únicamente suelo vacío inferior para formato horizontal 4:3, conservando todas las personas visibles, colchonetas, manos, pies y cintas en su posición exacta.",
+    "generated_path": "assets/img/retocadas/trx-core.webp",
+    "asset": "assets/img/retocadas/trx-core.webp",
+    "method": "Herramienta integrada image_gen; conversión WebP para la web."
+  },
+  {
+    "id": "comunidad-fiesta",
+    "file": "1000198294.jpg",
+    "prompt": "Retoca esta fotografía real para la web del gimnasio STUDI-1. Retoque fotográfico profesional, no recreación ni ilustración. Conserva fielmente todas las personas, su identidad facial, edad aparente, cuerpo y proporciones, manos, ropa, tatuajes, poses, equipamiento, arquitectura y composición de la foto original. No inventes ni borres personas, no cambies colores de ropa, no añadas logos, texto ni objetos. Corrige dominante de color, recupera sombras y luces, reduce ruido/compresión y mejora la nitidez de forma natural, sin piel de plástico ni HDR exagerado. Entrega una sola foto retocada, sin collage ni marco. Fotografía alegre de grupo con disfraces amarillos. Luz uniforme favorecedora en todos los rostros, blancos neutros, amarillos con vida sin quemarlos, detalle nítido. Conserva exactamente a todos los integrantes, gestos y accesorios. Mantén la proporción horizontal 4:3 y deja suficiente aire en los bordes. No oscurezcas esta escena.",
+    "generated_path": "assets/img/retocadas/comunidad-fiesta.webp",
+    "asset": "assets/img/retocadas/comunidad-fiesta.webp",
+    "method": "Herramienta integrada image_gen; conversión WebP para la web."
+  },
+  {
+    "id": "clase-fitball",
+    "file": "1000199213.jpg",
+    "prompt": "Retoca esta fotografía real para la web del gimnasio STUDI-1. Retoque fotográfico profesional, no recreación ni ilustración. Conserva fielmente todas las personas, su identidad facial, edad aparente, cuerpo y proporciones, manos, ropa, tatuajes, poses, equipamiento, arquitectura y composición de la foto original. No inventes ni borres personas, no cambies colores de ropa, no añadas logos, texto ni objetos. Corrige dominante de color, recupera sombras y luces, reduce ruido/compresión y mejora la nitidez de forma natural, sin piel de plástico ni HDR exagerado. Entrega una sola foto retocada, sin collage ni marco. Foto dinámica de ejercicio con balones. Recupera el detalle del balón naranja y las luces del techo, ilumina rostros y ropa oscura con aspecto natural y colores ricos equilibrados. Conserva todos los balones, manos, personas y poses sin añadir nada. Mantén formato vertical y el encuadre completo.",
+    "generated_path": "assets/img/retocadas/clase-fitball.webp",
+    "asset": "assets/img/retocadas/clase-fitball.webp",
+    "method": "Herramienta integrada image_gen; conversión WebP para la web."
+  },
+  {
+    "id": "comunidad-grupo",
+    "file": "1000196959.jpg",
+    "prompt": "Retoca esta fotografía real para la web del gimnasio STUDI-1. Retoque fotográfico profesional, no recreación ni ilustración. Conserva fielmente todas las personas, su identidad facial, edad aparente, cuerpo y proporciones, manos, ropa, tatuajes, poses, equipamiento, arquitectura y composición de la foto original. No inventes ni borres personas, no cambies colores de ropa, no añadas logos, texto ni objetos. Corrige dominante de color, recupera sombras y luces, reduce ruido/compresión y mejora la nitidez de forma natural, sin piel de plástico ni HDR exagerado. Entrega una sola foto retocada, sin collage ni marco. Fotografía panorámica de la comunidad de socios. Conserva exactamente a todos los participantes, caras y gestos, sin cambiar posiciones. Corrige luz fría y contraste apagado, ilumina todos los rostros suavemente, color cálido natural de la madera y prendas vivas. Mantén la proporción panorámica original cercana a 2.2:1, sin cortar integrantes, sin añadir texto.",
+    "generated_path": "assets/img/retocadas/comunidad-grupo.webp",
+    "asset": "assets/img/retocadas/comunidad-grupo.webp",
+    "method": "Herramienta integrada image_gen; conversión WebP para la web."
+  }
+]

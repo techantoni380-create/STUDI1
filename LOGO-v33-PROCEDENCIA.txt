@@ -1,0 +1,7 @@
+Recurso final: assets/img/logo-oficial.png
+Modo: edición con ImageGen, fondo transparente; 2142 x 734, RGBA.
+Referencia: PNG oficial entregado con el proyecto, conservando la identidad metálica y verde.
+Prompt de la variante utilizada:
+Refine this exact logo for final web use. Preserve STUDI1 metallic silver and lime wordmark and RAÚL BEAS. The bottom slogan MUST be FLAT PURE WHITE lettering with NO gray stroke, NO shadow, NO bevel, NO extrusion, NO glow whatsoever. Exactly FITNESS · CLASES DIRIGIDAS on first line, ENTRENOS PERSONALES on second line. Transparent alpha background behind and between every letter, no plate. Add a little transparent padding around entire logo so lime numeral top and all edges are fully inside canvas. Keep wide horizontal composition.
+
+La cabecera muestra el eslogan como texto HTML blanco sin fondo para asegurar nitidez a tamaño pequeño. El recorte de presentación se realiza con CSS; no se reescriben los píxeles del PNG generado. El monograma S1 del carrusel es vectorial, separado del logo principal.
